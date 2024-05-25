@@ -1,5 +1,3 @@
-
-
 export PATH="${PATH}:/Users/lalit/Library/Python/3.11/bin"
 export PATH="${PATH}:/Users/lalit/.local/bin"
 eval "$(/opt/homebrew/bin/brew shellenv)"
