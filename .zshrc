@@ -33,3 +33,7 @@ function macfeh() {
 }
 
 export PF_INFO="title os host kernel wm uptime pkgs memory palette"
+
+eval "$(zoxide init zsh)"
+
+alias cd="z"

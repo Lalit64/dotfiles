@@ -1,0 +1,12 @@
+{
+  "extras": [
+    "lazyvim.plugins.extras.coding.yanky",
+    "lazyvim.plugins.extras.editor.trouble-v3",
+    "lazyvim.plugins.extras.ui.alpha",
+    "lazyvim.plugins.extras.util.mini-hipatterns"
+  ],
+  "news": {
+    "NEWS.md": "4964"
+  },
+  "version": 4
+}
