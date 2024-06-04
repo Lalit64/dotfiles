@@ -37,3 +37,5 @@ export PF_INFO="title os host kernel wm uptime pkgs memory palette"
 eval "$(zoxide init zsh)"
 
 alias cd="z"
+alias ls="eza --icons"
+alias tree="eza --icons --tree"

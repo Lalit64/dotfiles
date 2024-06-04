@@ -3,23 +3,23 @@
  *		https://github.com/threadreaper
  */
 
-.cm-s-nqqwal .CodeMirror-gutters { background: #232136 !important; }
+.cm-s-nqqwal .CodeMirror-gutters { background: #191724 !important; }
 .cm-s-nqqwal .CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded { color: #e0def4; }
-.cm-s-nqqwal .CodeMirror-cursor { border-left: 1px solid #e0def4; background-color: rgba(234,154,151,0.4)}
-.cm-s-nqqwal { background-color: #232136; color: #e0def4; }
-.cm-s-nqqwal span.cm-builtin { color: #3e8fb0; font-weight: bold; }
+.cm-s-nqqwal .CodeMirror-cursor { border-left: 1px solid #e0def4; background-color: rgba(235,188,186,0.4)}
+.cm-s-nqqwal { background-color: #191724; color: #e0def4; }
+.cm-s-nqqwal span.cm-builtin { color: #31748f; font-weight: bold; }
 .cm-s-nqqwal span.cm-comment { color: #6e6a86; }
 .cm-s-nqqwal span.cm-keyword { color: #f6c177; font-weight: bold; }
 .cm-s-nqqwal span.cm-atom { color: #9ccfd8; }
 .cm-s-nqqwal span.cm-def { color: #c4a7e7; }
-.cm-s-nqqwal span.cm-variable { color: #ea9a97; }
+.cm-s-nqqwal span.cm-variable { color: #ebbcba; }
 .cm-s-nqqwal span.cm-variable-2 { color: #c4a7e7; }
-.cm-s-nqqwal span.cm-string { color: #3e8fb0; }
-.cm-s-nqqwal span.cm-string-2 { color: #3e8fb0; }
+.cm-s-nqqwal span.cm-string { color: #31748f; }
+.cm-s-nqqwal span.cm-string-2 { color: #31748f; }
 .cm-s-nqqwal span.cm-number { color: #c4a7e7; }
 .cm-s-nqqwal span.cm-tag { color: #f6c177; }
-.cm-s-nqqwal span.cm-property { color: #ea9a97; }
-.cm-s-nqqwal span.cm-attribute { color: #ea9a97; }
+.cm-s-nqqwal span.cm-property { color: #ebbcba; }
+.cm-s-nqqwal span.cm-attribute { color: #ebbcba; }
 .cm-s-nqqwal span.cm-qualifier { color: #9ccfd8; }
 .cm-s-nqqwal span.cm-meta { color: #c4a7e7; }
 .cm-s-nqqwal span.cm-header { color: #f6c177; }
@@ -28,4 +28,4 @@
 .cm-s-nqqwal span.CodeMirror-nonmatchingbracket { border-bottom: 1px solid; background: none; }
 .cm-s-nqqwal .CodeMirror-activeline-background { background: rgba(196,167,231,0.4); }
 .cm-s-nqqwal div.CodeMirror-selected { background: #f6c177; }
-.cm-s-nqqwal .CodeMirror-focused div.CodeMirror-selected { background: #393552); }
+.cm-s-nqqwal .CodeMirror-focused div.CodeMirror-selected { background: #26233a); }

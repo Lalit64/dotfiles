@@ -1,9 +1,9 @@
 static const char norm_fg[] = "#e0def4";
-static const char norm_bg[] = "#393552";
+static const char norm_bg[] = "#26233a";
 static const char norm_border[] = "#6e6a86";
 
 static const char sel_fg[] = "#e0def4";
-static const char sel_bg[] = "#3e8fb0";
+static const char sel_bg[] = "#31748f";
 static const char sel_border[] = "#e0def4";
 
 static const char urg_fg[] = "#e0def4";
