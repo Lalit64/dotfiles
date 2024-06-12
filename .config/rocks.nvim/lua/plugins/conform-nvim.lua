@@ -1,4 +1,4 @@
-local options = {
+local opts = {
   formatters = {
     svelte_fmt = {
       command = "/opt/homebrew/bin/prettier",
@@ -15,4 +15,4 @@ local options = {
   },
 }
 
-require("conform").setup(options)
+require("conform").setup(opts)

@@ -11,10 +11,6 @@ M.ui = {
 	theme = "rosepine",
   transparency = true,
   theme_toggle = { "rosepine", "rosepine-dawn" },
-  cmp = {
-    icons = true,
-    style = "default",
-  },
   nvdash = {
     load_on_startup = true,
     header = {
