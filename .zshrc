@@ -42,3 +42,15 @@ alias tree="eza --icons --tree"
 
 kitty +runpy 'from kitty.fast_data_types import cocoa_set_app_icon; import sys; cocoa_set_app_icon(*sys.argv[1:]); print("OK")' "$HOME/.config/kitty/kitty-blue.icns" /Applications/kitty.app > /dev/null
 
+brew() {
+  local dump_commands=('install' 'uninstall') # Include all commands that should do a brew dump
+  local main_command="${1}"
+
+  /opt/homebrew/bin/brew ${@}
+
+  for command in "${dump_commands[@]}"; do
+    [[ "${command}" == "${main_command}" ]] && /opt/homebrew/bin/brew bundle dump --file="$HOME/dotfiles/Brewfile" --force
+  done
+
+  return 0
+}
