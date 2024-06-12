@@ -39,3 +39,6 @@ eval "$(zoxide init zsh)"
 alias cd="z"
 alias ls="eza --icons"
 alias tree="eza --icons --tree"
+
+kitty +runpy 'from kitty.fast_data_types import cocoa_set_app_icon; import sys; cocoa_set_app_icon(*sys.argv[1:]); print("OK")' "$HOME/.config/kitty/kitty-blue.icns" /Applications/kitty.app
+
