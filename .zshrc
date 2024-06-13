@@ -54,3 +54,7 @@ brew() {
 
   return 0
 }
+
+if test -f $HOME/.zshrc.local; then
+  source $HOME/.zshrc.local
+fi
