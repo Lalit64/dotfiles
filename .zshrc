@@ -19,6 +19,11 @@ export EDITOR=nvim
 alias neofetch="neofetch --off"
 alias wal="wal -o \"/Users/lalit/wal-reload.sh\" -s"
 
+wal-image() {
+  wal -n -i "$@"
+  wallpaper "$@"
+}
+
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

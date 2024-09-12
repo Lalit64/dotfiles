@@ -11,12 +11,12 @@
     "copilot": false
   },
   "base_keymap": "Atom",
-  "vim_mode": false,
-  "theme": "Rosé Pine Moon",
+  "vim_mode": true,
+  "theme": "Rosé Pine",
   "ui_font_size": 16,
   "buffer_font_size": 14,
   "tab_size": 2,
-  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "MonoLisa Nerd Font Mono",
   "buffer_font_features": {},
   "project_panel": {
     "git_status": false
