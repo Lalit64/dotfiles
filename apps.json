@@ -78,6 +78,11 @@
       "subtitle": "A client mod for Discord",
       "tintColor": "7289da",
       "downloadURL": "https://github.com/revenge-mod/revenge-tweak/releases/download/v254.0/Revenge.ipa",
+      "screenshotURLs": [
+        "https://files.catbox.moe/axpb5m.png",
+        "https://files.catbox.moe/fmmwe9.jpeg",
+        "https://files.catbox.moe/gfmcx4.png"
+      ],
       "versions": [
         {
           "version": "254.0",
