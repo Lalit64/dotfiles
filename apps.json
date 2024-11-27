@@ -1,6 +1,7 @@
 {
   "beta": "false",
   "name": "Lalit64s's AltStore Repo",
+  "sourceURL": "https://raw.githubusercontent.com/Lalit64/dotfiles/refs/heads/main/apps.json",
   "identifier": "com.lalit64.source",
   "apps": [
     {
@@ -102,6 +103,5 @@
         }
       ]
     }
-  ],
-  "userInfo": {}
+  ]
 }
