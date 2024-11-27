@@ -93,14 +93,14 @@
       ]
     },
     {
-      "name": "BHInsta",
+      "name": "BHInstagram",
       "bundleIdentifier": "com.burbn.instagram",
       "developerName": "vlourme",
       "version": "0.6.0",
-      "downloadURL": "https://github.com/Lalit64/SCInsta/releases/download/release/com.burbn.instagram.ipa",
+      "downloadURL": "https://github.com/BandarHL/BHInstagram/releases/download/0.0.1/Instagram_290.1_BHInstagram_0.0.1.ipa",
       "iconURL": "https://files.catbox.moe/xk4h8i.jpg",
       "localizedDescription": "",
-      "subtitle": "A feature-rich tweak for Instagram on iOS!",
+      "subtitle": "An awesome tweak for Instagram!",
       "tintColor": "c72a96",
       "screenshotURLs": [
         "https://camo.githubusercontent.com/040e14025fd9660c692f50f125f09ae39f62bc298c7fee5b70c0bbc76b131867/68747470733a2f2f692e696d6775722e636f6d2f6872337630666b2e706e67",
@@ -114,7 +114,7 @@
           "version": "0.6.0",
           "date": "2024-11-27",
           "size": 91750400,
-          "downloadURL": "https://github.com/Lalit64/SCInsta/releases/download/release/com.burbn.instagram.ipa"
+          "downloadURL": "https://github.com/BandarHL/BHInstagram/releases/download/0.0.1/Instagram_290.1_BHInstagram_0.0.1.ipa"
         }
       ]
     }
