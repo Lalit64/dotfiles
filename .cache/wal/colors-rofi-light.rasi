@@ -22,7 +22,7 @@
 
     background-color: @background;
     background: #cdd6f4;
-    foreground: #181825;
+    foreground: #1e1e2e;
     border-color: @background;
     spacing: 2;
 }

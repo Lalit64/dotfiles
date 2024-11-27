@@ -3,10 +3,10 @@
  *		https://github.com/threadreaper
  */
 
-.cm-s-nqqwal .CodeMirror-gutters { background: #181825 !important; }
+.cm-s-nqqwal .CodeMirror-gutters { background: #1e1e2e !important; }
 .cm-s-nqqwal .CodeMirror-foldgutter-open, .CodeMirror-foldgutter-folded { color: #cdd6f4; }
 .cm-s-nqqwal .CodeMirror-cursor { border-left: 1px solid #cdd6f4; background-color: rgba(250,179,135,0.4)}
-.cm-s-nqqwal { background-color: #181825; color: #cdd6f4; }
+.cm-s-nqqwal { background-color: #1e1e2e; color: #cdd6f4; }
 .cm-s-nqqwal span.cm-builtin { color: #89b4fa; font-weight: bold; }
 .cm-s-nqqwal span.cm-comment { color: #313244; }
 .cm-s-nqqwal span.cm-keyword { color: #f9e2af; font-weight: bold; }

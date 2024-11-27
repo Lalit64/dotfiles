@@ -3,7 +3,7 @@
 wallpaper="None"
 
 # Special
-background='#181825'
+background='#1e1e2e'
 foreground='#cdd6f4'
 cursor='#cdd6f4'
 

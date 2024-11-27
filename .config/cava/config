@@ -6,9 +6,9 @@
 # Accepts only non-negative values.
 framerate = 120
 
-autosens = 1
+autosens = 4
 overshoot = 0
-sensitivity=25
+sensitivity=40
 
 bars = 0
 bar_width = 3.0
@@ -24,7 +24,7 @@ source = "Background Music"
 channels = mono
 
 [color]
-background = '#232136'
+
 gradient = 1
 gradient_count = 6
 gradient_color_1 = '#3e8fb0'

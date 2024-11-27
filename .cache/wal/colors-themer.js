@@ -8,7 +8,7 @@ module.exports.colors = {
     accent5: "#cba6f7",
     accent6: "#cdd6f4",
     accent7: "#cdd6f4",
-    shade0:  "#181825",
+    shade0:  "#1e1e2e",
     shade1:  "#f38ba8",
     shade2:  "#89b4fa",
     shade3:  "#f9e2af",

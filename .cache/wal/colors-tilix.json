@@ -1,12 +1,12 @@
 {
-    "background-color": "#181825",
+    "background-color": "#1e1e2e",
     "badge-color": "#cdd6f4",
     "bold-color": "#cdd6f4",
     "comment": "",
-    "cursor-background-color": "#181825",
+    "cursor-background-color": "#1e1e2e",
     "cursor-foreground-color": "#cdd6f4",
     "foreground-color": "#cdd6f4",
-    "highlight-background-color": "#181825",
+    "highlight-background-color": "#1e1e2e",
     "highlight-foreground-color": "#cdd6f4",
     "name": "wal export",
     "palette": [

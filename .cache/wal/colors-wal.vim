@@ -1,6 +1,6 @@
 " Special
 let wallpaper  = "None"
-let background = "#181825"
+let background = "#1e1e2e"
 let foreground = "#cdd6f4"
 let cursor     = "#cdd6f4"
 

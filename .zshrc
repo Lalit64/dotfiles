@@ -60,6 +60,9 @@ brew() {
   return 0
 }
 
+# this is for zsh
+export PATH=$PATH:~/.local/share/nvim/mason/bin
+
 if test -f $HOME/.zshrc.local; then
   source $HOME/.zshrc.local
 fi

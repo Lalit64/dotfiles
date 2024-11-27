@@ -1,6 +1,6 @@
 set $wallpaper None
 
-set $background #181825
+set $background #1e1e2e
 set $foreground #cdd6f4
 
 set $color0 #181825
