@@ -1,0 +1,107 @@
+{
+  "beta": "false",
+  "name": "Lalit64s's AltStore Repo",
+  "identifier": "com.lalit64.source",
+  "apps": [
+    {
+      "beta": false,
+      "name": "YTLitePlus",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "Various Developers",
+      "subtitle": "YTLite with more features!",
+      "version": "19.34.2",
+      "versionDate": "2024-09-03",
+      "versionDescription": "Current YouTube IPA: \"19.34.2\"  \r\nCurrent YTLite Version: \"5.0.1\"  \r\nCurrent App Compatibility: \"iOS/iPadOS 15.0\" or later\r\n\r\nRELEASE 19.34.2•5.0.1: (2024•09•03)\r\n\r\n• Updated Youtube from \"19.32.6\" to \"19.34.2\"\r\n• Updated YTLite from \"4.0.1\" to \"5.0.1\"\r\n\r\nIssues in this Release:\r\n• Touches will not work while bypassing startup popup\r\n• LowContrastMode does not work *(Compatible only with YouTube v17.33.2•v17.38.10)*\r\n\r\nCatbox\r\n\"z8jg5n.ipa\"",
+      "downloadURL": "https://files.catbox.moe/z8jg5n.ipa",
+      "localizedDescription": "YTLite with more features!\n\nYTLitePlus is an enhanced Youtube app that offers a superior Youtube experience, combining YTLite (by @dayanch96) with numerous other tweaks :\n\n• YTLite\n• YTUHD\n• YouPiP\n• YTABConfig\n• YouMute\n• DontEatMyContent\n• Return YouTube Dislikes\n• iSponsorBlock\n• YouRememberCaption\n• YTNoTracking\n• YTUnShorts\n• YTNoCheckLocalNetwork\n• BigYTMiniPlayer\n• YTSpeed\n• YTHoldForSpeed\n• YTVideoOverlay\n• YouQuality\n• YTNoModernUI\n• OLEDDarkmode\n• OLDDarkmode\n• LowContrastMode\n• YTNoSuggestedVideo\n\nCredit\n\n@Balackburn, @bhackel, @Deci8BelioS, @matt911, @arichornloverALT, @Macleykun, @AlexInABox, @SKEIDs, @VictorxD70, @Glenta, @zSaaiq, @MrAlucardDante, @gototheskinny, @asdfzxcvbn, @dayanch96, @ssuesskind, @MiRO92, @qnblackcat, @PoomSmart, @level3tjg, @BandarHL, @Galactic-Dev, @julioverne, @hbang, @Lyvendia, @therealFoxster, @ichitaso, @AhmedBafkir, @CokePokes, @ISnackable",
+      "iconURL": "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/Youtube_logo-512.png",
+      "tintColor": "e22a41",
+      "category": "social",
+      "size": 103674391,
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/1.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/2.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/3.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/4.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/5.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/6.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/7.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/8.png",
+        "https://raw.githubusercontent.com/YTLitePlus/Assets/main/Screenshots/9.png"
+      ],
+      "appPermissions": {
+        "entitlements": [
+          "com.apple.security.application-groups",
+          "com.apple.developer.associated-domains",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "com.apple.developer.coremedia.allow-alternate-video-decoder-selection",
+          "com.apple.developer.usernotifications.time-sensitive",
+          "get-task-allow",
+          "com.apple.developer.device-information.user-assigned-device-name",
+          "com.apple.developer.group-session",
+          "keychain-access-groups",
+          "com.apple.developer.networking.multicast",
+          "aps-environment",
+          "com.apple.developer.networking.wifi-info",
+          "com.apple.developer.siri"
+        ],
+        "privacy": {
+          "NSAppleMusicUsageDescription": "YTLitePlus requires access to your Apple Music library.",
+          "NSBluetoothPeripheralUsageDescription": "YTLitePlus requires Bluetooth access to connect with nearby peripherals.",
+          "NSCameraUsageDescription": "YTLitePlus requires access to the camera to capture photos and videos.",
+          "NSContactsUsageDescription": "YTLitePlus requires access to your contacts to help you share content with your friends.",
+          "NSLocalNetworkUsageDescription": "YTLitePlus requires local network access to connect and communicate with nearby devices.",
+          "NSLocationWhenInUseUsageDescription": "YTLitePlus requires access to your location while using the app to provide personalized recommendations.",
+          "NSMicrophoneUsageDescription": "YTLitePlus requires access to your microphone to record audio.",
+          "NSPhotoLibraryUsageDescription": "YTLitePlus requires access to your Photo Library to save photos and videos.",
+          "NSUserTrackingUsageDescription": "To personalize ads and provide ad measurement, YTLitePlus will link activity from this app with activity from non-Google apps and websites."
+        }
+      },
+      "versions": [
+        {
+          "version": "19.34.2",
+          "date": "2024-09-03",
+          "localizedDescription": "Current YouTube IPA: \"19.34.2\"  \r\nCurrent YTLite Version: \"5.0.1\"  \r\nCurrent App Compatibility: \"iOS/iPadOS 15.0\" or later\r\n\r\nRELEASE 19.34.2•5.0.1: (2024•09•03)\r\n\r\n• Updated Youtube from \"19.32.6\" to \"19.34.2\"\r\n• Updated YTLite from \"4.0.1\" to \"5.0.1\"\r\n\r\nIssues in this Release:\r\n• Touches will not work while bypassing startup popup\r\n• LowContrastMode does not work *(Compatible only with YouTube v17.33.2•v17.38.10)*\r\n\r\nCatbox\r\n\"z8jg5n.ipa\"",
+          "downloadURL": "https://files.catbox.moe/z8jg5n.ipa",
+          "size": 103674391
+        }
+      ]
+    },
+    {
+      "name": "Revenge",
+      "bundleIdentifier": "com.hammerandchisel.discord",
+      "developerName": "Cristiandis",
+      "iconURL": "https://avatars.githubusercontent.com/u/159218871?s=200&v=4",
+      "localizedDescription": "A client mod for Discord",
+      "subtitle": "A client mod for Discord",
+      "tintColor": "7289da",
+      "versions": [
+        {
+          "version": "254.0",
+          "date": "2024-11-15",
+          "size": 98005042,
+          "downloadURL": "https://github.com/revenge-mod/revenge-tweak/releases/download/v254.0/Revenge.ipa"
+        }
+      ]
+    },
+    {
+      "name": "BHInsta",
+      "bundleIdentifier": "com.burbn.instagram",
+      "developerName": "vlourme",
+      "iconURL": "https://raw.githubusercontent.com/qnblackcat/AltStore/main/ScreenShot/800px-Instagram_logo_2016.svg.png",
+      "localizedDescription": "",
+      "subtitle": "A feature-rich tweak for Instagram on iOS!",
+      "tintColor": "c72a96",
+      "versions": [
+        {
+          "version": "0.6.0",
+          "date": "2024-11-27",
+          "size": 91750400,
+          "downloadURL": "https://github.com/Lalit64/SCInsta/releases/download/release/SCInsta_sideloaded_v0.6.0.ipa"
+        }
+      ]
+    }
+  ],
+  "userInfo": {}
+}
