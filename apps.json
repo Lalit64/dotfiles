@@ -97,6 +97,13 @@
       "localizedDescription": "",
       "subtitle": "A feature-rich tweak for Instagram on iOS!",
       "tintColor": "c72a96",
+      "screenshotURLs": [
+        "https://camo.githubusercontent.com/040e14025fd9660c692f50f125f09ae39f62bc298c7fee5b70c0bbc76b131867/68747470733a2f2f692e696d6775722e636f6d2f6872337630666b2e706e67",
+        "https://camo.githubusercontent.com/e6cab3153f21576be28fd15bb669fc6f2f101b701eb02f586d41665d620ff7b0/68747470733a2f2f692e696d6775722e636f6d2f67515a647457702e706e67",
+        "https://camo.githubusercontent.com/511e4f80b1597d857dd2bdb79d41ccbd98d59fe18714d6e6c9151c36c1104442/68747470733a2f2f692e696d6775722e636f6d2f695849464c78472e706e67",
+        "https://camo.githubusercontent.com/48d8f63383c7f21d505480029bce852564183922694675f0edf0fd5aa78e21ab/68747470733a2f2f692e696d6775722e636f6d2f484d5a396e34442e706e67",
+        "https://camo.githubusercontent.com/d4f8083e1e78df53ca9fbf92122bb7c3cb980904c619da2db86363799baa7377/68747470733a2f2f692e696d6775722e636f6d2f4a5163795374362e706e67"
+      ],
       "versions": [
         {
           "version": "0.6.0",
