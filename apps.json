@@ -93,28 +93,48 @@
       ]
     },
     {
-      "name": "BHInstagram",
+      "name": "Instagram",
       "bundleIdentifier": "com.burbn.instagram",
-      "developerName": "vlourme",
+      "developerName": "Fouad Raheb",
       "version": "0.6.0",
-      "downloadURL": "https://github.com/BandarHL/BHInstagram/releases/download/0.0.1/Instagram_290.1_BHInstagram_0.0.1.ipa",
+      "downloadURL": "https://github.com/Lalit64/dotfiles/releases/download/ipa/Instagram.ipa",
       "iconURL": "https://files.catbox.moe/xk4h8i.jpg",
       "localizedDescription": "",
-      "subtitle": "An awesome tweak for Instagram!",
+      "subtitle": "Boost your Instagram with many privacy, analytics, and customization features.",
       "tintColor": "c72a96",
       "screenshotURLs": [
-        "https://camo.githubusercontent.com/040e14025fd9660c692f50f125f09ae39f62bc298c7fee5b70c0bbc76b131867/68747470733a2f2f692e696d6775722e636f6d2f6872337630666b2e706e67",
-        "https://camo.githubusercontent.com/e6cab3153f21576be28fd15bb669fc6f2f101b701eb02f586d41665d620ff7b0/68747470733a2f2f692e696d6775722e636f6d2f67515a647457702e706e67",
-        "https://camo.githubusercontent.com/511e4f80b1597d857dd2bdb79d41ccbd98d59fe18714d6e6c9151c36c1104442/68747470733a2f2f692e696d6775722e636f6d2f695849464c78472e706e67",
-        "https://camo.githubusercontent.com/48d8f63383c7f21d505480029bce852564183922694675f0edf0fd5aa78e21ab/68747470733a2f2f692e696d6775722e636f6d2f484d5a396e34442e706e67",
-        "https://camo.githubusercontent.com/d4f8083e1e78df53ca9fbf92122bb7c3cb980904c619da2db86363799baa7377/68747470733a2f2f692e696d6775722e636f6d2f4a5163795374362e706e67"
+        "https://regram.fouadraheb.com/assets/ss1-t9sGsrWC.png"
       ],
       "versions": [
         {
           "version": "0.6.0",
           "date": "2024-11-27",
           "size": 91750400,
-          "downloadURL": "https://github.com/BandarHL/BHInstagram/releases/download/0.0.1/Instagram_290.1_BHInstagram_0.0.1.ipa"
+          "downloadURL": "https://github.com/Lalit64/dotfiles/releases/download/ipa/Instagram.ipa"
+        }
+      ]
+    },
+    {
+      "name": "Mini Motorways",
+      "bundleIdentifier": "com.dinopoloclub.minimotorways",
+      "developerName": "Dino Polo Club",
+      "version": "0.6.0",
+      "downloadURL": "https://github.com/Lalit64/dotfiles/releases/download/ipa/MiniMotorways.ipa",
+      "iconURL": "https://static.wikia.nocookie.net/mini-metro/images/7/7c/Mini_Motorways_Logo.webp/revision/latest?cb=20231022023221",
+      "localizedDescription": "Mini Motorways is a game about drawing the roads that drive a growing city. Build a road network, one road at a time, to create a bustling metropolis. Redesign your city to keep the traffic flowing, and carefully manage upgrades to meet the changing demands. How long can you keep the cities of the world moving?",
+      "subtitle": "Draw roads that drive the city",
+      "tintColor": "f0b761",
+      "screenshotURLs": [
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleVideo124/v4/74/03/61/74036151-0bb3-8c2c-1e4e-c3d18dd3aea1/Job793ba2cd-0f4e-4350-87f8-00ae60a1257d-107107121-PreviewImage_preview_image_nonvideo_sdr-Time1596157950559.png/434x0w.webp",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/f6/2e/2c/f62e2cd3-01b2-7183-9564-7bce72ca4f36/99858f95-a61d-49c3-b80f-055696f54904_English__U0028US_U0029-iPhone_6.5_U0027_U0027-2778x1284-EE-Update.png/434x0w.webp",
+        "https://is1-ssl.mzstatic.com/image/thumb/PurpleSource112/v4/f5/bf/b9/f5bfb9cb-5526-010e-dd85-b59d6d06620b/99ced1fb-d6bf-46d3-8e74-75fe71504daf_English__U0028US_U0029-iPhone_6.5_U0027_U0027-2778x1284-EE-Update.png/434x0w.webp"
+      ],
+      "versions": [
+        {
+          "version": "0.6.0",
+          "date": "2024-11-27",
+          "size": 91750400,
+          "downloadURL": "https://github.com/Lalit64/dotfiles/releases/download/ipa/MiniMotorways.ipa"
         }
       ]
     }
