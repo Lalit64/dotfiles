@@ -1,0 +1,27 @@
+{
+    "wallpaper": "/Users/lalit/wallpapers/astronaut-jellyfish-catppuccin.png",
+    "alpha": "100",
+    "special": {
+        "background": "#12121b",
+        "foreground": "#ebc6c4",
+        "cursor": "#ebc6c4"
+    },
+    "colors": {
+        "color0": "#12121b",
+        "color1": "#92676F",
+        "color2": "#BC8D76",
+        "color3": "#677687",
+        "color4": "#B3738B",
+        "color5": "#7093A2",
+        "color6": "#9E9DA0",
+        "color7": "#ebc6c4",
+        "color8": "#a48a89",
+        "color9": "#92676F",
+        "color10": "#BC8D76",
+        "color11": "#677687",
+        "color12": "#B3738B",
+        "color13": "#7093A2",
+        "color14": "#9E9DA0",
+        "color15": "#ebc6c4"
+    }
+}
