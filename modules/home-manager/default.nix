@@ -71,7 +71,7 @@
       # ~/.cache/wal
       "/Users/lalit/.cache/wal".source = config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/nix-darwin/modules/dotfiles/.cache/wal";
       # Ubersicht widgets
-      "/Users/lalit/Library/Application Support/Übersicht/widgets/bar".source = config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/nix-darwin/modules/dotfiles/bar";
+      "/Users/lalit/Library/Application Support/Übersicht/widgets/simple-bar".source = config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/nix-darwin/modules/dotfiles/bar";
     };
   };
 
