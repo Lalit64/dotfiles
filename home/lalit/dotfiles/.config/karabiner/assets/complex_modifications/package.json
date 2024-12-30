@@ -1,0 +1,15 @@
+{
+  "name": "o-launcher-ts",
+  "version": "1.0.0",
+  "author": "Lalit Yalamanchili",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsm rules.ts",
+    "watch": "nodemon --exec yarn build -e ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.5",
+    "nodemon": "^2.0.22",
+    "tsm": "^2.3.0"
+  }
+}
