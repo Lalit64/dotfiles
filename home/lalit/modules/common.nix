@@ -6,7 +6,7 @@
     # programs
     ./stylix.nix # system colors and font
     ./zsh.nix # shell
-    ./kitty.nix # terminal
+    ./kitty/kitty.nix # terminal
     ./ghostty.nix
     ./zed.nix # text editor
     ./cava.nix

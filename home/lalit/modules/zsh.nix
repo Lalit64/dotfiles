@@ -16,7 +16,7 @@
     };
 
     shellAliases = {
-      nixswitch = "darwin-rebuild switch --flake ~/.config/snowflake#lalits-mbp";
+      nixswitch = "echo 'make sure to run git add' && darwin-rebuild switch --flake ~/.config/snowflake#lalits-mbp";
       wal = "${pkgs.pywal}/bin/wal -o \"/Users/lalit/wal-reload.sh\" -s";
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";

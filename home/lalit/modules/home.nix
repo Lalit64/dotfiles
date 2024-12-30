@@ -30,7 +30,6 @@
       docker-compose
       eslint
       eza
-      fastfetch
       fd
       ffmpeg
       fontconfig
@@ -111,6 +110,12 @@
       enableZshIntegration = true;
       settings = {
         add_newline = false;
+      };
+    };
+    fastfetch = {
+      enable = true;
+      settings.logo = {
+        source = "nix";
       };
     };
     eza.enable = true;

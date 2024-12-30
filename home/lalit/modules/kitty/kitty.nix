@@ -1,5 +1,7 @@
 { ... }:
 {
+  home.file."/Users/lalit/.config/kitty/search.py".source = ./search.py;
+  home.file."/Users/lalit/.config/kitty/scroll_mark.py".source = ./scroll_mark.py;
   programs.kitty = {
     enable = true;
 
@@ -27,6 +29,8 @@
       "cmd+4" = "goto_tab 4";
       "cmd+5" = "goto_tab 5";
       "cmd+6" = "goto_tab 6";
+      "cmd+f" =
+        "launch --location=hsplit --allow-remote-control kitty +kitten search.py @active-kitty-window-id";
     };
     shellIntegration = {
       mode = "no-cursor";
