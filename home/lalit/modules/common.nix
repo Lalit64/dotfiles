@@ -12,7 +12,6 @@
     ./cava.nix
     ./vscode.nix # secondary text editor
     ./simplebar.nix # bar
-    # ./sketchybar/sketchybar.nix
     ./nixvim.nix # Neovim config
   ];
 }

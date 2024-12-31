@@ -66,6 +66,9 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
+                extraSpecialArgs = {
+                  inherit inputs outputs hostname;
+                };
                 users."${username}" = {
                   imports = [
                     ./home/${username}/${hostname}.nix
