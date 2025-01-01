@@ -40,7 +40,6 @@
       ice-bar
       imagemagick
       jq
-      luajit
       mpv
       nixd
       nixfmt-rfc-style
@@ -67,8 +66,6 @@
 
     file = {
       # ~/.config directory
-      "/Users/lalit/.config/karabiner".source =
-        config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/snowflake/home/lalit/dotfiles/.config/karabiner";
       "/Users/lalit/.config/wal".source =
         config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/snowflake/home/lalit/dotfiles/.config/wal";
       # ~/ directory
@@ -102,6 +99,7 @@
             "3.11"
           ];
           ruby = "3.1";
+          luajit = "2.1";
         };
       };
     };
@@ -114,9 +112,6 @@
     };
     fastfetch = {
       enable = true;
-      settings.logo = {
-        source = "nix";
-      };
     };
     eza.enable = true;
     git.enable = true;

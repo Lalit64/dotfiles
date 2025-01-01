@@ -29,14 +29,21 @@
     pathsToLink = [ "/Applications" ];
   };
 
-  local.dock.enable = true;
-  local.dock.entries = [
-    { path = "/Applications/Zen Browser.app/"; }
-    { path = "/Applications/iPhone Mirroring.app/"; }
-    { path = "${pkgs.zed-editor}/Applications/Zed.app/"; }
-    { path = "${pkgs.kitty}/Applications/kitty.app/"; }
-    { path = "${pkgs.zoom-us}/Applications/zoom.us.app/"; }
-  ];
+  local = {
+    dock = {
+      enable = true;
+      entries = [
+        { path = "/Applications/Zen Browser.app/"; }
+        { path = "/Applications/iPhone Mirroring.app/"; }
+        { path = "${pkgs.zed-editor}/Applications/Zed.app/"; }
+        { path = "${pkgs.kitty}/Applications/kitty.app/"; }
+        { path = "${pkgs.zoom-us}/Applications/zoom.us.app/"; }
+      ];
+    };
+    wallpaper = {
+      enable = true;
+    };
+  };
 
   system = {
     keyboard.enableKeyMapping = true;
@@ -83,7 +90,7 @@
   imports = [
     ./brew.nix
     ./borders.nix
-    ./dock
+    ./activation.nix
   ];
 
   # backwards compat; don't change

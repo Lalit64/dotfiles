@@ -22,7 +22,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-
   outputs =
     {
       self,
@@ -47,7 +46,7 @@
 
       # Function for nix-darwin system configuration
       mkDarwinConfiguration =
-        system: hostname: username:
+        system: hostname: username: wallpaper:
         darwin.lib.darwinSystem {
           system = system;
           pkgs = import nixpkgs {
@@ -55,7 +54,12 @@
             config.allowUnfree = true;
           };
           specialArgs = {
-            inherit inputs outputs hostname;
+            inherit
+              inputs
+              outputs
+              hostname
+              wallpaper
+              ;
             userConfig = users.${username};
           };
           modules = [
@@ -67,7 +71,12 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = {
-                  inherit inputs outputs hostname;
+                  inherit
+                    inputs
+                    outputs
+                    hostname
+                    wallpaper
+                    ;
                 };
                 users."${username}" = {
                   imports = [
@@ -83,8 +92,12 @@
     in
     {
       darwinConfigurations = {
-        "lalits-mbp" = mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit";
-        "home-desk" = mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit";
+        "lalits-mbp" =
+          mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"
+            "/Users/lalit/wallpapers/nix-catppuccin-mocha.png";
+        "home-desk" =
+          mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit"
+            "/Users/lalit/wallpapers/nix-catppuccin-mocha.png";
       };
     };
 }

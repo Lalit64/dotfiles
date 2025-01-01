@@ -7,7 +7,6 @@
     onActivation.cleanup = "zap";
     global = {
       brewfile = true;
-      # lockfiles = true;
     };
     taps = [
       "homebrew/services"
@@ -28,11 +27,11 @@
       "ghostty"
     ];
     brews = [
-      # {
-      #   name = "sketchybar";
-      #   start_service = true;
-      #   restart_service = "changed";
-      # }
+      {
+        name = "sketchybar";
+        start_service = false;
+        restart_service = "changed";
+      }
     ];
   };
 }

@@ -17,7 +17,6 @@
       mouser_action2 = "resize";
       mouse_drop_action = "swap";
 
-      window_opacity = "off";
       split_ratio = 0.5;
       auto_balance = "off";
     };
@@ -32,6 +31,8 @@
       yabai -m space 8 --label VIII
       yabai -m space 9 --label IX
       yabai -m space 10 --label X
+
+      yabai -m config window_opacity off
 
       # rules for specific apps
       yabai -m rule --add app="^System Settings$" manage=off

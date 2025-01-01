@@ -4,7 +4,7 @@
     enable = true;
     extensions = [
       "nix"
-      "catppuccin-blur"
+      "catppuccin"
     ];
 
     userSettings = {

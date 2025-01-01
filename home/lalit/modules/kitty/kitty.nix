@@ -6,7 +6,7 @@
     enable = true;
 
     settings = {
-      background_blur = 64;
+      background_blur = 32;
       allow_remote_control = true;
       window_padding_width = 25;
       confirm_os_window_close = 0;
