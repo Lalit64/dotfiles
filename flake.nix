@@ -35,6 +35,12 @@
     let
       inherit (self) outputs;
 
+      systems = [
+        "aarch64-darwin"
+      ];
+
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+
       # Define user configurations
       users = {
         lalit = {
@@ -52,6 +58,11 @@
           pkgs = import nixpkgs {
             system = system;
             config.allowUnfree = true;
+            overlays = [
+              (final: prev: {
+                sbar-lua = prev.callPackage ./pkgs/sbarlua.nix { };
+              })
+            ];
           };
           specialArgs = {
             inherit
@@ -91,6 +102,7 @@
         };
     in
     {
+
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"

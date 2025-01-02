@@ -24,7 +24,9 @@
       bash
       zsh
     ];
-    systemPackages = [ pkgs.coreutils ];
+    systemPackages = [
+      pkgs.coreutils
+    ];
     systemPath = [ "/usr/local/bin" ];
     pathsToLink = [ "/Applications" ];
   };
@@ -86,6 +88,11 @@
 
   # touch id sudo
   security.pam.enableSudoTouchIdAuth = true;
+
+  services.sketchybar = {
+    enable = true;
+    package = pkgs.sketchybar;
+  };
 
   imports = [
     ./brew.nix

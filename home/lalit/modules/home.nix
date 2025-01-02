@@ -40,6 +40,9 @@
       ice-bar
       imagemagick
       jq
+      lua54Packages.lua
+      sketchybar-app-font
+      sbar-lua
       mpv
       nixd
       nixfmt-rfc-style
@@ -79,6 +82,26 @@
       # bar
       "/Users/lalit/Library/Application Support/Übersicht/widgets/simple-bar".source =
         config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/snowflake/home/lalit/dotfiles/bar";
+      ".config/sketchybar" = {
+        source = ./config/sketchybar;
+        recursive = true;
+        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
+      };
+      ".local/share/sketchybar_lua/sketchybar.so" = {
+        source = "${pkgs.sbar-lua}/lib/sketchybar.so";
+        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
+      };
+      ".config/sketchybar/sketchybarrc" = {
+        text = ''
+          #!/usr/bin/env ${pkgs.lua54Packages.lua}/bin/lua
+          package.path = "./?.lua;./?/init.lua;" .. package.path
+          -- Load the sketchybar-package and prepare the helper binaries
+          require("helpers")
+          require("init")
+        '';
+        executable = true;
+        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
+      };
     };
   };
 

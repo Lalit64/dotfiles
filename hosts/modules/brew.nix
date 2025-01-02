@@ -25,13 +25,14 @@
       "mythic"
       "handbrake"
       "ghostty"
+      "sf-symbols"
+      "font-sf-mono"
+      "font-sf-pro"
     ];
     brews = [
-      {
-        name = "sketchybar";
-        start_service = false;
-        restart_service = "changed";
-      }
+      "switchaudio-osx"
+      "nowplaying-cli"
+      "readline"
     ];
   };
 }
