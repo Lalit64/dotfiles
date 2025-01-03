@@ -1,36 +1,49 @@
-local colors = require("colors")
 local icons = require("icons")
+local colors = require("colors")
 local settings = require("settings")
 
--- Padding item required because of bracket
-sbar.add("item", { width = 5 })
-
-local apple = sbar.add("item", {
+-- Create the Apple menu item with a specific name
+local apple = sbar.add("item", "apple.logo", {
   icon = {
-    font = { size = 16.0 },
+    font = { size = settings.font.sizes.icons },
+    -- TODO set a custom icon for this click script
     string = icons.apple,
-    padding_right = 8,
-    padding_left = 8,
+    align = "center",
+    color = colors.white,
+    drawing = true,
+    padding_left = settings.bar_margin_padding,
+    padding_right = settings.item_padding,
   },
-  label = { drawing = false },
-  background = {
-    color = colors.bg2,
-    border_color = colors.black,
-    border_width = 1
+  label = {
+    drawing = false,
   },
-  padding_left = 1,
-  padding_right = 1,
-  click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 0"
+  align = "center",
 })
 
--- Double border for apple using a single item bracket
-sbar.add("bracket", { apple.name }, {
-  background = {
-    color = colors.transparent,
-    height = 30,
-    border_color = colors.grey,
-  }
-})
+-- Track menu visibility
+local menu_visible = false
 
--- Padding item required because of bracket
-sbar.add("item", { width = 7 })
+-- Functions to handle menu visibility
+local function toggle_menu()
+  if menu_visible then
+    menu_visible = false
+  else
+    sbar.exec("~/.config/sketchybar/helpers/event_providers/bin/apple_menu app=menu")
+    menu_visible = true
+  end
+end
+
+-- Toggle menu on click
+apple:subscribe("mouse.clicked", function(env)
+  toggle_menu()
+end)
+
+-- Add this to prevent window from closing when clicking inside it
+apple:subscribe("mouse.clicked.inside", function(env)
+  return
+end)
+
+-- Remove or comment out the mouse.exited.global subscription
+apple:subscribe("mouse.exited.global", function(env)
+  menu_visible = false
+end)

@@ -7,18 +7,31 @@ local icons = {
     apple = "􀣺",
     gear = "􀍟",
     cpu = "􀫥",
+    memory = "􀫦",
+    hdd = "􀥾",
+    brew = "􀐚",
+    mail = "􀍕",
+    messages = "􀌤",
     clipboard = "􀉄",
+    keyboard = "􀇳",
+    control_center = "􀜊",
+
+    lock = {
+      close = "􀎡",
+      open = "􀎥",
+    },
 
     switch = {
       on = "􁏮",
       off = "􁏯",
     },
+
     volume = {
-      _100="􀊩",
-      _66="􀊧",
-      _33="􀊥",
-      _10="􀊡",
-      _0="􀊣",
+      _100 = "􀊩",
+      _66 = "􀊧",
+      _33 = "􀊥",
+      _10 = "􀊡",
+      _0 = "􀊣",
     },
     battery = {
       _100 = "􀛨",
@@ -26,7 +39,7 @@ local icons = {
       _50 = "􀺶",
       _25 = "􀛩",
       _0 = "􀛪",
-      charging = "􀢋"
+      charging = "􀢋",
     },
     wifi = {
       upload = "􀄨",
@@ -46,7 +59,7 @@ local icons = {
   nerdfont = {
     plus = "",
     loading = "",
-    apple = "",
+    apple = "􀝶",
     gear = "",
     cpu = "",
     clipboard = "Missing Icon",
@@ -56,11 +69,11 @@ local icons = {
       off = "󱨦",
     },
     volume = {
-      _100="",
-      _66="",
-      _33="",
-      _10="",
-      _0="",
+      _100 = "",
+      _66 = "",
+      _33 = "",
+      _10 = "",
+      _0 = "",
     },
     battery = {
       _100 = "",
@@ -68,14 +81,14 @@ local icons = {
       _50 = "",
       _25 = "",
       _0 = "",
-      charging = ""
+      charging = "",
     },
     wifi = {
       upload = "",
       download = "",
       connected = "󰖩",
       disconnected = "󰖪",
-      router = "Missing Icon"
+      router = "Missing Icon",
     },
     media = {
       back = "",

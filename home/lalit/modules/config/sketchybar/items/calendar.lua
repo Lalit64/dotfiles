@@ -1,49 +1,84 @@
 local settings = require("settings")
 local colors = require("colors")
 
--- Padding item required because of bracket
-sbar.add("item", { position = "right", width = settings.group_paddings })
-
-local cal = sbar.add("item", {
+local time = sbar.add("item", {
   icon = {
-    color = colors.white,
-    padding_left = 8,
-    font = {
-      style = settings.font.style_map["Black"],
-      size = 12.0,
-    },
+    drawing = false, -- No icon for time
   },
   label = {
+    font = {
+      family = settings.font.numbers,
+      style = settings.font.style_map["Semibold"],
+      size = settings.font.sizes.numbers + 1.0,
+    },
+
+    string = "", -- Will be set by the subscription
     color = colors.white,
-    padding_right = 8,
-    width = 49,
-    align = "right",
-    font = { family = settings.font.numbers },
+    align = "center",
+    padding_left = settings.item_padding,
+    padding_right = settings.bar_margin_padding,
   },
   position = "right",
   update_freq = 30,
-  padding_left = 1,
-  padding_right = 1,
-  background = {
-    color = colors.bg2,
-    border_color = colors.black,
-    border_width = 1
+})
+
+local date = sbar.add("item", "date", {
+  icon = {
+    drawing = false,
   },
-  click_script = "open -a 'Calendar'"
+  label = {
+    color = colors.white,
+    align = "right",
+    font = {
+      family = settings.font.numbers,
+      style = settings.font.style_map["Regular"],
+    },
+  },
+  position = "right",
+  update_freq = 30,
+  padding_left = settings.item_padding,
 })
 
--- Double border for calendar using a single item bracket
-sbar.add("bracket", { cal.name }, {
-  background = {
-    color = colors.transparent,
-    height = 30,
-    border_color = colors.grey,
-  }
-})
+-- Subscribe to update the time and date
+date:subscribe({ "forced", "routine", "system_woke" }, function(env)
+  date:set({ label = os.date("%a %b %d") })
+end)
 
--- Padding item required because of bracket
-sbar.add("item", { position = "right", width = settings.group_paddings })
+time:subscribe({ "forced", "routine", "system_woke" }, function(env)
+  time:set({ label = os.date("%H:%M") })
+end)
 
-cal:subscribe({ "forced", "routine", "system_woke" }, function(env)
-  cal:set({ icon = os.date("%a. %d %b."), label = os.date("%H:%M") })
+-- Track menu visibility
+local menu_visible = false
+
+-- Functions to handle menu visibility
+local function toggle_menu()
+  if menu_visible then
+    menu_visible = false
+  else
+    sbar.exec("~/.config/sketchybar/helpers/event_providers/bin/apple_menu app=date")
+    menu_visible = true
+  end
+end
+
+-- Add click handlers for both time and date
+time:subscribe("mouse.clicked", function(env)
+  toggle_menu()
+end)
+
+date:subscribe("mouse.clicked", function(env)
+  toggle_menu()
+end)
+
+-- Handle window closing when clicking outside
+time:subscribe("mouse.clicked.outside", function(env)
+  if menu_visible then
+    sbar.exec("pkill -SIGUSR1 apple_menu")
+    menu_visible = false
+  end
+end)
+
+-- -- Prevent window from closing when clicking inside
+time:subscribe("mouse.clicked.inside", function(env)
+  return
 end)

@@ -6,47 +6,52 @@ sbar.default({
   updates = "when_shown",
   icon = {
     font = {
-      family = settings.font.text,
-      style = settings.font.style_map["Bold"],
-      size = 14.0
+      family = settings.font.icons,
+      style = settings.font.style_map["Regular"],
+      size = settings.font.sizes.icons,
     },
     color = colors.white,
     padding_left = settings.paddings,
     padding_right = settings.paddings,
-    background = { image = { corner_radius = 9 } },
+    background = { image = { corner_radius = settings.item_corner_radius } },
   },
   label = {
     font = {
       family = settings.font.text,
-      style = settings.font.style_map["Semibold"],
-      size = 13.0
+      style = settings.font.style_map["Medium"],
+      size = settings.font.sizes.text,
     },
     color = colors.white,
     padding_left = settings.paddings,
     padding_right = settings.paddings,
   },
   background = {
-    height = 28,
-    corner_radius = 9,
-    border_width = 2,
-    border_color = colors.bg2,
+    height = settings.item_height,
+    corner_radius = settings.item_corner_radius,
+    border_width = 0,
     image = {
-      corner_radius = 9,
-      border_color = colors.grey,
-      border_width = 1
-    }
+      corner_radius = settings.item_corner_radius,
+    },
   },
+  -- TODO: Add a popup menu styles
   popup = {
     background = {
-      border_width = 2,
-      corner_radius = 9,
-      border_color = colors.popup.border,
+      drawing = true,
+      corner_radius = settings.popup_border_radius,
       color = colors.popup.bg,
       shadow = { drawing = true },
+      image = {
+        corner_radius = settings.popup_border_radius,
+        padding_left = settings.popup_image_padding,
+        padding_right = settings.popup_image_padding,
+      },
+      border_color = colors.popup.border,
+      border_width = settings.popup_border_width,
     },
-    blur_radius = 50,
+    blur_radius = settings.popup_blur_radius,
+    y_offset = settings.popup_y_offset,
   },
-  padding_left = 5,
-  padding_right = 5,
+  padding_left = settings.paddings,
+  padding_right = settings.paddings,
   scroll_texts = true,
 })

@@ -94,10 +94,12 @@
       ".config/sketchybar/sketchybarrc" = {
         text = ''
           #!/usr/bin/env ${pkgs.lua54Packages.lua}/bin/lua
-          package.path = "./?.lua;./?/init.lua;" .. package.path
           -- Load the sketchybar-package and prepare the helper binaries
           require("helpers")
           require("init")
+
+          -- Enable hot reloading
+          sbar.exec("sketchybar --hotload true")
         '';
         executable = true;
         onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";

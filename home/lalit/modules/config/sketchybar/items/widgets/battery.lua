@@ -4,33 +4,40 @@ local settings = require("settings")
 
 local battery = sbar.add("item", "widgets.battery", {
   position = "right",
+  update_freq = 2,
   icon = {
-    font = {
-      style = settings.font.style_map["Regular"],
-      size = 19.0,
-    }
+    drawing = true,
   },
-  label = { font = { family = settings.font.numbers } },
-  update_freq = 180,
-  popup = { align = "center" }
+  label = {
+    drawing = true,
+    padding_left = settings.item_padding,
+    font = {
+      family = settings.font.numbers,
+      style = settings.font.style_map["Regular"],
+      size = settings.font.sizes.numbers,
+    },
+  },
+  padding_right = settings.item_padding,
+  padding_left = settings.item_padding,
+
+  click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 'Control Center,Battery'",
 })
 
 local remaining_time = sbar.add("item", {
   position = "popup." .. battery.name,
-  icon = {
-    string = "Time remaining:",
-    width = 100,
-    align = "left"
-  },
   label = {
+    font = {
+      family = settings.font.numbers,
+      style = settings.font.style_map["Regular"],
+      size = settings.font.sizes.numbers,
+    },
     string = "??:??h",
-    width = 100,
-    align = "right"
+    padding_right = settings.item_padding,
+    padding_left = settings.item_padding,
   },
 })
 
-
-battery:subscribe({"routine", "power_source_change", "system_woke"}, function()
+battery:subscribe({ "routine", "power_source_change", "system_woke" }, function()
   sbar.exec("pmset -g batt", function(batt_info)
     local icon = "!"
     local label = "?"
@@ -41,11 +48,12 @@ battery:subscribe({"routine", "power_source_change", "system_woke"}, function()
       label = charge .. "%"
     end
 
-    local color = colors.green
+    local color = colors.white
     local charging, _, _ = batt_info:find("AC Power")
 
     if charging then
       icon = icons.battery.charging
+      color = colors.green
     else
       if found and charge > 80 then
         icon = icons.battery._100
@@ -70,31 +78,40 @@ battery:subscribe({"routine", "power_source_change", "system_woke"}, function()
     battery:set({
       icon = {
         string = icon,
-        color = color
+        color = color,
       },
-      label = { string = lead .. label },
+      label = {
+        drawing = true,
+        string = lead .. label,
+      },
     })
   end)
 end)
 
-battery:subscribe("mouse.clicked", function(env)
+local function hide_details()
+  battery:set({ popup = { drawing = false } })
+end
+
+battery:subscribe("mouse.entered", function(env)
   local drawing = battery:query().popup.drawing
-  battery:set( { popup = { drawing = "toggle" } })
+  battery:set({
+    popup = {
+      drawing = "toggle",
+      align = "center",
+    },
+  })
 
   if drawing == "off" then
     sbar.exec("pmset -g batt", function(batt_info)
       local found, _, remaining = batt_info:find(" (%d+:%d+) remaining")
-      local label = found and remaining .. "h" or "No estimate"
-      remaining_time:set( { label = label })
+      local charge_found, _, charge = batt_info:find("(%d+)%%")
+      local charge_label = charge_found and charge .. "%" or "Unknown"
+      local label = found and remaining:gsub(":", ".") .. "hrs Remaining (" .. charge_label .. ")"
+          or "00:00 Remaining (" .. charge_label .. ")"
+      remaining_time:set({ label = { string = label } })
     end)
   end
 end)
 
-sbar.add("bracket", "widgets.battery.bracket", { battery.name }, {
-  background = { color = colors.bg1 }
-})
-
-sbar.add("item", "widgets.battery.padding", {
-  position = "right",
-  width = settings.group_paddings
-})
+-- battery:subscribe("mouse.exited.global", hide_details)
+battery:subscribe("mouse.exited", hide_details)
