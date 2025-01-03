@@ -8,6 +8,11 @@ These are my complete configurations for use in my daily life using macOS alongs
 
 Maybe this is the time to try something new. If you want, start by checking out https://github.com/DeterminateSystems/nix-installer and installing nix.
 
+## Screenshots
+<img src="https://files.catbox.moe/1t1mgn.png" />
+<img src="https://files.catbox.moe/vy5sni.png" />
+<img src="https://files.catbox.moe/7c70og.png" />
+
 ## Installation
 
 Once you have Nix properly installed on your machine, now is the time to clone this configuration to `~/.config/snowflake` and start having fun in the snow.

@@ -35,12 +35,6 @@
     let
       inherit (self) outputs;
 
-      systems = [
-        "aarch64-darwin"
-      ];
-
-      forAllSystems = nixpkgs.lib.genAttrs systems;
-
       # Define user configurations
       users = {
         lalit = {

@@ -515,7 +515,7 @@ struct CircularProgressView: View {
           .rotationEffect(.degrees(-90))
 
         Image(systemName: icon)
-          .font(.system(size: 14))
+          .font(.custom("CaskaydiaCove Nerd Font Mono", size: 14))
           .foregroundColor(color)
       }
       .padding(.top, 10)
@@ -659,7 +659,7 @@ struct ContentView: View {
           // Username with dynamic adjustments
           Text(username)
             .foregroundColor(.white)
-            .font(.system(size: 10, weight: .semibold))  // Adjust font size based on length
+            .font(.custom("CaskaydiaCove Nerd Font Mono", size: 10))  // Adjust font size based on length
             .multilineTextAlignment(.leading)
             .lineLimit(2)  // Limit to two lines if necessary
             .frame(maxWidth: .infinity, alignment: .leading)  // Allow full width usage
@@ -731,7 +731,7 @@ struct ContentView: View {
 
               Text(mediaController.artist)
                 .foregroundColor(.white.opacity(0.7))
-                .font(.system(size: 12))
+                .font(.custom("CaskaydiaCove Nerd Font Mono", size: 12))
                 .lineLimit(1)
             }
 
@@ -1412,7 +1412,7 @@ struct ActionButton: View {
     Button(action: action) {
       Image(systemName: icon)
         .foregroundColor(color)
-        .font(.system(size: 13))
+        .font(.custom("CaskaydiaCove Nerd Font Mono", size: 13))
         .frame(width: 30, height: 30)
         .background(Color(Colors.cardBackground))
         .cornerRadius(8)
@@ -1597,7 +1597,7 @@ struct WeatherView: View {
         HStack {
           // Left side - Weather icon
           Image(systemName: weatherController.weatherIcon)
-            .font(.system(size: 32))
+            .font(.custom("CaskaydiaCove Nerd Font Mono", size: 32))
             .foregroundColor(.white)
 
           Spacer()
@@ -1611,7 +1611,7 @@ struct WeatherView: View {
 
             // Condition text
             Text(weatherController.condition)
-              .font(.system(size: 14))
+              .font(.custom("CaskaydiaCove Nerd Font Mono", size: 14))
               .foregroundColor(.white.opacity(0.7))
           }
         }
@@ -1754,7 +1754,7 @@ struct DayCell: View {
 
   var body: some View {
     Text(day.number)
-      .font(.system(size: 12))
+      .font(.custom("CaskaydiaCove Nerd Font Mono", size: 12))
       .foregroundColor(
         day.isCurrentMonth
           ? (day.isToday ? .white : .white.opacity(0.7))

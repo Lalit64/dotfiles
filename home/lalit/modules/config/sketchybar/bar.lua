@@ -14,5 +14,6 @@ sbar.bar({
   padding_left = settings.bar_padding,
   corner_radius = settings.bar_corner_radius,
   blur_radius = settings.bar_blur_radius,
+  shadow = on,
   y_offset = settings.bar_y_offset,
 })
