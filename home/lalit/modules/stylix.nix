@@ -18,7 +18,7 @@
         package = pkgs.nerd-fonts.caskaydia-cove;
         name = "CaskaydiaCove Nerd Font Mono";
       };
-      sizes.terminal = 12.5;
+      sizes.terminal = 13;
     };
     opacity.terminal = 0.8;
   };

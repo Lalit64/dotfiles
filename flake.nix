@@ -13,6 +13,12 @@
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
+    # lix
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1-2.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # stylix
     stylix.url = "github:danth/stylix";
 
@@ -26,6 +32,7 @@
     {
       self,
       darwin,
+      lix-module,
       nixpkgs,
       home-manager,
       nixvim,
@@ -69,6 +76,7 @@
           };
           modules = [
             ./hosts/${hostname}/default.nix
+            lix-module.nixosModules.default
             home-manager.darwinModules.home-manager
             {
               users.users."${username}".home = "/Users/${username}";

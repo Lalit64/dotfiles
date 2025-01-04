@@ -37,7 +37,7 @@
       enableZshIntegration = true;
     };
     extraConfig = ''
-      modify_font cell_height 25px
+      modify_font cell_height 15px
       nnoremap <ScrollWheelRight> <Nop>
       nnoremap <ScrollWheelLeft> <Nop>
       nnoremap <S-ScrollWheelUp> <ScrollWheelRight>

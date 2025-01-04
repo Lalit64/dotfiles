@@ -353,7 +353,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     if let contentView = window?.contentView {
       contentView.wantsLayer = true
-      contentView.layer?.cornerRadius = 12
+      contentView.layer?.cornerRadius = 8
       contentView.layer?.masksToBounds = true
       contentView.layer?.backgroundColor = NSColor.clear.cgColor
       contentView.layer?.opacity = 0.0
@@ -831,9 +831,10 @@ struct ContentView: View {
 
       mouseTrackingOverlay
     }
-    .cornerRadius(15)
+    // Change panel border radius here and also on line 356
+    .cornerRadius(8)  // this one
     .overlay(
-      RoundedRectangle(cornerRadius: 14)
+      RoundedRectangle(cornerRadius: 8)  // this one
         .stroke(Color(Colors.blue), lineWidth: 3)
     )
     .onReceive(uptimeTimer) { _ in
@@ -1908,9 +1909,9 @@ struct CalendarPanelView: View {
       }
       mouseTrackingOverlay
     }
-    .cornerRadius(15)
+    .cornerRadius(8)
     .overlay(
-      RoundedRectangle(cornerRadius: 14)
+      RoundedRectangle(cornerRadius: 8)
         .stroke(Color(Colors.blue), lineWidth: 3)
     )
   }

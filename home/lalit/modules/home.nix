@@ -137,6 +137,26 @@
     };
     fastfetch = {
       enable = true;
+      settings = {
+        logo = {
+          source = "/Users/lalit/wallpapers/nix-darwin.png";
+          type = "kitty-direct";
+          width = 32;
+          height = 10;
+        };
+        modules = [
+          "os"
+          "host"
+          "uptime"
+          "packages"
+          "shell"
+          "terminal"
+          "terminalfont"
+          "cpu"
+          "gpu"
+          "colors"
+        ];
+      };
     };
     eza.enable = true;
     git.enable = true;
