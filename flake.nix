@@ -13,30 +13,31 @@
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    # lix
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1-2.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # stylix
     stylix.url = "github:danth/stylix";
 
     # nixvim
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    # nvf
+    nvf.url = "github:notashelf/nvf";
+    nvf.inputs.nixpkgs.follows = "nixpkgs";
+
+    # vscode-extensions
+    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
   outputs =
     {
       self,
-      darwin,
-      lix-module,
       nixpkgs,
+      darwin,
       home-manager,
-      nixvim,
       stylix,
+      # nixvim,
+      nvf,
+      vscode-extensions,
       ...
     }@inputs:
     let
@@ -63,6 +64,7 @@
               (final: prev: {
                 sbar-lua = prev.callPackage ./pkgs/sbarlua.nix { };
               })
+	            vscode-extensions.overlays.default
             ];
           };
           specialArgs = {
@@ -76,7 +78,6 @@
           };
           modules = [
             ./hosts/${hostname}/default.nix
-            lix-module.nixosModules.default
             home-manager.darwinModules.home-manager
             {
               users.users."${username}".home = "/Users/${username}";
@@ -94,7 +95,8 @@
                 users."${username}" = {
                   imports = [
                     ./home/${username}/${hostname}.nix
-                    nixvim.homeManagerModules.nixvim
+                    # nixvim.homeManagerModules.nixvim
+                    nvf.homeManagerModules.default
                     stylix.homeManagerModules.stylix
                   ];
                 };
@@ -108,10 +110,10 @@
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"
-            "/Users/lalit/wallpapers/astronaut-jellyfish-catppuccin.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/nix-catppuccin-mocha.png";
         "home-desk" =
           mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit"
-            "/Users/lalit/wallpapers/astronaut-jellyfish-catppuccin.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/nix-catppuccin-mocha.png";
       };
     };
 }

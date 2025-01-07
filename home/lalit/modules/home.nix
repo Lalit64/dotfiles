@@ -8,16 +8,16 @@
     username = "lalit";
     homeDirectory = "/Users/lalit";
     packages = with pkgs; [
-      # macOS utils
+      # macos utils
       pika
       raycast
       zoom-us
       docker
       keka
       vesktop
-      # Java
+      # java
       zulu
-      # Packages
+      # packages
       vim
       automake
       base16-schemes
@@ -27,6 +27,7 @@
       cocoapods
       deno
       dipc
+      docker
       docker-compose
       eslint
       eza
@@ -37,6 +38,7 @@
       gcc
       gh
       glow
+      httpie
       ice-bar
       imagemagick
       jq
@@ -62,26 +64,30 @@
       zig
       zoxide
 
-      # Fonts
+      # fonts
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
     ];
 
     file = {
-      # ~/.config directory
+      # pywal themes
       "/Users/lalit/.config/wal".source =
-        config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/snowflake/home/lalit/dotfiles/.config/wal";
-      # ~/ directory
+        config.lib.file.mkOutOfStoreSymlink "./wal";
+
+      # pywal reload scrip 
       "/Users/lalit/wal-reload.sh".source =
-        config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/snowflake/home/lalit/dotfiles/wal-reload.sh";
+        config.lib.file.mkOutOfStoreSymlink "./wal-reload.sh";
+
+      # wallpapers
       "/Users/lalit/wallpapers".source =
-        config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/snowflake/home/lalit/dotfiles/wallpapers";
+        config.lib.file.mkOutOfStoreSymlink "./wallpapers";
+
+      # pywal cache
       # ~/.cache/wal
       "/Users/lalit/.cache/wal".source =
-        config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/snowflake/home/lalit/dotfiles/.cache/wal";
-      # bar
-      "/Users/lalit/Library/Application Support/Übersicht/widgets/simple-bar".source =
-        config.lib.file.mkOutOfStoreSymlink "/Users/lalit/.config/snowflake/home/lalit/dotfiles/bar";
+        config.lib.file.mkOutOfStoreSymlink "./wal-cache";
+
+      ################ sketchybar ################
       ".config/sketchybar" = {
         source = ./config/sketchybar;
         recursive = true;
@@ -104,6 +110,7 @@
         executable = true;
         onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
       };
+        #############################################
     };
   };
 
@@ -113,6 +120,7 @@
     home-manager = {
       enable = true;
     };
+    # mise-en-place used for managing dev-tools
     mise = {
       enable = true;
       enableZshIntegration = true;
@@ -128,6 +136,7 @@
         };
       };
     };
+    # prompt
     starship = {
       enable = true;
       enableZshIntegration = true;
@@ -135,6 +144,7 @@
         add_newline = false;
       };
     };
+    # fetch
     fastfetch = {
       enable = true;
       settings = {
@@ -158,7 +168,9 @@
         ];
       };
     };
+    # better ls
     eza.enable = true;
+    # git
     git.enable = true;
   };
 }

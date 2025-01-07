@@ -5,14 +5,7 @@
     autoEnable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     image = wallpaper;
-    targets = {
-      nixvim = {
-        enable = false;
-        plugin = "base16-nvim";
-        transparentBackground.main = true;
-        transparentBackground.signColumn = true;
-      };
-    };
+    targets.zed.enable = false;
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;

@@ -37,7 +37,7 @@
       entries = [
         { path = "/Applications/Zen Browser.app/"; }
         { path = "/Applications/iPhone Mirroring.app/"; }
-        { path = "${pkgs.zed-editor}/Applications/Zed.app/"; }
+        { path = "${pkgs.vscode}/Applications/Visual Studio Code.app/"; }
         { path = "${pkgs.kitty}/Applications/kitty.app/"; }
         { path = "${pkgs.zoom-us}/Applications/zoom.us.app/"; }
       ];

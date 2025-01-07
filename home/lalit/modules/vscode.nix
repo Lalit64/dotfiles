@@ -3,22 +3,29 @@
     enable = true;
     enableUpdateCheck = false;
 
-    extensions = with pkgs.vscode-extensions; [
-      christian-kohler.path-intellisense
-      christian-kohler.npm-intellisense
-      catppuccin.catppuccin-vsc
-      eamodio.gitlens
-      esbenp.prettier-vscode
-      ms-azuretools.vscode-docker
-      ms-vscode-remote.remote-containers
-      ms-vscode-remote.remote-ssh
-      ms-vscode-remote.remote-ssh-edit
-      ms-vscode-remote.remote-containers
-      naumovs.color-highlight
-      prisma.prisma
-      sumneko.lua
-      svelte.svelte-vscode
-      wix.vscode-import-cost
+    mutableExtensionsDir = false;
+    extensions = with pkgs; [
+      vscode-extensions.christian-kohler.path-intellisense
+      vscode-extensions.christian-kohler.npm-intellisense
+      vscode-extensions.catppuccin.catppuccin-vsc
+      vscode-extensions.eamodio.gitlens
+      vscode-extensions.esbenp.prettier-vscode
+      vscode-extensions.ms-azuretools.vscode-docker
+      vscode-extensions.ms-vscode-remote.remote-containers
+      vscode-extensions.ms-vscode-remote.remote-ssh
+      vscode-extensions.ms-vscode-remote.remote-ssh-edit
+      vscode-extensions.ms-vscode-remote.remote-containers
+      vscode-extensions.naumovs.color-highlight
+      vscode-extensions.prisma.prisma
+      vscode-extensions.sumneko.lua
+      vscode-extensions.svelte.svelte-vscode
+      vscode-extensions.wix.vscode-import-cost
+      vscode-extensions.jnoortheen.nix-ide
+      vscode-marketplace.oven.bun-vscode
+      vscode-marketplace.ms-vscode.atom-keybindings
+      vscode-marketplace.moalamri.inline-fold
+      vscode-marketplace.mongodb.mongodb-vscode
+      vscode-marketplace.miguelsolorio.symbols
     ];
 
     userSettings = {
@@ -47,29 +54,14 @@
         gotoLocation.multipleTypeDefinitions = "goto";
         suggestLineHeight = 30;
         fontLigatures = true;
-        editor.wordSeparators = "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?";
+        wordSeparators = "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?";
+        defaultFormatter = "esbenp.prettier-vscode";
+        formatOnSave = true;
       };
-
-      "[javascript]" = {
-        editor.defaultFormatter = "esbenp.prettier-vscode";
-        editor.formatOnSave = true;
+      workbench.colorCustomizations = {
+	inlineparameters.annotationBackground = "#000000";
       };
-      "[typescriptreact]" = {
-        editor.defaultFormatter = "esbenp.prettier-vscode";
-        editor.formatOnSave = true;
-      };
-      "[tailwindcss]" = {
-        editor.defaultFormatter = "esbenp.prettier-vscode";
-        editor.formatOnSave = true;
-      };
-      "[vue]" = {
-        editor.defaultFormatter = "esbenp.prettier-vscode";
-        editor.formatOnSave = true;
-      };
-      "[javascriptreact]" = {
-        editor.defaultFormatter = "esbenp.prettier-vscode";
-        editor.formatOnSave = true;
-      };
+      workbench.iconTheme = "symbols";
       terminal.integrated.cursorStyle = "underline";
     };
   };

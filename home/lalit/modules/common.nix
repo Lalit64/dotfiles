@@ -6,13 +6,13 @@
     # programs
     ./stylix.nix # system colors and font
     ./zsh.nix # shell
-    ./kitty/kitty.nix # terminal
-    ./karabiner/karabiner.nix
-    ./ghostty.nix
-    ./zed.nix # text editor
-    ./cava.nix
-    ./vscode.nix # secondary text editor
+    ./kitty/kitty.nix # primary terminal
+    ./karabiner/karabiner.nix # keyboard shortcuts
+    ./ghostty.nix # secondary terminal
+    ./zed.nix # secondary text editor
+    ./cava.nix # audio visualizer
+    ./vscode.nix # primary text editor
     ./simplebar.nix # bar
-    ./nixvim.nix # Neovim config
+    ./nvf.nix # nvim configuration
   ];
 }
