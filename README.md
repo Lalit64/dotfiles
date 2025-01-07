@@ -11,7 +11,7 @@ Maybe this is the time to try something new. If you want, start by checking out 
 ## Screenshots
 <img src="https://files.catbox.moe/1t1mgn.png" />
 <img src="https://files.catbox.moe/vy5sni.png" />
-<img src="https://files.catbox.moe/7c70og.png" />
+<img src="https://files.catbox.moe/wq5lnk.png" />
 
 ## Installation
 
