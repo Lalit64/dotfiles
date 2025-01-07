@@ -34,7 +34,6 @@
       fd
       ffmpeg
       fontconfig
-      fzf
       gcc
       gh
       glow
@@ -72,20 +71,20 @@
     file = {
       # pywal themes
       "/Users/lalit/.config/wal".source =
-        config.lib.file.mkOutOfStoreSymlink "./wal";
+        config.lib.file.mkOutOfStoreSymlink ./wal;
 
       # pywal reload scrip 
       "/Users/lalit/wal-reload.sh".source =
-        config.lib.file.mkOutOfStoreSymlink "./wal-reload.sh";
+        config.lib.file.mkOutOfStoreSymlink ./wal-reload.sh;
 
       # wallpapers
       "/Users/lalit/wallpapers".source =
-        config.lib.file.mkOutOfStoreSymlink "./wallpapers";
+        config.lib.file.mkOutOfStoreSymlink ./wallpapers;
 
       # pywal cache
       # ~/.cache/wal
       "/Users/lalit/.cache/wal".source =
-        config.lib.file.mkOutOfStoreSymlink "./wal-cache";
+        config.lib.file.mkOutOfStoreSymlink ./wal-cache;
 
       ################ sketchybar ################
       ".config/sketchybar" = {

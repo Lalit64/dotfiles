@@ -52,6 +52,7 @@
         };
         ts.enable = true;
         svelte.enable = true;
+        lua.enable = true;
       };
 
       vim.keymaps = [
