@@ -8,8 +8,8 @@
     targets.zed.enable = false;
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font Mono";
+        package = pkgs.lalit64-nur.monolisa-nf;
+        name = "MonoLisa Nerd Font Mono";
       };
       sizes.terminal = 13;
     };

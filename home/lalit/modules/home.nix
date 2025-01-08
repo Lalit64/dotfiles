@@ -10,6 +10,7 @@
     packages = with pkgs; [
       # from my nur ( nix user repository )
       lalit64-nur.sbar-lua
+      lalit64-nur.monolisa-nf
       # macos utils
       pika
       raycast
