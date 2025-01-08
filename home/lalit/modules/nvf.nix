@@ -26,6 +26,20 @@
         };
       };
 
+      vim.tabline.nvimBufferline = {
+        enable = true;
+        setupOpts.options.offsets = [
+          {
+            filetype = "neo-tree";
+            highlihgt = "Directory";
+            separator = true;
+            text = "File Explorer";
+          }
+        ];
+        setupOpts.options.indicator.style = "icon";
+        setupOpts.options.numbers = "none";
+      };
+
       vim.binds.whichKey.enable = true;
 
       vim.filetree.neo-tree = {
