@@ -8,6 +8,8 @@
     username = "lalit";
     homeDirectory = "/Users/lalit";
     packages = with pkgs; [
+      # from my nur ( nix user repository )
+      lalit64-nur.sbar-lua
       # macos utils
       pika
       raycast
@@ -23,6 +25,7 @@
       base16-schemes
       bat
       bun
+      btop
       cmatrix
       cocoapods
       deno
@@ -43,7 +46,6 @@
       jq
       lua54Packages.lua
       sketchybar-app-font
-      sbar-lua
       mpv
       nixd
       nixfmt-rfc-style

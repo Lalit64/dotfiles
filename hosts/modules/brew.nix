@@ -31,6 +31,7 @@
       "font-sf-mono"
       "font-sf-pro"
       "orbstack"
+      "eloston-chromium"
     ];
     brews = [
       "switchaudio-osx"

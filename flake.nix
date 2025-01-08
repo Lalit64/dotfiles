@@ -27,6 +27,9 @@
 
     # vscode-extensions
     vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
+    lalit64-nur.url = "github:lalit64/nur";
+    lalit64-nur.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     {
@@ -35,9 +38,9 @@
       darwin,
       home-manager,
       stylix,
-      # nixvim,
       nvf,
       vscode-extensions,
+      nur,
       ...
     }@inputs:
     let
@@ -62,9 +65,9 @@
             config.allowUnfree = true;
             overlays = [
               (final: prev: {
-                sbar-lua = prev.callPackage ./pkgs/sbarlua.nix { };
+                lalit64-nur = inputs.lalit64-nur.packages."${prev.system}";
               })
-	            vscode-extensions.overlays.default
+              vscode-extensions.overlays.default
             ];
           };
           specialArgs = {

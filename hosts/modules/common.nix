@@ -8,6 +8,7 @@
 
   nixpkgs = {
     config.allowUnfree = true;
+    config.allowUnsupportedSystem = true;
   };
 
   nix.settings = {
