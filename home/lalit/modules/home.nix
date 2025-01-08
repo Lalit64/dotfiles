@@ -95,7 +95,7 @@
         onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
       };
       ".local/share/sketchybar_lua/sketchybar.so" = {
-        source = "${pkgs.sbar-lua}/lib/sketchybar.so";
+        source = "${pkgs.lalit64-nur.sbar-lua}/lib/sketchybar.so";
         onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
       };
       ".config/sketchybar/sketchybarrc" = {
