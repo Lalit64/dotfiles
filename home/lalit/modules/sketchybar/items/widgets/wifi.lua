@@ -41,7 +41,7 @@ local ssid = sbar.add("item", {
   label = {
     font = {
       family = settings.font.text,
-      style = settings.font.style_map["SemiBold"],
+      style = settings.font.style_map["Regular"],
       size = settings.font.sizes.text,
     },
     max_chars = 25,

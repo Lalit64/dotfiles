@@ -25,7 +25,7 @@ local function add_space(i)
       highlight_color = colors.white,
       font = {
         family = settings.font.numbers,
-        style = settings.font.style_map["Semibold"],
+        style = settings.font.style_map["Regular"],
         size = settings.font.sizes.numbers + 1.0,
       },
       align = "center",

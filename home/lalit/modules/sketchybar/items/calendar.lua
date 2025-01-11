@@ -8,7 +8,7 @@ local time = sbar.add("item", {
   label = {
     font = {
       family = settings.font.numbers,
-      style = settings.font.style_map["Semibold"],
+      style = settings.font.style_map["Regular"],
       size = settings.font.sizes.numbers + 1.0,
     },
 

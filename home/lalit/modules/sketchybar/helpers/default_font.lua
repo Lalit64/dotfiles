@@ -1,8 +1,8 @@
 return {
-  text = "CaskaydiaCove Nerd Font",           -- Used for text
-  numbers = "CaskaydiaCove Nerd Font Mono",   -- Used for numbers
-  icons = "CaskaydiaCove Nerd Font Mono",     -- Used for icons (or NerdFont)
-  app_icons = "CaskaydiaCove Nerd Font Mono", -- Used for app icons
+  text = "MonoLisa Nerd Font Mono",           -- Used for text
+  numbers = "MonoLisa Nerd Font Mono",   -- Used for numbers
+  icons = "MonoLisa Nerd Font Mono",     -- Used for icons (or NerdFont)
+  app_icons = "MonoLisa Nerd Font Mono", -- Used for app icons
   sizes = {
     text = 13.0,
     numbers = 12.0,
@@ -11,9 +11,6 @@ return {
   },
   style_map = {
     ["Regular"] = "Regular",
-    ["Semibold"] = "Semibold",
     ["Bold"] = "Bold",
-    ["Heavy"] = "Heavy",
-    ["Black"] = "Black",
   },
 }

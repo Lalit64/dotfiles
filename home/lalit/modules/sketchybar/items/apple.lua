@@ -12,7 +12,6 @@ local apple = sbar.add("item", "apple.logo", {
     color = colors.white,
     drawing = true,
     padding_left = settings.bar_margin_padding,
-    padding_right = settings.item_padding,
   },
   label = {
     drawing = false,

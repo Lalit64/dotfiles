@@ -13,19 +13,10 @@ local front_app = sbar.add("item", "front_app", {
     color = colors.white,
     font = {
       family = settings.font.numbers,
-      style = settings.font.style_map["Semibold"],
+      style = settings.font.style_map["Regular"],
       size = settings.font.sizes.numbers,
     },
   },
-  -- icon = {
-  --   background = {
-  --     drawing = true,
-  --     image = {
-  --       scale = 0.6,
-  --       padding_right = settings.item_padding,
-  --     },
-  --   },
-  -- },
   updates = true,
   space = space_id,
 })
