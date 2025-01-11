@@ -87,7 +87,6 @@ in
     in
     {
       system.activationScripts.postUserActivation.text = ''
-        sudo ${pkgs.yabai}/bin/yabai --load-sa
          # Wallpaper
          echo >&2 "Setting the wallpaper..."
         osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${wallpaper}"'

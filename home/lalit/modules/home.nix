@@ -12,6 +12,8 @@
       lalit64-nur.sbar-lua
       lalit64-nur.monolisa-nf
       # macos utils
+      aerospace
+      sketchybar
       pika
       raycast
       zoom-us
@@ -73,46 +75,17 @@
 
     file = {
       # pywal themes
-      "/Users/lalit/.config/wal".source =
-        config.lib.file.mkOutOfStoreSymlink ./wal;
+      "/Users/lalit/.config/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal;
 
-      # pywal reload scrip 
-      "/Users/lalit/wal-reload.sh".source =
-        config.lib.file.mkOutOfStoreSymlink ./wal-reload.sh;
+      # pywal reload scrip
+      "/Users/lalit/wal-reload.sh".source = config.lib.file.mkOutOfStoreSymlink ./wal-reload.sh;
 
       # wallpapers
-      "/Users/lalit/wallpapers".source =
-        config.lib.file.mkOutOfStoreSymlink ./wallpapers;
+      "/Users/lalit/wallpapers".source = config.lib.file.mkOutOfStoreSymlink ./wallpapers;
 
       # pywal cache
       # ~/.cache/wal
-      "/Users/lalit/.cache/wal".source =
-        config.lib.file.mkOutOfStoreSymlink ./wal-cache;
-
-      ################ sketchybar ################
-      ".config/sketchybar" = {
-        source = ./config/sketchybar;
-        recursive = true;
-        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
-      };
-      ".local/share/sketchybar_lua/sketchybar.so" = {
-        source = "${pkgs.lalit64-nur.sbar-lua}/lib/sketchybar.so";
-        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
-      };
-      ".config/sketchybar/sketchybarrc" = {
-        text = ''
-          #!/usr/bin/env ${pkgs.lua54Packages.lua}/bin/lua
-          -- Load the sketchybar-package and prepare the helper binaries
-          require("helpers")
-          require("init")
-
-          -- Enable hot reloading
-          sbar.exec("sketchybar --hotload true")
-        '';
-        executable = true;
-        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
-      };
-        #############################################
+      "/Users/lalit/.cache/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal-cache;
     };
   };
 

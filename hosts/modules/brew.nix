@@ -32,6 +32,7 @@
       "font-sf-pro"
       "orbstack"
       "eloston-chromium"
+      "sidequest"
     ];
     brews = [
       "switchaudio-osx"

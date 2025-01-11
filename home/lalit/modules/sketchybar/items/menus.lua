@@ -113,7 +113,7 @@ space_menu_swap:subscribe("swap_menus_and_spaces", function()
     -- Show the menus if they are not already visible
     menu_visible = true
     menu_watcher:set({ updates = true })
-    sbar.exec("yabai -m query --windows --window | jq -r '.space'", function(space_id)
+    sbar.exec("aerospace list-workspaces --focused", function(space_id)
       update_menus(space_id)
     end)
   end
@@ -124,7 +124,7 @@ space_menu_swap:subscribe("front_app_switched", function(env)
     -- Hide all old menu items
     menu_watcher:set({ updates = true })
     -- Change to the new menus
-    sbar.exec("yabai -m query --windows --window | jq -r '.space'", function(space_id)
+    sbar.exec("", function(space_id)
       update_menus(space_id)
     end)
   else

@@ -47,38 +47,3 @@ end)
 time:subscribe({ "forced", "routine", "system_woke" }, function(env)
   time:set({ label = os.date("%H:%M") })
 end)
-
--- Track menu visibility
-local menu_visible = false
-
--- Functions to handle menu visibility
-local function toggle_menu()
-  if menu_visible then
-    menu_visible = false
-  else
-    sbar.exec("~/.config/sketchybar/helpers/event_providers/bin/apple_menu app=date")
-    menu_visible = true
-  end
-end
-
--- Add click handlers for both time and date
-time:subscribe("mouse.clicked", function(env)
-  toggle_menu()
-end)
-
-date:subscribe("mouse.clicked", function(env)
-  toggle_menu()
-end)
-
--- Handle window closing when clicking outside
-time:subscribe("mouse.clicked.outside", function(env)
-  if menu_visible then
-    sbar.exec("pkill -SIGUSR1 apple_menu")
-    menu_visible = false
-  end
-end)
-
--- -- Prevent window from closing when clicking inside
-time:subscribe("mouse.clicked.inside", function(env)
-  return
-end)

@@ -41,6 +41,13 @@
       };
 
       vim.binds.whichKey.enable = true;
+        
+      vim.comments.comment-nvim = {
+        enable = true;
+        mappings = {
+          toggleCurrentLine = "<leader>/";
+        };
+      };
 
       vim.filetree.neo-tree = {
         enable = true;

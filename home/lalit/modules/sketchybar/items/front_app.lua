@@ -4,7 +4,7 @@ local app_icons = require("helpers.app_icons")
 local events = require("events")
 
 -- Query the current space ID
-local space_id = sbar.exec("yabai -m query --windows --window | jq -r '.space'")
+local space_id = sbar.exec("aerospace list-workspaces --focused")
 
 -- Create the front app item
 local front_app = sbar.add("item", "front_app", {

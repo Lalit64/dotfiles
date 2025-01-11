@@ -21,6 +21,7 @@
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";
       tree = "${pkgs.eza}/bin/eza --icons --tree";
+      ff = "${pkgs.fastfetch}/bin/fastfetch";
     };
 
     initExtra = ''
@@ -32,8 +33,6 @@
 
       eval "$(/opt/homebrew/bin/brew shellenv)"
       eval "$(${pkgs.zoxide}/bin/zoxide init zsh)"
-
-      sudo ${pkgs.yabai}/bin/yabai --load-sa
     '';
 
     oh-my-zsh = {

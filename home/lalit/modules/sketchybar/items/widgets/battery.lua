@@ -20,7 +20,6 @@ local battery = sbar.add("item", "widgets.battery", {
   padding_right = settings.item_padding,
   padding_left = settings.item_padding,
 
-  click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 'Control Center,Battery'",
 })
 
 local remaining_time = sbar.add("item", {

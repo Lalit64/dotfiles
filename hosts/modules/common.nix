@@ -89,7 +89,7 @@
 
   # touch id sudo
   security.pam.enableSudoTouchIdAuth = true;
-
+  
   services.sketchybar = {
     enable = true;
     package = pkgs.sketchybar;
@@ -98,6 +98,7 @@
   imports = [
     ./brew.nix
     ./borders.nix
+    ./aerospace.nix
     ./activation.nix
   ];
 
