@@ -33,7 +33,7 @@ sbar.exec("aerospace list-workspaces --all", function(spaces)
     space:subscribe("aerospace_workspace_changed", function(env)
       local selected = env.FOCUSED_WORKSPACE == space_name
       space:set({
-        icon = { highlight = selected, font = { style = selected and settings.font.style_map["Bold"] or settings.font.style_map["Regular"] } },
+        icon = { highlight = selected, font = { style = selected and settings.font.style_map["Italic"] or settings.font.style_map["Regular"] } },
         -- background = { color = selected and colors.spaces.active or colors.bar.bg }
       })
       space_bracket:set({

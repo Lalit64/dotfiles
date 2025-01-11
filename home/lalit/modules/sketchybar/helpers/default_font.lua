@@ -11,6 +11,7 @@ return {
   },
   style_map = {
     ["Regular"] = "Regular",
+    ["Italic"] = "Regular Italic",
     ["Bold"] = "Bold",
   },
 }
