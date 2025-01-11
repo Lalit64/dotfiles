@@ -54,9 +54,10 @@
       nixfmt-rfc-style
       nil
       pnpm
-      portaudio
       prettierd
+      portaudio
       pywal
+      pywalfox-native
       ripgrep
       rustup
       starship

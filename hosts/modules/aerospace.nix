@@ -24,7 +24,7 @@
       ];
 
       on-focus-changed = [
-        "exec-and-forget sketchybar --trigger front_app_switched"
+        "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger front_app_switched"
       ];
 
       gaps = {
@@ -39,6 +39,18 @@
           vertical = 14;
         };
       };
+
+      on-window-detected = [
+        {
+            check-further-callbacks = false;
+            "if" = {
+                app-id = "com.apple.finder";
+            };
+            run = [
+                "layout floating"
+            ];
+        }
+      ];
 
       mode.main.binding = {
         cmd-alt-h = [];
@@ -71,7 +83,7 @@
         ctrl-cmd-shift-5 = "move-node-to-workspace 5";
         ctrl-cmd-shift-6 = "move-node-to-workspace 6";
 
-        alt-m = "exec-and-forget sketchybar --trigger aerospace_switch";
+        alt-m = "exec-and-forget s${pkgs.sketchybar}/bin/sketchybar --trigger aerospace_switch";
 
         ctrl-cmd-shift-space = "layout floating tiling";
         ctrl-cmd-shift-minus = "resize smart -50";
@@ -81,6 +93,8 @@
         alt-rightSquareBracket = "join-with right";
 
         alt-slash = "layout horizontal vertical";
+
+        ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload";
       }; 
     };
   };
