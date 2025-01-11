@@ -8,7 +8,6 @@ local apple = sbar.add("item", "apple.logo", {
     font = { size = settings.font.sizes.icons },
     -- TODO set a custom icon for this click script
     string = icons.apple,
-    align = "center",
     color = colors.white,
     drawing = true,
     padding_left = settings.bar_margin_padding,
@@ -16,6 +15,6 @@ local apple = sbar.add("item", "apple.logo", {
   label = {
     drawing = false,
   },
-  align = "center",
-  click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 0"
+  click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 0",
+  y_offset = 0.75,
 })
