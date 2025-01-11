@@ -13,5 +13,6 @@ return {
     ["Regular"] = "Regular",
     ["Italic"] = "Regular Italic",
     ["Bold"] = "Bold",
+    ["Bold Italic"] = "Bold Italic",
   },
 }
