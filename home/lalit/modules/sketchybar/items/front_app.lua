@@ -36,7 +36,7 @@ local function set_front_app_state(state)
     background = { color = state.background_color or colors.transparent },
     label = {
       padding_right = state.label_padding_right or settings.item_padding,
-      padding_left = state.label_padding_right or 0,
+      padding_left = state.label_padding_right or settings.item_padding,
     },
     updates = state.updates or true,
   })
@@ -59,9 +59,6 @@ front_app:subscribe("mouse.entered", function()
   sbar.animate("elastic", 10, function()
     set_front_app_state({
       background_color = colors.spaces.active,
-      icon_scale = 0.5,
-      icon_padding_left = 3,
-      label_padding_right = settings.item_padding,
     })
   end)
 end)
@@ -71,9 +68,6 @@ front_app:subscribe("mouse.exited", function()
   sbar.animate("elastic", 10, function()
     set_front_app_state({
       background_color = colors.transparent,
-      icon_scale = 0.6,
-      icon_padding_left = 0,
-      label_padding_right = settings.item_padding - 5,
     })
   end)
 end)
@@ -93,19 +87,6 @@ front_app:subscribe("front_app_switched", function(env)
     space = space_id,
   })
   start_bounce_animation()
-end)
-
--- Event: Mouse clicked
-front_app:subscribe("mouse.clicked", function()
-  sbar.trigger("swap_menus_and_spaces")
-  sbar.animate("elastic", 10, function()
-    set_front_app_state({
-      icon_scale = 0.5,
-      icon_padding_left = 3,
-      label_padding_right = settings.item_padding,
-      background_color = colors.spaces.active,
-    })
-  end)
 end)
 
 -- Add a spacer after the front app

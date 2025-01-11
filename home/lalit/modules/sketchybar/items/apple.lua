@@ -18,4 +18,5 @@ local apple = sbar.add("item", "apple.logo", {
     drawing = false,
   },
   align = "center",
+  click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 0"
 })
