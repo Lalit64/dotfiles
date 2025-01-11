@@ -18,11 +18,11 @@ return {
     border = 0xff89b4fa,
   },
   popup = {
-    bg = 0xcc1e1e2e,
+    bg = 0xff1e1e2e,
     border = 0xff89b4fa,
   },
   spaces = {
-    active = 0xff2e3440,
+    active = 0xff181825,
     inactive = 0x002e3440,
   },
   bg1 = 0xff000000,
