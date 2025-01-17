@@ -6,6 +6,7 @@ local selected
 sbar.exec("aerospace list-workspaces --all", function(spaces)
     for space_name in spaces:gmatch("[^\r\n]+") do
         local space = sbar.add("item", "space." .. space_name, {
+            padding_right = settings.item_spacing - 1,
             icon = {
                 font = { family = settings.font.numbers },
                 string = space_name,
@@ -16,7 +17,7 @@ sbar.exec("aerospace list-workspaces --all", function(spaces)
             },
             background = {
                 height = settings.bar_height - 8,
-                color = 0xff181824,
+                color = colors.bar.bg,
                 border_color = colors.blue,
                 corner_radius = 8,
             }
@@ -28,7 +29,6 @@ sbar.exec("aerospace list-workspaces --all", function(spaces)
             space:set({
                 icon = { font = { style = selected and settings.font.style_map["Italic"] or settings.font.style_map["Regular"] } },
                 background = {
-                    color = selected and colors.bar.bg or 0xff181824,
                     border_width = selected and 1 or 0,
                 }
             })
