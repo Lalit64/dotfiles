@@ -2,26 +2,26 @@
 {
   home.file = {
     ".config/sketchybar" = {
-        source = ./sketchybar;
-        recursive = true;
-        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
-      };
-      ".local/share/sketchybar_lua/sketchybar.so" = {
-        source = "${pkgs.lalit64-nur.sbar-lua}/lib/sketchybar.so";
-        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
-      };
-      ".config/sketchybar/sketchybarrc" = {
-        text = ''
-          #!/usr/bin/env ${pkgs.lua54Packages.lua}/bin/lua
-          -- Load the sketchybar-package and prepare the helper binaries
-          require("helpers")
-          require("init")
+      source = ./sketchybar;
+      recursive = true;
+      onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
+    };
+    ".local/share/sketchybar_lua/sketchybar.so" = {
+      source = "${pkgs.lalit64-nur.sbar-lua}/lib/sketchybar.so";
+      onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
+    };
+    ".config/sketchybar/sketchybarrc" = {
+      text = ''
+        #!/usr/bin/env ${pkgs.lua54Packages.lua}/bin/lua
+        -- Load the sketchybar-package and prepare the helper binaries
+        require("helpers")
+        require("init")
 
-          -- Enable hot reloading
-          sbar.exec("sketchybar --hotload true")
-        '';
-        executable = true;
-        onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
-      };
+        -- Enable hot reloading
+        sbar.exec("sketchybar --hotload true")
+      '';
+      executable = true;
+      onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
+    };
   };
 }

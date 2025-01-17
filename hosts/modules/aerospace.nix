@@ -4,14 +4,14 @@
     enable = true;
     package = pkgs.aerospace;
     settings = {
-      after-login-command = [];
-      after-startup-command = [];
+      after-login-command = [ ];
+      after-startup-command = [ ];
 
       key-mapping.preset = "qwerty";
 
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
-      
+
       accordion-padding = 12;
 
       default-root-container-layout = "tiles";
@@ -31,7 +31,7 @@
         outer = {
           top = 20;
           bottom = 14;
-          left = 14; 
+          left = 14;
           right = 14;
         };
         inner = {
@@ -42,18 +42,36 @@
 
       on-window-detected = [
         {
-            check-further-callbacks = false;
-            "if" = {
-                app-id = "com.apple.finder";
-            };
-            run = [
-                "layout floating"
-            ];
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.apple.finder";
+          };
+          run = [
+            "layout floating"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.github.th-ch.youtube-music";
+          };
+          run = [
+            "layout floating"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.apple.Passwords";
+          };
+          run = [
+            "layout floating"
+          ];
         }
       ];
 
       mode.main.binding = {
-        cmd-alt-h = [];
+        cmd-alt-h = [ ];
 
         alt-tab = "workspace-back-and-forth";
 
@@ -95,7 +113,7 @@
         alt-slash = "layout horizontal vertical";
 
         ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload";
-      }; 
+      };
     };
   };
 }

@@ -15,21 +15,16 @@
 
     stylix.url = "github:danth/stylix";
 
-    # nixvim
-    # nixvim = {
-    #   url = "github:nix-community/nixvim";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
     # nvf
     nvf.url = "github:notashelf/nvf";
     nvf.inputs.nixpkgs.follows = "nixpkgs";
 
-    # vscode-extensions
-    vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+    # vscode-marketplace
+    vscode-marketplace.url = "github:nix-community/nix-vscode-extensions";
 
     lalit64-nur.url = "github:lalit64/nur";
     lalit64-nur.inputs.nixpkgs.follows = "nixpkgs";
+
   };
   outputs =
     {
@@ -39,7 +34,7 @@
       home-manager,
       stylix,
       nvf,
-      vscode-extensions,
+      vscode-marketplace,
       nur,
       ...
     }@inputs:
@@ -67,7 +62,7 @@
               (final: prev: {
                 lalit64-nur = inputs.lalit64-nur.packages."${prev.system}";
               })
-              vscode-extensions.overlays.default
+              vscode-marketplace.overlays.default
             ];
           };
           specialArgs = {
@@ -75,9 +70,10 @@
               inputs
               outputs
               hostname
+              username
+              system
               wallpaper
               ;
-            userConfig = users.${username};
           };
           modules = [
             ./hosts/${hostname}/default.nix
@@ -92,13 +88,14 @@
                     inputs
                     outputs
                     hostname
+                    username
+                    system
                     wallpaper
                     ;
                 };
                 users."${username}" = {
                   imports = [
                     ./home/${username}/${hostname}.nix
-                    # nixvim.homeManagerModules.nixvim
                     nvf.homeManagerModules.default
                     stylix.homeManagerModules.stylix
                   ];

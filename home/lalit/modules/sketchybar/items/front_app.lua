@@ -1,20 +1,25 @@
 local colors = require("colors")
 local settings = require("settings")
-local app_icons = require("helpers.app_icons")
-local events = require("events")
 
 -- Query the current space ID
 local space_id = sbar.exec("aerospace list-workspaces --focused")
 
 -- Create the front app item
 local front_app = sbar.add("item", "front_app", {
-    padding_left = 10,
+    padding_left = settings.item_spacing,
     label = {
         drawing = true,
         color = colors.white,
         font = { family = settings.font.numbers, size = 13, },
-        padding_left = 6,
-        padding_right = 6,
+        padding_left = settings.bar_margin_padding - 8,
+        padding_right = settings.bar_margin_padding - 8,
+    },
+    background = {
+        color = colors.transparent,
+        border_color = colors.bar.border,
+        border_width = 1,
+        height = settings.bar_height - 8,
+        corner_radius = 8,
     },
     updates = true,
     space = space_id,
@@ -23,10 +28,10 @@ local front_app = sbar.add("item", "front_app", {
 -- Helper function to set the front app state
 local function set_front_app_state(state)
     front_app:set({
-        background = { color = state.background_color or colors.transparent },
+        background = { color = colors.bar.bg },
         label = {
-            padding_left = 6,
-            padding_right = 6,
+            padding_left = settings.bar_margin_padding - 8,
+            padding_right = settings.bar_margin_padding - 8,
         },
         updates = state.updates or true,
     })
@@ -48,16 +53,7 @@ end
 front_app:subscribe("mouse.entered", function()
     sbar.animate("elastic", 10, function()
         set_front_app_state({
-            background_color = colors.spaces.active,
-        })
-    end)
-end)
-
--- Event: Mouse exited
-front_app:subscribe("mouse.exited", function()
-    sbar.animate("elastic", 10, function()
-        set_front_app_state({
-            background_color = colors.transparent,
+            background_color = colors.bar.bg,
         })
     end)
 end)
@@ -84,5 +80,3 @@ sbar.add("item", "front_app.spacer", {
     width = settings.item_spacing,
     background = { drawing = false },
 })
-
-return front_app

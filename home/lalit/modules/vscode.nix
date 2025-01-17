@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   programs.vscode = {
     enable = true;
     enableUpdateCheck = false;
@@ -21,6 +22,7 @@
       vscode-extensions.svelte.svelte-vscode
       vscode-extensions.wix.vscode-import-cost
       vscode-extensions.jnoortheen.nix-ide
+      vscode-extensions.ms-python.python
       vscode-marketplace.oven.bun-vscode
       vscode-marketplace.ms-vscode.atom-keybindings
       vscode-marketplace.moalamri.inline-fold
@@ -31,7 +33,7 @@
     userSettings = {
       editor = {
         copyWithSyntaxHighlighting = false;
-        emptySelectionClipboard = false;
+        emptySelectionClipboard = true;
         multiCursorModifier = "ctrlCmd";
         snippetSuggestions = "top";
         detectIndentation = false;
@@ -58,11 +60,26 @@
         defaultFormatter = "esbenp.prettier-vscode";
         formatOnSave = true;
       };
-      workbench.colorCustomizations = {
-	inlineparameters.annotationBackground = "#000000";
-      };
+
       workbench.iconTheme = "symbols";
       terminal.integrated.cursorStyle = "underline";
+
+      # nix stuff
+      nix.enableLanguageServer = true;
+      nix.formatterPath = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+      nix.serverPath = "${pkgs.nil}/bin/nil";
+      nix.serverSettings = {
+        nil = {
+          formatting = {
+            command = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
+          };
+        };
+      };
+
+      # formatters
+      "[nix]".editor.defaultFormatter = "jnoortheen.nix-ide";
+      "[lua]".editor.defaultFormatter = "sumneko.lua";
+      "[python]".editor.defaultFormatter = "ms-python.black-formatter";
     };
   };
 }

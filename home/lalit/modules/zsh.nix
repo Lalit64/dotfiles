@@ -1,4 +1,9 @@
-{ pkgs, hostname, ... }:
+{
+  pkgs,
+  hostname,
+  username,
+  ...
+}:
 {
   # .zshenv
   programs.zsh = {
@@ -17,7 +22,7 @@
 
     shellAliases = {
       nixswitch = "echo 'make sure to run git add' && darwin-rebuild switch --flake ~/.config/snowflake#${hostname}";
-      wal = "${pkgs.pywal}/bin/wal -o \"/Users/lalit/wal-reload.sh\" -s";
+      wal = "${pkgs.pywal}/bin/wal -o \"/Users/${username}/wal-reload.sh\" -s";
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";
       tree = "${pkgs.eza}/bin/eza --icons --tree";
@@ -25,9 +30,9 @@
     };
 
     initExtra = ''
-      export PATH="$PATH:/Users/lalit/.local/bin"
+      export PATH="$PATH:/Users/${username}/.local/bin"
       export PNPM_HOME="/"
-      export PATH="/Users/lalit/Library/pnpm:$PATH"
+      export PATH="/Users/${username}/Library/pnpm:$PATH"
       export PATH="$PATH:$HOME/.cargo/bin"
       export EDITOR=${pkgs.neovim}/bin/nvim
 

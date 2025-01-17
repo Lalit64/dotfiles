@@ -11,7 +11,6 @@
     taps = [
       "homebrew/services"
       "FelixKratz/formulae"
-      "encoredev/tap"
     ];
     casks = [
       "android-platform-tools"
@@ -22,7 +21,6 @@
       "httpie"
       "protonvpn"
       "whatsapp"
-      "ubersicht"
       "zen-browser"
       "mythic"
       "handbrake"
@@ -31,14 +29,13 @@
       "font-sf-mono"
       "font-sf-pro"
       "orbstack"
-      "eloston-chromium"
+      "google-chrome"
       "sidequest"
     ];
     brews = [
       "switchaudio-osx"
       "nowplaying-cli"
       "readline"
-      "encore"
     ];
   };
 }

@@ -3,6 +3,7 @@
   programs.nvf = {
     enable = true;
     settings = {
+      # theme
       vim.theme = {
         enable = true;
         name = "catppuccin";
@@ -16,50 +17,7 @@
       vim.statusline.lualine.enable = true;
       vim.telescope.enable = true;
 
-      vim.autocomplete.nvim-cmp = {
-        enable = true;
-        mappings = {
-          close = "<Esc>";
-          confirm = "<Cr>";
-          next = "<Down>";
-          previous = "<Up>";
-        };
-      };
-
-      vim.tabline.nvimBufferline = {
-        enable = true;
-        setupOpts.options.offsets = [
-          {
-            filetype = "neo-tree";
-            highlihgt = "Directory";
-            separator = true;
-            text = "File Explorer";
-          }
-        ];
-        setupOpts.options.indicator.style = "icon";
-        setupOpts.options.numbers = "none";
-      };
-
-      vim.binds.whichKey.enable = true;
-        
-      vim.comments.comment-nvim = {
-        enable = true;
-        mappings = {
-          toggleCurrentLine = "<leader>/";
-        };
-      };
-
-      vim.filetree.neo-tree = {
-        enable = true;
-        setupOpts = {
-          enable_cursor_hijack = true;
-          enable_git_status = false;
-          hijack_netrw_behavior = "open_default";
-        };
-      };
-
-      vim.autopairs.nvim-autopairs.enable = true;
-
+      # lsp
       vim.languages = {
         enableLSP = true;
         enableTreesitter = true;
@@ -76,6 +34,7 @@
         lua.enable = true;
       };
 
+      # keymaps
       vim.keymaps = [
         {
           key = "<leader>e";
@@ -85,6 +44,54 @@
           desc = "Toggle neotree";
         }
       ];
+
+      # autocomplete
+      vim.autocomplete.nvim-cmp = {
+        enable = true;
+        mappings = {
+          close = "<Esc>";
+          confirm = "<Cr>";
+          next = "<Down>";
+          previous = "<Up>";
+        };
+      };
+
+      # bufferline
+      vim.tabline.nvimBufferline = {
+        enable = true;
+        setupOpts.options.offsets = [
+          {
+            filetype = "neo-tree";
+            highlihgt = "Directory";
+            separator = true;
+            text = "File Explorer";
+          }
+        ];
+        setupOpts.options.indicator.style = "icon";
+        setupOpts.options.numbers = "none";
+      };
+
+      vim.comments.comment-nvim = {
+        enable = true;
+        mappings = {
+          toggleCurrentLine = "<leader>/";
+        };
+      };
+
+      # neo-tree
+      vim.filetree.neo-tree = {
+        enable = true;
+        setupOpts = {
+          enable_cursor_hijack = true;
+          enable_git_status = false;
+          hijack_netrw_behavior = "open_default";
+        };
+      };
+
+      # which-key
+      vim.binds.whichKey.enable = true;
+
+      vim.autopairs.nvim-autopairs.enable = true;
     };
   };
 }

@@ -1,6 +1,6 @@
 {
   pkgs,
-  userConfig,
+  username,
   hostname,
   ...
 }:
@@ -18,7 +18,7 @@
   nix.optimise.automatic = true;
 
   programs.zsh.enable = true;
-  users.users.${userConfig.name}.home = "/Users/${userConfig.name}";
+  users.users.${username}.home = "/Users/${username}";
 
   environment = {
     shells = with pkgs; [
@@ -62,7 +62,7 @@
         _HIHideMenuBar = true;
       };
       screencapture = {
-        location = "/Users/${userConfig.name}/Desktop/screenshots";
+        location = "/Users/${username}/Desktop/screenshots";
         type = "png";
         disable-shadow = true;
       };
@@ -89,7 +89,7 @@
 
   # touch id sudo
   security.pam.enableSudoTouchIdAuth = true;
-  
+
   services.sketchybar = {
     enable = true;
     package = pkgs.sketchybar;

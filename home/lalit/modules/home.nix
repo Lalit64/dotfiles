@@ -1,12 +1,13 @@
 {
   pkgs,
   config,
+  username,
   ...
 }:
 {
   home = {
-    username = "lalit";
-    homeDirectory = "/Users/lalit";
+    username = username;
+    homeDirectory = "/Users/${username}";
     packages = with pkgs; [
       # from my nur ( nix user repository )
       lalit64-nur.sbar-lua
@@ -20,6 +21,7 @@
       docker
       keka
       vesktop
+      youtube-music
       # java
       zulu
       # packages
@@ -40,6 +42,7 @@
       fd
       ffmpeg
       fontconfig
+      fzf
       gcc
       gh
       glow
@@ -62,10 +65,10 @@
       rustup
       starship
       stow
-      terminal-notifier
       typescript
       watchman
       wget
+      zathura
       zig
       zoxide
 
@@ -76,17 +79,17 @@
 
     file = {
       # pywal themes
-      "/Users/lalit/.config/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal;
+      "/Users/${username}/.config/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal;
 
       # pywal reload scrip
-      "/Users/lalit/wal-reload.sh".source = config.lib.file.mkOutOfStoreSymlink ./wal-reload.sh;
+      "/Users/${username}/wal-reload.sh".source = config.lib.file.mkOutOfStoreSymlink ./wal-reload.sh;
 
       # wallpapers
-      "/Users/lalit/wallpapers".source = config.lib.file.mkOutOfStoreSymlink ./wallpapers;
+      "/Users/${username}/wallpapers".source = config.lib.file.mkOutOfStoreSymlink ./wallpapers;
 
       # pywal cache
       # ~/.cache/wal
-      "/Users/lalit/.cache/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal-cache;
+      "/Users/${username}/.cache/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal-cache;
     };
   };
 
@@ -125,7 +128,7 @@
       enable = true;
       settings = {
         logo = {
-          source = "/Users/lalit/wallpapers/nix-darwin.png";
+          source = "/Users/${username}/wallpapers/nix-darwin.png";
           type = "kitty-direct";
           width = 32;
           height = 10;
