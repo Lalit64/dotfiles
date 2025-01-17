@@ -147,9 +147,14 @@
         ];
       };
     };
+    #git
+    git = {
+      enable = true;
+      userName = "Lalit Yalamanchili";
+      userEmail = "lalit.yalamanchili@gmail.com";
+    };
+
     # better ls
     eza.enable = true;
-    # git
-    git.enable = true;
   };
 }

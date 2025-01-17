@@ -29,7 +29,6 @@
 
       gaps = {
         outer = {
-          top = 20;
           bottom = 14;
           left = 14;
           right = 14;
