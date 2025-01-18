@@ -67,6 +67,15 @@
             "layout floating"
           ];
         }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.utmapp.UTM";
+          };
+          run = [
+            "layout floating"
+          ];
+        }
       ];
 
       mode.main.binding = {

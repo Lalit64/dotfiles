@@ -65,6 +65,7 @@
       starship
       stow
       typescript
+      utm
       watchman
       wget
       zathura
