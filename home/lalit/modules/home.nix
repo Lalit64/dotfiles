@@ -52,15 +52,14 @@
       jq
       lua54Packages.lua
       sketchybar-app-font
-      mpv
       nixd
       nixfmt-rfc-style
       nil
       pnpm
       prettierd
-      portaudio
       pywal
       pywalfox-native
+      portaudio
       ripgrep
       rustup
       starship

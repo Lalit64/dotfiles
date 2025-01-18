@@ -32,10 +32,6 @@
       "google-chrome"
       "sidequest"
     ];
-    brews = [
-      "switchaudio-osx"
-      "nowplaying-cli"
-      "readline"
-    ];
+    brews = [ ];
   };
 }

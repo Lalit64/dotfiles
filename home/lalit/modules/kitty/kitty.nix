@@ -3,6 +3,7 @@
   # search using cmd+f
   home.file."/Users/${username}/.config/kitty/search.py".source = ./search.py;
   home.file."/Users/${username}/.config/kitty/scroll_mark.py".source = ./scroll_mark.py;
+  home.file."/Users/${username}/kitty_toggle.sh".source = ./toggle.sh;
 
   programs.kitty = {
     enable = true;

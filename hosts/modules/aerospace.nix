@@ -100,8 +100,6 @@
         ctrl-cmd-shift-5 = "move-node-to-workspace 5";
         ctrl-cmd-shift-6 = "move-node-to-workspace 6";
 
-        alt-m = "exec-and-forget s${pkgs.sketchybar}/bin/sketchybar --trigger aerospace_switch";
-
         ctrl-cmd-shift-space = "layout floating tiling";
         ctrl-cmd-shift-minus = "resize smart -50";
         ctrl-cmd-shift-equal = "resize smart +50";
@@ -112,6 +110,9 @@
         alt-slash = "layout horizontal vertical";
 
         ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload";
+        cmd-enter = ''
+          exec-and-forget ~/kitty_toggle.sh
+        '';
       };
     };
   };
