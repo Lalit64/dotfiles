@@ -1,4 +1,4 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   programs.zed-editor = {
     enable = true;
@@ -9,10 +9,6 @@
 
     userSettings = {
       base_keymap = "Atom";
-      theme = "Catppuccin Mocha (Blur)";
-      ui_font_size = 16;
-      buffer_font_size = 16;
-      buffer_font_family = config.stylix.fonts.monospace.name;
       vim_mode = false;
       tab_size = 2;
       soft_wrap = "editor_width";

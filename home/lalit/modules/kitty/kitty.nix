@@ -1,19 +1,19 @@
-{ username, ... }:
+{ pkgs, username, ... }:
 {
   # search using cmd+f
   home.file."/Users/${username}/.config/kitty/search.py".source = ./search.py;
   home.file."/Users/${username}/.config/kitty/scroll_mark.py".source = ./scroll_mark.py;
-  home.file."/Users/${username}/kitty_toggle.sh".source = ./toggle.sh;
 
   programs.kitty = {
     enable = true;
+    package = pkgs.emptyDirectory;
 
     settings = {
-      background_blur = 32;
+      background_blur = 24;
       allow_remote_control = true;
       window_padding_width = 25;
       confirm_os_window_close = 0;
-      macos_hide_titlebar = true;
+      hide_window_decorations = "titlebar-only";
 
       cursor_shape = "underline";
       cursor_trail = 4;

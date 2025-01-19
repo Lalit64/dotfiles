@@ -4,14 +4,13 @@
     enable = true;
     package = pkgs.jankyborders;
 
-    style = "square";
-    width = 5.0;
+    style = "round";
+    width = 3.0;
     hidpi = true;
-    active_color = "0xff56526e";
-    inactive_color = "0xff414550";
+    active_color = "0xff89b4fa";
+    inactive_color = "0xff56526e";
     whitelist = [
       "kitty"
-      "Zed"
     ];
   };
 }

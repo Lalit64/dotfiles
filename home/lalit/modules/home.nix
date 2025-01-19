@@ -22,15 +22,14 @@
       keka
       vesktop
       youtube-music
+      qbittorrent
       # java
       zulu
       # packages
       vim
       automake
       base16-schemes
-      bat
       bun
-      btop
       cmatrix
       cocoapods
       deno
@@ -147,6 +146,7 @@
         ];
       };
     };
+
     #git
     git = {
       enable = true;
@@ -154,6 +154,13 @@
       userEmail = "lalit.yalamanchili@gmail.com";
     };
 
+    bat = {
+      enable = true;
+    };
+
+    btop = {
+      enable = true;
+    };
     # better ls
     eza.enable = true;
   };

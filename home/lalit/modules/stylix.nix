@@ -5,7 +5,6 @@
     autoEnable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     image = wallpaper;
-    targets.zed.enable = false;
     fonts = {
       monospace = {
         package = pkgs.lalit64-nur.monolisa-nf;

@@ -18,169 +18,24 @@
             "description": "Mods",
             "manipulators": [
               {
-                "description": "Zen Browser",
-                "type": "basic",
-                "from": {
-                  "simultaneous": [
-                    {
-                      "key_code": "left_option"
-                    },
-                    {
-                      "key_code": "o"
-                    }
-                  ],
-                  "simultaneous_options": {
-                    "key_down_order": "strict",
-                    "key_up_order": "strict_inverse",
-                    "to_after_key_up": [
-                      {
-                        "set_variable": {
-                          "name": "launcher_mode",
-                          "value": 0
-                        }
-                      }
-                    ]
-                  },
-                  "modifiers": {
-                    "mandatory": [],
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "launcher_mode",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "shell_command": "open -a 'Zen Browser.app'"
-                  }
-                ],
-                "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-                }
-              },
-              {
-                "description": "kitty",
-                "type": "basic",
-                "from": {
-                  "simultaneous": [
-                    {
-                      "key_code": "left_option"
-                    },
-                    {
-                      "key_code": "t"
-                    }
-                  ],
-                  "simultaneous_options": {
-                    "key_down_order": "strict",
-                    "key_up_order": "strict_inverse",
-                    "to_after_key_up": [
-                      {
-                        "set_variable": {
-                          "name": "launcher_mode",
-                          "value": 0
-                        }
-                      }
-                    ]
-                  },
-                  "modifiers": {
-                    "mandatory": [],
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "launcher_mode",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "shell_command": "open -a 'kitty.app'"
-                  }
-                ],
-                "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-                }
-              },
-              {
-                "description": "Zed",
-                "type": "basic",
-                "from": {
-                  "simultaneous": [
-                    {
-                      "key_code": "left_option"
-                    },
-                    {
-                      "key_code": "c"
-                    }
-                  ],
-                  "simultaneous_options": {
-                    "key_down_order": "strict",
-                    "key_up_order": "strict_inverse",
-                    "to_after_key_up": [
-                      {
-                        "set_variable": {
-                          "name": "launcher_mode",
-                          "value": 0
-                        }
-                      }
-                    ]
-                  },
-                  "modifiers": {
-                    "mandatory": [],
-                    "optional": [
-                      "any"
-                    ]
-                  }
-                },
-                "to": [
-                  {
-                    "set_variable": {
-                      "name": "launcher_mode",
-                      "value": 1
-                    }
-                  },
-                  {
-                    "shell_command": "open -a 'Zed.app'"
-                  }
-                ],
-                "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-                }
-              },
-              {
                 "description": "Hyper Key",
                 "type": "basic",
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "left_shift",
-                    "modifiers": [
-                      "command",
-                      "left_control"
-                    ]
+                    "modifiers": ["command", "left_control"]
                   }
                 ],
                 "to_if_alone": [
                   {
                     "key_code": "escape",
-                    "modifiers": [
-                      "any"
-                    ]
+                    "modifiers": ["any"]
                   }
                 ]
               },
@@ -206,14 +61,8 @@
                     ]
                   },
                   "modifiers": {
-                    "mandatory": [
-                      "left_control",
-                      "command",
-                      "left_shift"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_control", "command", "left_shift"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [

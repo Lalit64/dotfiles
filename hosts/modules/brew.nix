@@ -31,6 +31,7 @@
       "orbstack"
       "google-chrome"
       "sidequest"
+      "kitty@nightly"
     ];
     brews = [ ];
   };

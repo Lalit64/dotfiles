@@ -2,7 +2,7 @@
 {
   home.file = {
     ".config/sketchybar" = {
-      source = ./sketchybar;
+      source = ./.;
       recursive = true;
       onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
     };

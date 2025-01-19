@@ -1,6 +1,5 @@
 import * as fs from "fs";
 import { hyper_key } from "./lib/hyper-key";
-import { generate_launcher_mode } from "./lib/o-launcher";
 import { KarabinerRules } from "./types";
 import { shell } from "./lib/shell";
 
@@ -9,15 +8,9 @@ const hypr = ["left_control", "command", "left_shift"];
 const rules: KarabinerRules[] = [
   {
     description: "Mods",
-    // For 'application' provide only the name don't add .app
     manipulators: [
-      // O-launcher
-      generate_launcher_mode("o", [], "Zen Browser"),
-      generate_launcher_mode("t", [], "kitty"),
-      generate_launcher_mode("c", [], "Zed"),
       // Hyper Key
       hyper_key(),
-
       shell(hypr, "s", "pmset sleepnow"),
     ],
   },
