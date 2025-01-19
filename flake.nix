@@ -5,64 +5,57 @@
     # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
-    # home-manager
-    home-manager.url = "github:nix-community/home-manager/master";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
     # nix-darwin
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
+    # home-manager
+    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+
+    # system theming
     stylix.url = "github:danth/stylix";
 
-    # nvf
-    nvf.url = "github:notashelf/nvf";
-    nvf.inputs.nixpkgs.follows = "nixpkgs";
-
-    # vscode-marketplace
-    vscode-marketplace.url = "github:nix-community/nix-vscode-extensions";
-
+    # my nix user repository
     lalit64-nur.url = "github:lalit64/nur";
     lalit64-nur.inputs.nixpkgs.follows = "nixpkgs";
 
+    # nvf - neovim configuration
+    nvf.url = "github:notashelf/nvf";
+    nvf.inputs.nixpkgs.follows = "nixpkgs";
+
+    # sbarlua
+    sbarlua = {
+      url = "github:lalit64/SbarLua/nix-darwin-package";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # vscode-marketplace for vscodium extensions
+    vscode-marketplace.url = "github:nix-community/nix-vscode-extensions";
   };
   outputs =
     {
       self,
-      nixpkgs,
-      darwin,
-      home-manager,
-      stylix,
-      nvf,
-      vscode-marketplace,
-      nur,
       ...
     }@inputs:
     let
       inherit (self) outputs;
 
-      # Define user configurations
-      users = {
-        lalit = {
-          email = "lalit.yalamanchili@gmail.com";
-          fullName = "Lalit Yalamanchili";
-          name = "lalit";
-        };
-      };
-
       # Function for nix-darwin system configuration
       mkDarwinConfiguration =
         system: hostname: username: wallpaper:
-        darwin.lib.darwinSystem {
+        inputs.darwin.lib.darwinSystem {
           system = system;
-          pkgs = import nixpkgs {
+          pkgs = import inputs.nixpkgs {
             system = system;
             config.allowUnfree = true;
             overlays = [
               (final: prev: {
                 lalit64-nur = inputs.lalit64-nur.packages."${prev.system}";
+                qrookie = inputs.qrookie.packages."${prev.system}";
+                sbarlua = inputs.sbarlua.packages."${prev.system}";
               })
-              vscode-marketplace.overlays.default
+              inputs.vscode-marketplace.overlays.default
             ];
           };
           specialArgs = {
@@ -77,7 +70,7 @@
           };
           modules = [
             ./hosts/${hostname}/default.nix
-            home-manager.darwinModules.home-manager
+            inputs.home-manager.darwinModules.home-manager
             {
               users.users."${username}".home = "/Users/${username}";
               home-manager = {
@@ -96,8 +89,8 @@
                 users."${username}" = {
                   imports = [
                     ./home/${username}/${hostname}.nix
-                    nvf.homeManagerModules.default
-                    stylix.homeManagerModules.stylix
+                    inputs.nvf.homeManagerModules.default
+                    inputs.stylix.homeManagerModules.stylix
                   ];
                 };
               };

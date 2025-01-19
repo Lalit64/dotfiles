@@ -2,23 +2,22 @@
 {
   programs.nvf = {
     enable = true;
-    settings = {
+    settings.vim = {
       # theme
-      vim.theme = {
+      theme = {
         enable = true;
         name = "catppuccin";
         style = "mocha";
         transparent = true;
       };
 
-      vim.options.shiftwidth = 2;
-      vim.options.tabstop = 2;
+      options.shiftwidth = 2;
+      options.tabstop = 2;
 
-      vim.statusline.lualine.enable = true;
-      vim.telescope.enable = true;
+      telescope.enable = true;
 
       # lsp
-      vim.languages = {
+      languages = {
         enableLSP = true;
         enableTreesitter = true;
 
@@ -35,7 +34,7 @@
       };
 
       # keymaps
-      vim.keymaps = [
+      keymaps = [
         {
           key = "<leader>e";
           mode = [ "n" ];
@@ -45,8 +44,36 @@
         }
       ];
 
+      mini = {
+        basics = {
+          enable = true;
+          setupOpts = { };
+        };
+        comment = {
+          enable = true;
+          setupOpts = {
+            mappings = {
+              comment_line = "<leader>/";
+            };
+          };
+        };
+        icons = {
+          enable = true;
+          setupOpts = {
+            style = "glyph";
+          };
+        };
+        pairs = {
+          enable = true;
+        };
+        starter = {
+          enable = true;
+          setupOpts = { };
+        };
+      };
+
       # autocomplete
-      vim.autocomplete.nvim-cmp = {
+      autocomplete.nvim-cmp = {
         enable = true;
         mappings = {
           close = "<Esc>";
@@ -57,7 +84,7 @@
       };
 
       # bufferline
-      vim.tabline.nvimBufferline = {
+      tabline.nvimBufferline = {
         enable = true;
         setupOpts.options.offsets = [
           {
@@ -71,15 +98,8 @@
         setupOpts.options.numbers = "none";
       };
 
-      vim.comments.comment-nvim = {
-        enable = true;
-        mappings = {
-          toggleCurrentLine = "<leader>/";
-        };
-      };
-
       # neo-tree
-      vim.filetree.neo-tree = {
+      filetree.neo-tree = {
         enable = true;
         setupOpts = {
           enable_cursor_hijack = true;
@@ -88,10 +108,11 @@
         };
       };
 
-      # which-key
-      vim.binds.whichKey.enable = true;
+      # statusline
+      statusline.lualine.enable = true;
 
-      vim.autopairs.nvim-autopairs.enable = true;
+      # which-key
+      binds.whichKey.enable = true;
     };
   };
 }

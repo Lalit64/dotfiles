@@ -10,11 +10,11 @@
     homeDirectory = "/Users/${username}";
     packages = with pkgs; [
       # from my nur ( nix user repository )
-      lalit64-nur.sbar-lua
-      lalit64-nur.monolisa-nf
+      lalit64-nur.monolisa-nf # MonoLisa Nerd Font Mono
       # macos utils
       aerospace
       sketchybar
+      sbarlua.sbarlua
       pika
       raycast
       zoom-us
