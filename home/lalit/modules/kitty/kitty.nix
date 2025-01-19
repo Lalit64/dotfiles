@@ -32,6 +32,7 @@
       "cmd+4" = "goto_tab 4";
       "cmd+5" = "goto_tab 5";
       "cmd+6" = "goto_tab 6";
+      "cmd+," = "launch nvim ~/.config/snowflake/home/${username}/modules/kitty/kitty.nix";
 
       # search using cmd+f
       "cmd+f" =
