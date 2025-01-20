@@ -18,7 +18,7 @@
     nh.inputs.nixpkgs.follows = "nixpkgs";
 
     # system theming
-    stylix.url = "github:danth/stylix";
+    stylix.url = "github:Lalit64/stylix/vesktop-darwin";
 
     # my nix user repository
     lalit64-nur.url = "github:lalit64/nur";

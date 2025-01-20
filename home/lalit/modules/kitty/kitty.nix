@@ -20,7 +20,7 @@
     settings = {
       # customization stuff
       background_opacity = 0.8;
-      background_blur = 24;
+      background_blur = 32;
       window_padding_width = 25;
       hide_window_decorations = "titlebar-only";
 
