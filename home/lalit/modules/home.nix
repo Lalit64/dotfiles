@@ -15,7 +15,6 @@
       aerospace
       sketchybar
       sbarlua.sbarlua
-      pika
       raycast
       zoom-us
       docker
