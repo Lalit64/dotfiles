@@ -40,6 +40,7 @@
       };
 
       on-window-detected = [
+        ####### Floating Windows #######
         {
           check-further-callbacks = false;
           "if" = {
@@ -74,6 +75,43 @@
           };
           run = [
             "layout floating"
+          ];
+        }
+        ####### Specific spaces for apps #######
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "app.zen-browser.zen";
+          };
+          run = [
+            "move-node-to-workspace 1"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.vscodium";
+          };
+          run = [
+            "move-node-to-workspace 2"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "net.kovidgoyal.kitty";
+          };
+          run = [
+            "move-node-to-workspace 2"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "us.zoom.xos";
+          };
+          run = [
+            "move-node-to-workspace 3"
           ];
         }
       ];
@@ -118,7 +156,7 @@
 
         alt-slash = "layout horizontal vertical";
 
-        ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload";
+        ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload && aerospace reload-config";
 
         alt-t = "exec-and-forget open -a kitty.app";
         alt-o = ''exec-and-forget open -a "Zen Browser.app"'';

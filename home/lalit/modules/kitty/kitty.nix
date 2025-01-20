@@ -1,5 +1,14 @@
-{ pkgs, username, ... }:
 {
+  pkgs,
+  config,
+  username,
+  ...
+}:
+{
+  #theme
+  home.file."/Users/${username}/.config/kitty/mocha.conf".source = ./mocha.conf;
+  # custom tab bar
+  home.file."/Users/${username}/.config/kitty/tab_bar.py".source = ./tab_bar.py;
   # search using cmd+f
   home.file."/Users/${username}/.config/kitty/search.py".source = ./search.py;
   home.file."/Users/${username}/.config/kitty/scroll_mark.py".source = ./scroll_mark.py;
@@ -9,19 +18,30 @@
     package = pkgs.emptyDirectory;
 
     settings = {
+      # customization stuff
+      background_opacity = 0.8;
       background_blur = 24;
-      allow_remote_control = true;
       window_padding_width = 25;
-      confirm_os_window_close = 0;
       hide_window_decorations = "titlebar-only";
+
+      allow_remote_control = true;
+      confirm_os_window_close = 0;
 
       cursor_shape = "underline";
       cursor_trail = 4;
 
-      tab_bar_style = "powerline";
+      tab_bar_style = "custom";
       tab_bar_edge = "top";
       tab_bar_align = "left";
       tab_powerline_style = "slanted";
+      active_tab_font_style = "normal";
+
+      # font
+      font_family = config.stylix.fonts.monospace.name;
+      font_size = config.stylix.fonts.sizes.terminal;
+      bold_font = "auto";
+      italic_font = "auto";
+      bold_italic_font = "auto";
     };
 
     keybindings = {
@@ -45,6 +65,7 @@
     };
 
     extraConfig = ''
+      include mocha.conf
       modify_font cell_height 15px
       nnoremap <ScrollWheelRight> <Nop>
       nnoremap <ScrollWheelLeft> <Nop>
