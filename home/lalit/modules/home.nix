@@ -11,6 +11,7 @@
     packages = with pkgs; [
       # from my nur ( nix user repository )
       lalit64-nur.monolisa-nf # MonoLisa Nerd Font Mono
+      nh.nh
       # macos utils
       aerospace
       sketchybar
@@ -144,6 +145,15 @@
           "colors"
         ];
       };
+    };
+
+    # nh cli
+    nh = {
+      enable = true;
+      package = pkgs.emptyDirectory;
+      clean.enable = true;
+      clean.extraArgs = "--keep-since 4d --keep 3";
+      flake = "/Users/${username}/.config/snowflake";
     };
 
     #git

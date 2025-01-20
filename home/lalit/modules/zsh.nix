@@ -21,7 +21,9 @@
     };
 
     shellAliases = {
-      nixswitch = "echo 'make sure to run git add' && darwin-rebuild switch --flake ~/.config/snowflake#${hostname}";
+      nixswitch = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh.nh}/bin/nh darwin switch";
+      ns = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh.nh}/bin/nh darwin switch";
+      nc = "${pkgs.nh.nh}/bin/nh clean all";
       wal = "${pkgs.pywal}/bin/wal -o ~/wal-reload.sh";
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";

@@ -1,4 +1,4 @@
-{ ... }:
+{ username, ... }:
 {
-  home.file."/Users/lalit/.config/karabiner/karabiner.json".source = ./karabiner.json;
+  home.file."/Users/${username}/.config/karabiner/karabiner.json".source = ./karabiner.json;
 }

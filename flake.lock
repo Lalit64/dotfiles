@@ -367,6 +367,26 @@
         "type": "github"
       }
     },
+    "nh": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1736755595,
+        "narHash": "sha256-MCUsaDZVi2FCVvLPXkekq5i1BxTX/5zyLLEJDFX1u5Y=",
+        "owner": "viperML",
+        "repo": "nh",
+        "rev": "f4da5cf5af09e01a0177e889aa6fc682c6176a67",
+        "type": "github"
+      },
+      "original": {
+        "owner": "viperML",
+        "repo": "nh",
+        "type": "github"
+      }
+    },
     "nil": {
       "inputs": {
         "flake-utils": [
@@ -3290,6 +3310,7 @@
         "darwin": "darwin",
         "home-manager": "home-manager",
         "lalit64-nur": "lalit64-nur",
+        "nh": "nh",
         "nixpkgs": "nixpkgs",
         "nvf": "nvf",
         "sbarlua": "sbarlua",

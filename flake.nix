@@ -13,6 +13,10 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # nh cli
+    nh.url = "github:viperML/nh";
+    nh.inputs.nixpkgs.follows = "nixpkgs";
+
     # system theming
     stylix.url = "github:danth/stylix";
 
@@ -24,14 +28,12 @@
     nvf.url = "github:notashelf/nvf";
     nvf.inputs.nixpkgs.follows = "nixpkgs";
 
-    # sbarlua
-    sbarlua = {
-      url = "github:lalit64/SbarLua/nix-darwin-package";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # vscode-marketplace for vscodium extensions
     vscode-marketplace.url = "github:nix-community/nix-vscode-extensions";
+
+    # sbarlua
+    sbarlua.url = "github:lalit64/SbarLua/nix-darwin-package";
+    sbarlua.inputs.nixpkgs.follows = "nixpkgs";
   };
   outputs =
     {
@@ -54,6 +56,7 @@
                 lalit64-nur = inputs.lalit64-nur.packages."${prev.system}";
                 qrookie = inputs.qrookie.packages."${prev.system}";
                 sbarlua = inputs.sbarlua.packages."${prev.system}";
+                nh = inputs.nh.packages."${prev.system}";
               })
               inputs.vscode-marketplace.overlays.default
             ];
