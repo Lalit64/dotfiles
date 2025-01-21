@@ -158,8 +158,6 @@
 
         ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload && aerospace reload-config";
 
-        # alt-cmd-c = ""; center floating window on screen
-
         alt-t = "exec-and-forget open -a kitty.app";
         alt-o = ''exec-and-forget open -a "Zen Browser.app"'';
         alt-c = "exec-and-forget open -a VSCodium.app";
