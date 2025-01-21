@@ -21,9 +21,9 @@
     };
 
     shellAliases = {
-      nixswitch = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh.nh}/bin/nh darwin switch";
-      ns = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh.nh}/bin/nh darwin switch";
-      nc = "${pkgs.nh.nh}/bin/nh clean all";
+      nixswitch = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh}/bin/nh darwin switch";
+      ns = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh}/bin/nh darwin switch";
+      nc = "${pkgs.nh}/bin/nh clean all";
       wal = "${pkgs.pywal}/bin/wal -o ~/wal-reload.sh";
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";

@@ -11,11 +11,9 @@
     packages = with pkgs; [
       # from my nur ( nix user repository )
       lalit64-nur.monolisa-nf # MonoLisa Nerd Font Mono
-      nh.nh
       # macos utils
       aerospace
       sketchybar
-      sbarlua.sbarlua
       raycast
       zoom-us
       docker
@@ -50,7 +48,6 @@
       imagemagick
       jq
       lua54Packages.lua
-      sketchybar-app-font
       nixd
       nixfmt-rfc-style
       nil
@@ -61,6 +58,8 @@
       portaudio
       ripgrep
       rustup
+      sbarlua
+      sketchybar-app-font
       starship
       stow
       typescript
@@ -147,7 +146,7 @@
     # nh cli
     nh = {
       enable = true;
-      package = pkgs.emptyDirectory;
+      package = pkgs.nh;
       clean.enable = true;
       clean.extraArgs = "--keep-since 4d --keep 3";
       flake = "/Users/${username}/.config/snowflake";

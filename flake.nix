@@ -54,9 +54,8 @@
             overlays = [
               (final: prev: {
                 lalit64-nur = inputs.lalit64-nur.packages."${prev.system}";
-                qrookie = inputs.qrookie.packages."${prev.system}";
-                sbarlua = inputs.sbarlua.packages."${prev.system}";
-                nh = inputs.nh.packages."${prev.system}";
+                sbarlua = inputs.sbarlua.packages."${prev.system}".sbarlua;
+                nh = inputs.nh.packages."${prev.system}".nh;
               })
               inputs.vscode-marketplace.overlays.default
             ];
