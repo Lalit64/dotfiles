@@ -9,9 +9,9 @@
     fonts = {
       monospace = {
         package = pkgs.lalit64-nur.monolisa-nf;
-        name = "MonoLisa Nerd Font Mono";
+        name = "CaskaydiaCove Nerd Font Mono";
       };
-      sizes.terminal = 12.5;
+      sizes.terminal = 13;
     };
     opacity.terminal = 0.8;
   };

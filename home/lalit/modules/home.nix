@@ -70,6 +70,7 @@
       zathura
       zig
       zoxide
+      zsh-autopair
 
       # fonts
       nerd-fonts.jetbrains-mono
@@ -77,17 +78,13 @@
     ];
 
     file = {
-      # pywal themes
-      "/Users/${username}/.config/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal;
-
-      # pywal reload scrip
+      # pywal reload script
       "/Users/${username}/wal-reload.sh".source = config.lib.file.mkOutOfStoreSymlink ./wal-reload.sh;
 
       # wallpapers
       "/Users/${username}/wallpapers".source = config.lib.file.mkOutOfStoreSymlink ./wallpapers;
 
       # pywal cache
-      # ~/.cache/wal
       "/Users/${username}/.cache/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal-cache;
     };
   };

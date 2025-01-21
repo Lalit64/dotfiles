@@ -1,8 +1,10 @@
+local font = "CaskaydiaCove Nerd Font Mono"
+
 return {
-    text = "MonoLisa Nerd Font Mono",    -- Used for text
-    numbers = "MonoLisa Nerd Font Mono", -- Used for numbers
-    icons = "MonoLisa Nerd Font Mono",   -- Used for icons (or NerdFont)
-    app_icons = "MonoLisa Nerd Font Mono", -- Used for app icons
+    text = font,      -- Used for text
+    numbers = font,   -- Used for numbers
+    icons = font,     -- Used for icons (or NerdFont)
+    app_icons = font, -- Used for app icons
     sizes = {
         text = 13.0,
         numbers = 12.0,
@@ -11,7 +13,7 @@ return {
     },
     style_map = {
         ["Regular"] = "Regular",
-        ["Italic"] = "Regular Italic",
+        ["Italic"] = "Italic",
         ["Bold"] = "Bold",
         ["Bold Italic"] = "Bold Italic",
     },

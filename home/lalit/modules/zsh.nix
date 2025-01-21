@@ -40,6 +40,7 @@
 
       eval "$(/opt/homebrew/bin/brew shellenv)"
       eval "$(${pkgs.zoxide}/bin/zoxide init zsh)"
+      source "${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh"
     '';
 
     oh-my-zsh = {

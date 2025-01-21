@@ -24,7 +24,6 @@
       "zen-browser"
       "mythic"
       "handbrake"
-      "ghostty"
       "sf-symbols"
       "font-sf-mono"
       "font-sf-pro"
