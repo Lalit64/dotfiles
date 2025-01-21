@@ -1,5 +1,6 @@
 {
   pkgs,
+  lib,
   config,
   username,
   ...
@@ -53,14 +54,11 @@
       nil
       pnpm
       prettierd
-      pywal
-      pywalfox-native
       portaudio
       ripgrep
       rustup
       sbarlua
       sketchybar-app-font
-      starship
       stow
       typescript
       utm
@@ -77,23 +75,27 @@
     ];
 
     file = {
-      # pywal reload script
-      "/Users/${username}/wal-reload.sh".source = config.lib.file.mkOutOfStoreSymlink ./wal-reload.sh;
-
       # wallpapers
       "/Users/${username}/wallpapers".source = config.lib.file.mkOutOfStoreSymlink ./wallpapers;
-
-      # pywal cache
-      "/Users/${username}/.cache/wal".source = config.lib.file.mkOutOfStoreSymlink ./wal-cache;
     };
   };
 
   fonts.fontconfig.enable = true;
 
+  catppuccin = {
+    flavor = "mocha";
+    accent = "blue";
+
+    kitty.enable = true;
+    starship.enable = true;
+    bat.enable = true;
+  };
+
   programs = {
     home-manager = {
       enable = true;
     };
+
     # mise-en-place used for managing dev-tools
     mise = {
       enable = true;
@@ -114,8 +116,39 @@
     starship = {
       enable = true;
       enableZshIntegration = true;
+
       settings = {
         add_newline = false;
+        format = lib.concatStrings [
+          "$directory"
+          "$hostname"
+          "$git_branch"
+          "$git_status"
+          ######
+          "$fill"
+          ######
+          "$battery"
+          "$nix_shell"
+          "$lua"
+          "$python"
+          "$bun"
+          "$nodejs"
+          "$rust"
+          "$swift"
+          "$zig"
+          "$cmd_duration"
+          "$line_break"
+          ######
+          "$character"
+        ];
+        hostname = {
+          ssh_only = false;
+          style = "fg:blue";
+          format = "[@$hostname ]($style)";
+        };
+        fill = {
+          symbol = " ";
+        };
       };
     };
     # fetch

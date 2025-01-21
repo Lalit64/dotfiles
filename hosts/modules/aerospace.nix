@@ -77,16 +77,16 @@
             "layout floating"
           ];
         }
-        ####### Specific spaces for apps #######
         {
           check-further-callbacks = false;
           "if" = {
-            app-id = "app.zen-browser.zen";
+            app-id = "org.qbittorrent.qBittorrent";
           };
           run = [
-            "move-node-to-workspace 1"
+            "layout floating"
           ];
         }
+        ####### Specific spaces for apps #######
         {
           check-further-callbacks = false;
           "if" = {
@@ -157,6 +157,8 @@
         alt-slash = "layout horizontal vertical";
 
         ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload && aerospace reload-config";
+
+        # alt-cmd-c = ""; center floating window on screen
 
         alt-t = "exec-and-forget open -a kitty.app";
         alt-o = ''exec-and-forget open -a "Zen Browser.app"'';

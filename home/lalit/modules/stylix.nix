@@ -5,7 +5,10 @@
     autoEnable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     image = wallpaper;
-    targets.kitty.enable = false;
+    targets = {
+      kitty.enable = false;
+      bat.enable = false;
+    };
     fonts = {
       monospace = {
         package = pkgs.lalit64-nur.monolisa-nf;

@@ -5,8 +5,6 @@
   ...
 }:
 {
-  #theme
-  home.file."/Users/${username}/.config/kitty/mocha.conf".source = ./mocha.conf;
   # custom tab bar
   home.file."/Users/${username}/.config/kitty/tab_bar.py".source = ./tab_bar.py;
   # search using cmd+f
@@ -65,7 +63,6 @@
     };
 
     extraConfig = ''
-      include mocha.conf
       modify_font cell_height 15px
       nnoremap <ScrollWheelRight> <Nop>
       nnoremap <ScrollWheelLeft> <Nop>

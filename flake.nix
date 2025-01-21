@@ -19,6 +19,7 @@
 
     # system theming
     stylix.url = "github:Lalit64/stylix/vesktop-darwin";
+    catppuccin.url = "github:catppuccin/nix";
 
     # my nix user repository
     lalit64-nur.url = "github:lalit64/nur";
@@ -93,6 +94,7 @@
                     ./home/${username}/${hostname}.nix
                     inputs.nvf.homeManagerModules.default
                     inputs.stylix.homeManagerModules.stylix
+                    inputs.catppuccin.homeManagerModules.catppuccin
                   ];
                 };
               };
@@ -101,7 +103,6 @@
         };
     in
     {
-
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"

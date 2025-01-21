@@ -2,6 +2,7 @@
   pkgs,
   username,
   hostname,
+  wallpaper,
   ...
 }:
 {
@@ -32,25 +33,15 @@
     pathsToLink = [ "/Applications" ];
   };
 
-  local = {
-    dock = {
-      enable = true;
-      entries = [
-        { path = "/Applications/Zen Browser.app/"; }
-        { path = "/Applications/iPhone Mirroring.app/"; }
-        { path = "${pkgs.vscodium}/Applications/VSCodium.app/"; }
-        { path = "/Applications/kitty.app/"; }
-        { path = "${pkgs.zoom-us}/Applications/zoom.us.app/"; }
-      ];
-    };
-    wallpaper = {
-      enable = true;
-    };
-  };
-
   system = {
     keyboard.enableKeyMapping = true;
     keyboard.remapCapsLockToEscape = true;
+
+    activationScripts.postUserActivation.text = ''
+       # Wallpaper
+       echo >&2 "Setting the wallpaper..."
+      osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${wallpaper}"'
+    '';
 
     defaults = {
       NSGlobalDomain = {
@@ -75,6 +66,14 @@
         # Style options
         orientation = "left";
         show-recents = false;
+
+        persistent-apps = [
+          "/Applications/Zen Browser.app/"
+          "${pkgs.vscodium}/Applications/VSCodium.app/"
+          "${pkgs.zed-editor}/Applications/Zed.app/"
+          "/Applications/kitty.app/"
+          "${pkgs.zoom-us}/Applications/zoom.us.app/"
+        ];
       };
       finder = {
         AppleShowAllExtensions = true;
@@ -99,7 +98,6 @@
     ./brew.nix
     ./borders.nix
     ./aerospace.nix
-    ./activation.nix
   ];
 
   # backwards compat; don't change
