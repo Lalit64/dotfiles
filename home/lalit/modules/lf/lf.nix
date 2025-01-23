@@ -8,17 +8,19 @@
     commands = {
       mkdir = ''
         ''${{
-          printf "Directory Name: "
+          echo "Directory Name: "
           read DIR
           mkdir DIR
         }}
       '';
+
     };
 
     keybindings = {
       "\\\"" = "";
       "<enter>" = "open";
       "a" = "mkdir";
+      "d" = "delete";
     };
 
     settings = {

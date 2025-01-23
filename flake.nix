@@ -9,6 +9,12 @@
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
+    # lix.systems
+    lix = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # home-manager
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -58,6 +64,7 @@
                 sbarlua = inputs.sbarlua.packages."${prev.system}".sbarlua;
                 nh = inputs.nh.packages."${prev.system}".nh;
               })
+              inputs.lix.overlays.lixFromNixpkgs
               inputs.vscode-marketplace.overlays.default
             ];
           };
@@ -73,6 +80,7 @@
           };
           modules = [
             ./hosts/${hostname}/default.nix
+            inputs.lix.nixosModules.default
             inputs.home-manager.darwinModules.home-manager
             {
               users.users."${username}".home = "/Users/${username}";
@@ -106,10 +114,10 @@
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-fauna.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-flora.png";
         "home-desk" =
           mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-fauna.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-flora.png";
       };
     };
 }

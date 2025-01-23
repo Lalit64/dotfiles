@@ -32,6 +32,6 @@
       "sidequest"
       "kitty@nightly"
     ];
-    brews = [ ];
+    brews = [ "libiconv" ];
   };
 }

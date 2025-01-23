@@ -1,6 +1,5 @@
 {
   pkgs,
-  hostname,
   username,
   ...
 }:
@@ -36,9 +35,14 @@
       export PATH="/Users/${username}/Library/pnpm:$PATH"
       export PATH="$PATH:$HOME/.cargo/bin"
       export EDITOR=${pkgs.neovim}/bin/nvim
+      export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
+      export LDFLAGS="-L/opt/homebrew/opt/libiconv/lib"
+      export CPPFLAGS="-I/opt/homebrew/opt/libiconv/include"
+      export LIBRARY_PATH=$LIBRARY_PATH:$(brew --prefix)/lib:$(brew --prefix)/opt/libiconv/lib
 
       eval "$(/opt/homebrew/bin/brew shellenv)"
       eval "$(${pkgs.zoxide}/bin/zoxide init zsh)"
+      eval "$(${pkgs.mise}/bin/mise activate zsh)"
       source "${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh"
     '';
 

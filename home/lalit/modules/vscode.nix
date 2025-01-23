@@ -24,6 +24,8 @@
       vscode-extensions.wix.vscode-import-cost
       vscode-extensions.jnoortheen.nix-ide
       vscode-extensions.ms-python.python
+      vscode-extensions.rust-lang.rust-analyzer
+      vscode-marketplace.bradlc.vscode-tailwindcss
       vscode-marketplace.oven.bun-vscode
       vscode-marketplace.ms-vscode.atom-keybindings
       vscode-marketplace.moalamri.inline-fold
@@ -77,10 +79,13 @@
         };
       };
 
+      svelte.enable-ts-plugin = true;
+
       # formatters
       "[nix]".editor.defaultFormatter = "jnoortheen.nix-ide";
       "[lua]".editor.defaultFormatter = "sumneko.lua";
       "[python]".editor.defaultFormatter = "ms-python.black-formatter";
+      "[rust]".editor.defaultFormatter = "rust-lang.rust-analyzer";
     };
   };
 }

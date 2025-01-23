@@ -56,7 +56,6 @@
       prettierd
       portaudio
       ripgrep
-      rustup
       sbarlua
       sketchybar-app-font
       stow
@@ -102,13 +101,14 @@
       enableZshIntegration = true;
       globalConfig = {
         tools = {
-          node = "lts";
+          node = "latest";
           python = [
             "3.10"
             "3.11"
           ];
-          ruby = "3.1";
-          luajit = "2.1";
+          ruby = "latest";
+          rust = "latest";
+          rust-analyzer = "latest";
         };
       };
     };
