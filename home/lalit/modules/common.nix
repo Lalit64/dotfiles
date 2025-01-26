@@ -8,6 +8,7 @@
     ./karabiner/karabiner.nix # hyper key
     ./lf/lf.nix
     ./sketchybar/sketchybar.nix # top bar
+    ./sioyek/sioyek.nix
 
     ./stylix.nix # system colors and font
     ./zsh.nix # shell

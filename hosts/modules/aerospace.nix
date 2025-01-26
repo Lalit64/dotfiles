@@ -3,6 +3,7 @@
   services.aerospace = {
     enable = true;
     package = pkgs.aerospace;
+
     settings = {
       after-login-command = [ ];
       after-startup-command = [ ];
@@ -86,7 +87,26 @@
             "layout floating"
           ];
         }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.vmware.fusion";
+          };
+          run = [
+            "layout floating"
+          ];
+        }
         ####### Specific spaces for apps #######
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "app.zen-browser.zen";
+          };
+          run = [
+            "move-node-to-workspace 1"
+          ];
+        }
+
         {
           check-further-callbacks = false;
           "if" = {
@@ -105,10 +125,39 @@
             "move-node-to-workspace 2"
           ];
         }
+
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.electron.logseq";
+          };
+          run = [
+            "move-node-to-workspace 2"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "info.sioyek.sioyek";
+          };
+          run = [
+            "move-node-to-workspace 2"
+          ];
+        }
+
         {
           check-further-callbacks = false;
           "if" = {
             app-id = "us.zoom.xos";
+          };
+          run = [
+            "move-node-to-workspace 3"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "dev.vencord.vesktop";
           };
           run = [
             "move-node-to-workspace 3"

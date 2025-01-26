@@ -48,6 +48,7 @@
       ice-bar
       imagemagick
       jq
+      logseq # notes app
       lua54Packages.lua
       nixd
       nixfmt-rfc-style
@@ -63,7 +64,6 @@
       utm
       watchman
       wget
-      zathura
       zig
       zoxide
       zsh-autopair
@@ -173,6 +173,14 @@
           "gpu"
           "colors"
         ];
+      };
+    };
+
+    zathura = {
+      enable = true;
+      options = {
+        recolor = true;
+        recolor-keephue = true;
       };
     };
 

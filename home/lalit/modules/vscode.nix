@@ -52,11 +52,13 @@
         occurrencesHighlight = "off";
         renderControlCharacters = false;
         hideCursorInOverviewRuler = true;
-        gotoLocation.multipleReferences = "goto";
-        gotoLocation.multipleDefinitions = "goto";
-        gotoLocation.multipleDeclarations = "goto";
-        gotoLocation.multipleImplementations = "goto";
-        gotoLocation.multipleTypeDefinitions = "goto";
+        gotoLocation = {
+          multipleReferences = "goto";
+          multipleDefinitions = "goto";
+          multipleDeclarations = "goto";
+          multipleImplementations = "goto";
+          multipleTypeDefinitions = "goto";
+        };
         suggestLineHeight = 30;
         fontLigatures = true;
         wordSeparators = "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?";
@@ -68,17 +70,18 @@
       terminal.integrated.cursorStyle = "underline";
 
       # nix stuff
-      nix.enableLanguageServer = true;
-      nix.formatterPath = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
-      nix.serverPath = "${pkgs.nil}/bin/nil";
-      nix.serverSettings = {
-        nil = {
-          formatting = {
-            command = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
+      nix = {
+        enableLanguageServer = true;
+        formatterPath = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+        serverPath = "${pkgs.nil}/bin/nil";
+        serverSettings = {
+          nil = {
+            formatting = {
+              command = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
+            };
           };
         };
       };
-
       svelte.enable-ts-plugin = true;
 
       # formatters

@@ -6,18 +6,18 @@
 }:
 {
   # custom tab bar
-  home.file."/Users/${username}/.config/kitty/tab_bar.py".source = ./tab_bar.py;
-  # search using cmd+f
-  home.file."/Users/${username}/.config/kitty/search.py".source = ./search.py;
-  home.file."/Users/${username}/.config/kitty/scroll_mark.py".source = ./scroll_mark.py;
-
+  home.file = {
+    "/Users/${username}/.config/kitty/tab_bar.py".source = ./tab_bar.py;
+    "/Users/${username}/.config/kitty/search.py".source = ./search.py;
+    "/Users/${username}/.config/kitty/scroll_mark.py".source = ./scroll_mark.py;
+  };
   programs.kitty = {
     enable = true;
     package = pkgs.emptyDirectory;
 
     settings = {
       # customization stuff
-      background_opacity = 0.8;
+      background_opacity = 0.9;
       background_blur = 64;
       window_padding_width = 20;
       hide_window_decorations = "titlebar-only";

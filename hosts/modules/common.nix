@@ -9,7 +9,6 @@
 
   nixpkgs = {
     config.allowUnfree = true;
-    config.allowUnsupportedSystem = true;
   };
 
   nix.settings = {
@@ -73,9 +72,9 @@
         persistent-apps = [
           "/Applications/Zen Browser.app/"
           "${pkgs.vscodium}/Applications/VSCodium.app/"
-          "${pkgs.zed-editor}/Applications/Zed.app/"
           "/Applications/kitty.app/"
-          "${pkgs.zoom-us}/Applications/zoom.us.app/"
+          "${pkgs.logseq}/Applications/Logseq.app/"
+          "/Applications/sioyek.app/"
         ];
       };
       finder = {
