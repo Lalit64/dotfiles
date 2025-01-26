@@ -31,7 +31,6 @@
       "google-chrome"
       "sidequest"
       "kitty@nightly"
-      "lunar-client"
       "sioyek"
     ];
     brews = [ "libiconv" ];
