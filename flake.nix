@@ -54,9 +54,9 @@
       mkDarwinConfiguration =
         system: hostname: username: wallpaper:
         inputs.darwin.lib.darwinSystem {
-          system = system;
+          inherit system;
           pkgs = import inputs.nixpkgs {
-            system = system;
+            inherit system;
             config.allowUnfree = true;
             overlays = [
               (final: prev: {

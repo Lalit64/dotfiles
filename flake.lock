@@ -3664,16 +3664,15 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1737382778,
-        "narHash": "sha256-gYASAjwjA85hv/jeixrXiaLgmzhX3Y4w+pdyeEO+4lQ=",
-        "owner": "Lalit64",
+        "lastModified": 1737861120,
+        "narHash": "sha256-V/GWU1BQwbxyZif9RBvwn10S1KX+86uPkkI41KQEcQQ=",
+        "owner": "danth",
         "repo": "stylix",
-        "rev": "01f141ee74b59dba40a9c09feab2dece6f99d269",
+        "rev": "d6951d0b2ffe74e4779a180e9b6a0e17627756e1",
         "type": "github"
       },
       "original": {
-        "owner": "Lalit64",
-        "ref": "vesktop-darwin",
+        "owner": "danth",
         "repo": "stylix",
         "type": "github"
       }
