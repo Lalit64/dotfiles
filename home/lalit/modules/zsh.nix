@@ -23,6 +23,8 @@
       nixswitch = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh}/bin/nh darwin switch";
       ns = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh}/bin/nh darwin switch";
       nc = "${pkgs.nh}/bin/nh clean all";
+      nu = "nix flake update --flake /Users/${username}/.config/snowflake";
+
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";
       tree = "${pkgs.eza}/bin/eza --icons --tree";
@@ -30,15 +32,8 @@
     };
 
     initExtra = ''
-      export PATH="$PATH:/Users/${username}/.local/bin"
       export PNPM_HOME="/"
-      export PATH="/Users/${username}/Library/pnpm:$PATH"
-      export PATH="$PATH:$HOME/.cargo/bin"
       export EDITOR=${pkgs.neovim}/bin/nvim
-      export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
-      export LDFLAGS="-L/opt/homebrew/opt/libiconv/lib"
-      export CPPFLAGS="-I/opt/homebrew/opt/libiconv/include"
-      export LIBRARY_PATH=$LIBRARY_PATH:$(brew --prefix)/lib:$(brew --prefix)/opt/libiconv/lib
 
       eval "$(/opt/homebrew/bin/brew shellenv)"
       eval "$(${pkgs.zoxide}/bin/zoxide init zsh)"

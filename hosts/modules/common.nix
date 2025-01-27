@@ -17,8 +17,11 @@
 
   nix.optimise.automatic = true;
 
-  programs.zsh.enable = true;
-  users.users.${username}.home = "/Users/${username}";
+  users.users."${username}" = {
+    name = "${username}";
+    home = "/Users/${username}";
+    shell = pkgs.zsh;
+  };
 
   environment = {
     shells = with pkgs; [
@@ -28,13 +31,21 @@
     systemPackages = [
       pkgs.coreutils
     ];
-    systemPath = [ "/usr/local/bin" ];
+    systemPath = [
+      "/usr/local/bin"
+      "/opt/homebrew/bin"
+      "/Users/${username}/.local/bin"
+      "/Users/${username}/.cargo/bin"
+      "/Users/${username}/Library/pnpm"
+    ];
     pathsToLink = [ "/Applications" ];
   };
 
   system = {
     keyboard.enableKeyMapping = true;
     keyboard.remapCapsLockToEscape = true;
+    
+    startup.chime = true;
 
     activationScripts.postUserActivation.text = ''
        # Wallpaper
@@ -54,10 +65,10 @@
         # Automatically hide and show the menu bar
         _HIHideMenuBar = true;
       };
+
       screencapture = {
         location = "/Users/${username}/Desktop/screenshots";
         type = "png";
-        disable-shadow = true;
       };
       dock = {
         # Automatically hide and show the Dock

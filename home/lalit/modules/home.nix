@@ -7,11 +7,12 @@
 }:
 {
   home = {
-    username = username;
+    inherit username;
     homeDirectory = "/Users/${username}";
     packages = with pkgs; [
       # from my nur ( nix user repository )
       lalit64-nur.monolisa-nf # MonoLisa Nerd Font Mono
+      lalit64-nur.cleanshot
       # macos utils
       aerospace
       sketchybar

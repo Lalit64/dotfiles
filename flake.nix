@@ -6,7 +6,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
 
     # nix-darwin
-    darwin.url = "github:lnl7/nix-darwin";
+    darwin.url = "git+ssh://git@github.com/lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # lix.systems
@@ -16,27 +16,27 @@
     };
 
     # home-manager
-    home-manager.url = "github:nix-community/home-manager/master";
+    home-manager.url = "git+ssh://git@github.com/nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # nh cli
-    nh.url = "github:viperML/nh";
+    nh.url = "git+ssh://git@github.com/viperML/nh";
     nh.inputs.nixpkgs.follows = "nixpkgs";
 
     # system theming
-    stylix.url = "github:danth/stylix";
+    stylix.url = "git+ssh://git@github.com/danth/stylix";
     catppuccin.url = "github:catppuccin/nix";
 
     # my nix user repository
-    lalit64-nur.url = "github:lalit64/nur";
+    lalit64-nur.url = "git+ssh://git@github.com/lalit64/nur.git";
     lalit64-nur.inputs.nixpkgs.follows = "nixpkgs";
 
     # nvf - neovim configuration
-    nvf.url = "github:notashelf/nvf";
+    nvf.url = "git+ssh://git@github.com/notashelf/nvf";
     nvf.inputs.nixpkgs.follows = "nixpkgs";
 
     # vscode-marketplace for vscodium extensions
-    vscode-marketplace.url = "github:nix-community/nix-vscode-extensions";
+    vscode-marketplace.url = "git+ssh://git@github.com/nix-community/nix-vscode-extensions";
 
     # sbarlua
     sbarlua.url = "github:lalit64/SbarLua/nix-darwin-package";
