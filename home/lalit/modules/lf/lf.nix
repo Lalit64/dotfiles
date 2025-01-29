@@ -13,7 +13,6 @@
           mkdir DIR
         }}
       '';
-
     };
 
     keybindings = {

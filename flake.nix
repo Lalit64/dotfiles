@@ -32,8 +32,13 @@
     lalit64-nur.inputs.nixpkgs.follows = "nixpkgs";
 
     # nvf - neovim configuration
-    nvf.url = "git+ssh://git@github.com/notashelf/nvf";
-    nvf.inputs.nixpkgs.follows = "nixpkgs";
+    # nvf.url = "git+ssh://git@github.com/NotAShelf/nvf.git";
+    # nvf.inputs.nixpkgs.follows = "nixpkgs";
+
+    nvchad4nix = {
+      url = "github:nix-community/nix4nvchad";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # vscode-marketplace for vscodium extensions
     vscode-marketplace.url = "git+ssh://git@github.com/nix-community/nix-vscode-extensions";
@@ -61,6 +66,7 @@
             overlays = [
               (final: prev: {
                 lalit64-nur = inputs.lalit64-nur.packages."${prev.system}";
+                nvchad = inputs.nvchad4nix.packages."${prev.system}".nvchad;
                 sbarlua = inputs.sbarlua.packages."${prev.system}".sbarlua;
                 nh = inputs.nh.packages."${prev.system}".nh;
               })
@@ -100,7 +106,7 @@
                 users."${username}" = {
                   imports = [
                     ./home/${username}/${hostname}.nix
-                    inputs.nvf.homeManagerModules.default
+                    inputs.nvchad4nix.homeManagerModule
                     inputs.stylix.homeManagerModules.stylix
                     inputs.catppuccin.homeManagerModules.catppuccin
                   ];

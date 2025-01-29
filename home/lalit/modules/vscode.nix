@@ -25,6 +25,7 @@
       vscode-extensions.jnoortheen.nix-ide
       vscode-extensions.ms-python.python
       vscode-extensions.rust-lang.rust-analyzer
+      vscode-extensions.ziglang.vscode-zig
       vscode-marketplace.bradlc.vscode-tailwindcss
       vscode-marketplace.oven.bun-vscode
       vscode-marketplace.ms-vscode.atom-keybindings
@@ -39,7 +40,7 @@
         emptySelectionClipboard = true;
         multiCursorModifier = "ctrlCmd";
         snippetSuggestions = "top";
-        detectIndentation = false;
+        detectIndentation = true;
         minimap.enabled = false;
         guides.indentation = false;
         hover.delay = 1500;
@@ -64,6 +65,7 @@
         wordSeparators = "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?";
         defaultFormatter = "esbenp.prettier-vscode";
         formatOnSave = true;
+        tabSize = 2;
       };
 
       workbench.iconTheme = "symbols";
@@ -82,6 +84,8 @@
           };
         };
       };
+
+      # svelte typscript
       svelte.enable-ts-plugin = true;
 
       # formatters

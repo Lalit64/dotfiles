@@ -36,7 +36,7 @@
 
       # font
       font_family = config.stylix.fonts.monospace.name;
-      font_size = config.stylix.fonts.sizes.terminal;
+      font_size = config.stylix.fonts.sizes.terminal + 4;
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";
@@ -50,7 +50,8 @@
       "cmd+4" = "goto_tab 4";
       "cmd+5" = "goto_tab 5";
       "cmd+6" = "goto_tab 6";
-      "cmd+," = "launch --type=overlay /etc/profiles/per-user/${username}/bin/nvim ~/.config/snowflake/home/${username}/modules/kitty/kitty.nix";
+      "cmd+," =
+        "launch --type=overlay /etc/profiles/per-user/${username}/bin/nvim ~/.config/snowflake/home/${username}/modules/kitty/kitty.nix";
 
       # search using cmd+f
       "cmd+f" =

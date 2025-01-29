@@ -44,7 +44,7 @@
   system = {
     keyboard.enableKeyMapping = true;
     keyboard.remapCapsLockToEscape = true;
-    
+
     startup.chime = true;
 
     activationScripts.postUserActivation.text = ''
