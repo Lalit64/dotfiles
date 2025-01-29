@@ -104,6 +104,16 @@
         },
         {
           "stevearc/conform.nvim",
+          keys = {
+            {
+              "<leader>fm",
+              function ()
+                require("conform").format({ async = true })
+              end,
+              mode = "n",
+              desc = "Format buffer (conform)",
+            }
+          },
           config = function ()
             require("conform").setup({
               default_formatter_opts = {
