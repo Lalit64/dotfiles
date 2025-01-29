@@ -33,6 +33,8 @@
       "kitty@nightly"
       "sioyek"
     ];
-    brews = [ "libiconv" ];
+    brews = [ "libiconv" {
+      name = "ollama"; start_service = true;
+    }];
   };
 }

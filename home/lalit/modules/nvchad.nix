@@ -101,6 +101,13 @@
               conf.mapping = vim.tbl_deep_extend("force", conf.mapping, mymappings)
             return conf
           end,
+        },
+        {
+          "echasnovski/mini.surround",
+          lazy = false,
+          config = function ()
+            require("mini.surround").setup({})
+          end
         }
       }
       return M
