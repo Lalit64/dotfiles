@@ -48,8 +48,8 @@
     startup.chime = true;
 
     activationScripts.postUserActivation.text = ''
-       # Wallpaper
-       echo >&2 "Setting the wallpaper..."
+      # Wallpaper
+      echo >&2 "Setting the wallpaper..."
       osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${wallpaper}"'
       # disable .DS_Store files
       defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE

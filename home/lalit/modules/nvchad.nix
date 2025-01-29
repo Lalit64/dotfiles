@@ -2,6 +2,8 @@
 {
   programs.nvchad = {
     enable = true;
+    backup = false;
+
     chadrcConfig = ''
       local options = {
         base46 = {
@@ -80,11 +82,37 @@
       local status, chadrc = pcall(require, "chadrc")
       return vim.tbl_deep_extend("force", options, status and chadrc or {})
     '';
+
+    extraPlugins = ''
+      local M = {
+        {
+          "hrsh7th/nvim-cmp",
+            opts = function()
+              local cmp = require("cmp")
+                local conf = require("nvchad.configs.cmp")
+                local mymappings = {
+                  ["<Up>"] = cmp.mapping.select_prev_item(),
+                  ["<Down>"] = cmp.mapping.select_next_item(),
+                  ["<Tab>"] = cmp.mapping.confirm {
+                    behavior = cmp.ConfirmBehavior.Replace,
+                    select = true,
+                  },
+                }
+              conf.mapping = vim.tbl_deep_extend("force", conf.mapping, mymappings)
+            return conf
+          end,
+        }
+      }
+      return M
+    '';
+
     extraConfig = ''
+      local opt = vim.opt 
+      opt.wrap = false
+
       require("nvchad.configs.lspconfig").defaults()
         local lspconfig = require "lspconfig"
 
-        -- EXAMPLE
         local servers = { "astro", "bashls", "clangd", "cssls", "emmet_ls", "gopls", "html", "java_language_server", "marksman", "nil_ls", "pyright", "rust_analyzer", "sqls", "svelte", "ts_ls", "zls" }
         local nvlsp = require "nvchad.configs.lspconfig"
 
