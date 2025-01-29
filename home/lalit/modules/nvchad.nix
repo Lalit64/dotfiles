@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   programs.nvchad = {
     enable = true;
@@ -87,20 +87,36 @@
       local M = {
         {
           "hrsh7th/nvim-cmp",
-            opts = function()
-              local cmp = require("cmp")
-                local conf = require("nvchad.configs.cmp")
-                local mymappings = {
-                  ["<Up>"] = cmp.mapping.select_prev_item(),
-                  ["<Down>"] = cmp.mapping.select_next_item(),
-                  ["<Tab>"] = cmp.mapping.confirm {
-                    behavior = cmp.ConfirmBehavior.Replace,
-                    select = true,
-                  },
-                }
-              conf.mapping = vim.tbl_deep_extend("force", conf.mapping, mymappings)
+          opts = function()
+            local cmp = require("cmp")
+              local conf = require("nvchad.configs.cmp")
+              local mymappings = {
+                ["<Up>"] = cmp.mapping.select_prev_item(),
+                ["<Down>"] = cmp.mapping.select_next_item(),
+                ["<Tab>"] = cmp.mapping.confirm {
+                  behavior = cmp.ConfirmBehavior.Replace,
+                  select = true,
+                },
+              }
+            conf.mapping = vim.tbl_deep_extend("force", conf.mapping, mymappings)
             return conf
           end,
+        },
+        {
+          "stevearc/conform.nvim",
+          config = function ()
+            require("conform").setup({
+              default_formatter_opts = {
+                lsp_format = "prefer",
+              },
+              format_on_save = {
+                lsp_format = "prefer",
+              },
+              formatters_by_ft = {
+                nix = { "nixfmt", lsp_format = "fallback" }
+              }
+            })
+          end
         },
         {
           "echasnovski/mini.surround",
@@ -118,19 +134,27 @@
       opt.wrap = false
 
       require("nvchad.configs.lspconfig").defaults()
-        local lspconfig = require "lspconfig"
+      local lspconfig = require "lspconfig"
 
-        local servers = { "astro", "bashls", "clangd", "cssls", "emmet_ls", "gopls", "html", "java_language_server", "marksman", "nil_ls", "pyright", "rust_analyzer", "sqls", "svelte", "ts_ls", "zls" }
-        local nvlsp = require "nvchad.configs.lspconfig"
+      local servers = { "astro", "bashls", "clangd", "cssls", "emmet_ls", "gopls", "html", "java_language_server", "marksman", "nil_ls", "pyright", "rust_analyzer", "sqls", "svelte", "ts_ls", "zls" }
+      local nvlsp = require "nvchad.configs.lspconfig"
 
-        -- lsps with default config
-        for _, lsp in ipairs(servers) do
-          lspconfig[lsp].setup {
-            on_attach = nvlsp.on_attach,
-            on_init = nvlsp.on_init,
-            capabilities = nvlsp.capabilities,
-          }
-        end
+      -- lsps with default config
+      for _, lsp in ipairs(servers) do
+        lspconfig[lsp].setup {
+          on_attach = nvlsp.on_attach,
+          on_init = nvlsp.on_init,
+          capabilities = nvlsp.capabilities,
+        }
+      end
+
+      -- format on save
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*",
+        callback = function(args)
+        require("conform").format({ bufnr = args.buf })
+        end,
+      })
     '';
   };
 }
