@@ -81,7 +81,7 @@
         show-recents = false;
 
         persistent-apps = [
-          "/Applications/Zen Browser.app/"
+          "/Applications/Zen Twilight.app/"
           "${pkgs.vscodium}/Applications/VSCodium.app/"
           "/Applications/kitty.app/"
           "${pkgs.logseq}/Applications/Logseq.app/"

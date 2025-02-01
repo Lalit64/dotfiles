@@ -24,6 +24,7 @@
       ns = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh}/bin/nh darwin switch";
       nc = "${pkgs.nh}/bin/nh clean all";
       nu = "nix flake update --flake /Users/${username}/.config/snowflake";
+      nhash = ''nix hash to-sri --type sha256 $(nix-prefetch-url "$1")'';
 
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";

@@ -1,65 +1,53 @@
-local settings = require("settings")
-local colors = require("colors")
+local icons = require "icons"
+local colors = require("colors").sections.calendar
+local settings = require "settings"
 
-local time = sbar.add("item", {
-    icon = {
-        drawing = false, -- No icon for time
+local cal = sbar.add("item", {
+  icon = {
+    padding_left = 8,
+    padding_right = 4,
+    font = {
+      family = settings.font.numbers,
+      style = settings.font.style_map["Bold"],
     },
-    label = {
-        font = {
-            family = settings.font.numbers,
-            style = settings.font.style_map["Regular"],
-            size = settings.font.sizes.numbers + 1.0,
-        },
-        string = "", -- Will be set by the subscription
-        color = colors.white,
-        align = "center",
-        padding_left = settings.bar_margin_padding - 8,
-        padding_right = settings.bar_margin_padding - 8,
-    },
-    background = {
-        color = colors.bar.bg,
-        border_color = colors.blue,
-        border_width = 1,
-        height = settings.bar_height - 8,
-        corner_radius = 8,
-    },
-    position = "right",
-    update_freq = 30,
+  },
+  label = {
+    color = colors.label,
+    align = "left",
+    padding_right = 8,
+  },
+  padding_left = 10,
+  position = "right",
+  update_freq = 30,
+  click_script = "open -a 'Calendar'",
 })
 
-local date = sbar.add("item", "date", {
-    icon = {
-        drawing = false,
-    },
-    label = {
-        color = colors.white,
-        align = "right",
-        font = {
-            family = settings.font.numbers,
-            style = settings.font.style_map["Regular"],
+cal:subscribe("mouse.clicked", function()
+  sbar.animate("tanh", 8, function()
+    cal:set {
+      background = {
+        shadow = {
+          distance = 0,
         },
-        padding_left = settings.bar_margin_padding - 8,
-        padding_right = settings.bar_margin_padding - 8,
-    },
-    position = "right",
-    update_freq = 30,
-    background = {
-        color = colors.bar.bg,
-        border_color = colors.blue,
-        border_width = 1,
-        height = settings.bar_height - 8,
-        corner_radius = 8,
-    },
-    padding_left = settings.item_spacing,
-    padding_right = settings.item_spacing,
-})
-
--- Subscribe to update the time and date
-date:subscribe({ "forced", "routine", "system_woke" }, function(env)
-    date:set({ label = os.date("%a %b %d") })
+      },
+      y_offset = -4,
+      padding_left = 14,
+      padding_right = 0,
+    }
+    cal:set {
+      background = {
+        shadow = {
+          distance = 4,
+        },
+      },
+      y_offset = 0,
+      padding_left = 10,
+      padding_right = 4,
+    }
+  end)
 end)
 
-time:subscribe({ "forced", "routine", "system_woke" }, function(env)
-    time:set({ label = os.date("%H:%M") })
+-- english date
+cal:subscribe({ "forced", "routine", "system_woke" }, function(env)
+  cal:set { icon = os.date "%a %b %d %H:%M", label = icons.calendar }
 end)

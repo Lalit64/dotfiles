@@ -21,7 +21,6 @@
       docker
       keka
       vesktop
-      youtube-music
       qbittorrent
       # java
       zulu
@@ -45,6 +44,7 @@
       gcc
       gh
       glow
+      git-lfs
       httpie
       ice-bar
       imagemagick
@@ -57,6 +57,7 @@
       pnpm
       prettierd
       portaudio
+      rust-analyzer
       ripgrep
       sbarlua
       sketchybar-app-font
@@ -110,6 +111,7 @@
           ruby = "latest";
           rust = "latest";
           rust-analyzer = "latest";
+          go = "latest";
         };
       };
     };

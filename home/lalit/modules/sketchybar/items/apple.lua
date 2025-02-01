@@ -1,28 +1,39 @@
-local icons = require("icons")
-local colors = require("colors")
-local settings = require("settings")
+local colors = require("colors").sections
+local icons = require "icons"
 
--- Create the Apple menu item with a specific name
-local apple = sbar.add("item", "apple.logo", {
-    background = {
-        color = colors.bar.bg,
-        border_color = colors.bar.border,
-        border_width = 1,
-        height = settings.bar_height - 8,
-        corner_radius = 8,
-    },
-    icon = {
-        font = { size = settings.font.sizes.icons },
-        -- TODO set a custom icon for this click script
-        string = icons.apple,
-        color = colors.white,
-        drawing = true,
-        padding_left = settings.bar_margin_padding - 8,
-        padding_right = settings.bar_margin_padding - 8,
-    },
-    label = {
-        drawing = false,
-    },
-    click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 0",
-    y_offset = 0.75,
+local apple = sbar.add("item", {
+  icon = {
+    font = { size = 16 },
+    string = icons.apple,
+    padding_right = 15,
+    padding_left = 15,
+    color = colors.apple,
+  },
+  label = { drawing = false },
+  click_script = "$CONFIG_DIR/helpers/menus/bin/menus -s 0",
 })
+
+apple:subscribe("mouse.clicked", function()
+  sbar.animate("tanh", 8, function()
+    apple:set {
+      background = {
+        shadow = {
+          distance = 0,
+        },
+      },
+      y_offset = -4,
+      padding_left = 8,
+      padding_right = 0,
+    }
+    apple:set {
+      background = {
+        shadow = {
+          distance = 4,
+        },
+      },
+      y_offset = 0,
+      padding_left = 4,
+      padding_right = 4,
+    }
+  end)
+end)

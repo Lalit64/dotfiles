@@ -11,6 +11,7 @@
     taps = [
       "homebrew/services"
       "FelixKratz/formulae"
+      "th-ch/youtube-music"
     ];
     casks = [
       "android-platform-tools"
@@ -21,7 +22,6 @@
       "httpie"
       "protonvpn"
       "whatsapp"
-      "zen-browser"
       "mythic"
       "handbrake"
       "sf-symbols"
@@ -32,9 +32,14 @@
       "sidequest"
       "kitty@nightly"
       "sioyek"
+      "zen-browser@twilight"
+      "youtube-music"
+      "lm-studio"
     ];
-    brews = [ "libiconv" {
-      name = "ollama"; start_service = true;
-    }];
+    brews = [
+      "libiconv"
+      "switchaudio-osx"
+      "nowplaying-cli"
+    ];
   };
 }

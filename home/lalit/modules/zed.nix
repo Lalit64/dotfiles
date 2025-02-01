@@ -6,7 +6,6 @@
       "nix"
       "catppuccin"
     ];
-
     userSettings = {
       base_keymap = "Atom";
       vim_mode = false;
@@ -20,7 +19,6 @@
         Nix = {
           language_servers = [
             "nil"
-            "!nixd"
           ];
           formatter = {
             external = {

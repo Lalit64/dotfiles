@@ -1,0 +1,10 @@
+{
+    "diagnostics.globals": [
+        "vim",
+        "icons",
+        "colors",
+        "bar",
+        "default",
+        "helpers"
+    ]
+}

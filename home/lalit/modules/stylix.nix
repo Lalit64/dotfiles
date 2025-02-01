@@ -13,7 +13,7 @@
     fonts = {
       monospace = {
         package = pkgs.lalit64-nur.monolisa-nf;
-        name = "CaskaydiaCove Nerd Font Mono";
+        name = "MonoLisa Nerd Font Mono";
       };
       sizes.terminal = 13;
     };

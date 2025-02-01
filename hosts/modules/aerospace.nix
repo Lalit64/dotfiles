@@ -208,7 +208,7 @@
         ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload && aerospace reload-config";
 
         alt-t = "exec-and-forget open -a kitty.app";
-        alt-o = ''exec-and-forget open -a "Zen Browser.app"'';
+        alt-o = ''exec-and-forget open -a "Zen Twilight.app"'';
         alt-c = "exec-and-forget open -a VSCodium.app";
       };
     };

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 {
   programs.vscode = {
     enable = true;
@@ -70,6 +70,7 @@
 
       workbench.iconTheme = "symbols";
       terminal.integrated.cursorStyle = "underline";
+      terminal.integrated.fontFamily = config.stylix.fonts.monospace.name;
 
       # nix stuff
       nix = {

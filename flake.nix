@@ -120,10 +120,10 @@
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-flora.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-galaxy.png";
         "home-desk" =
           mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-flora.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-galaxy.png";
       };
     };
 }
