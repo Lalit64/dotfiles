@@ -41,7 +41,8 @@ local catppuccin_mocha = {
 
 M.sections = {
   bar = {
-    bg = catppuccin_mocha.mantle,
+    bg = with_alpha(catppuccin_mocha.mantle, 0.8),
+    transparent = transparent,
     border = transparent,
   },
   item = {

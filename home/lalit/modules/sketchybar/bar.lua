@@ -12,5 +12,5 @@ sbar.bar {
   y_offset = 6,
   border_color = colors.border,
   border_width = 0,
-  blur_radius = 40,
+  blur_radius = 32,
 }
