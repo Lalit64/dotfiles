@@ -55,7 +55,7 @@ sbar.add("item", {
 media_playback:subscribe("media_change", function(env)
   if whitelist[env.INFO.app] then
     local playing = (env.INFO.state == "playing")
-    media_playback:set { drawing = true, icon = { string = env.INFO.artist .. " - " .. env.INFO.title, highlight = playing } }
+    media_playback:set { drawing = true, icon = { string = env.INFO.title .. " - " .. env.INFO.artist, highlight = playing } }
   end
 end)
 

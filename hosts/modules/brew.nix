@@ -34,12 +34,15 @@
       "sioyek"
       "zen-browser@twilight"
       "youtube-music"
-      "lm-studio"
     ];
     brews = [
       "libiconv"
       "switchaudio-osx"
       "nowplaying-cli"
+      {
+        name = "ollama";
+        start_service = true;
+      }
     ];
   };
 }
