@@ -96,6 +96,15 @@
             "layout floating"
           ];
         }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.aone.keka";
+          };
+          run = [
+            "layout floating"
+          ];
+        }
         ####### Specific spaces for apps #######
         {
           check-further-callbacks = false;

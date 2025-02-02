@@ -313,11 +313,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1738415006,
-        "narHash": "sha256-ZlLTnqIQQ8OE6AtT+fluB642j2R9tnvxHHtpnmLjSxQ=",
+        "lastModified": 1738448366,
+        "narHash": "sha256-4ATtQqBlgsGqkHTemta0ydY6f7JBRXz4Hf574NHQpkg=",
         "ref": "refs/heads/master",
-        "rev": "8544cd092047a7e92d0dce011108a563de7fc0f2",
-        "revCount": 4090,
+        "rev": "18fa9f323d8adbb0b7b8b98a8488db308210ed93",
+        "revCount": 4092,
         "type": "git",
         "url": "ssh://git@github.com/nix-community/home-manager"
       },
@@ -354,11 +354,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1738419195,
-        "narHash": "sha256-fl9dcgi2FRBjsgTuLRHmhn2dPW7n30Tyom/NEooSlxc=",
+        "lastModified": 1738505575,
+        "narHash": "sha256-x02iqo6aLYGmVGZRX0x8AIe1JwaVqrXTjxV2dWHogLg=",
         "ref": "refs/heads/main",
-        "rev": "9c64839ddff077d7a4a8b94625cf679fb8d00c12",
-        "revCount": 7,
+        "rev": "a3ff0a5d205af604e35bd615964a2ff2d68e7d7e",
+        "revCount": 6,
         "type": "git",
         "url": "ssh://git@github.com/lalit64/nur.git"
       },
@@ -711,11 +711,11 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1738374609,
-        "narHash": "sha256-IyHDXC0zXFTtrheJHdr1M1lS1GkDBPo09/mWDt+UfUQ=",
+        "lastModified": 1738460950,
+        "narHash": "sha256-VnojfvmXvLmEddGj+5pGg8UiQY1REHl0apB0R51wylw=",
         "ref": "refs/heads/master",
-        "rev": "e26741603fb047295c7015c93746b75601c8c490",
-        "revCount": 1179,
+        "rev": "66dd0a10ed193f204a7e0f9853bdc21f94dd838f",
+        "revCount": 1180,
         "type": "git",
         "url": "ssh://git@github.com/nix-community/nix-vscode-extensions"
       },

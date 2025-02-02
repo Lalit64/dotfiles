@@ -13,6 +13,8 @@
       # from my nur ( nix user repository )
       lalit64-nur.monolisa-nf # MonoLisa Nerd Font Mono
       lalit64-nur.cleanshot
+      lalit64-nur.affinity-photo
+      lalit64-nur.affinity-designer
       # macos utils
       aerospace
       sketchybar
