@@ -18,6 +18,7 @@ return {
   ["Bitwig Studio"] = ":bitwing_studio:",
   ["Blender"] = ":blender:",
   ["Books"] = ":books:",
+  ["sioyex"] = ":books:",
   ["Brave Browser"] = ":brave_browser:",
   ["Calculator"] = ":calculator:",
   ["Calendar"] = ":calendar:",
@@ -77,6 +78,7 @@ return {
   ["Neovide"] = ":neovide:",
   ["Neovim"] = ":neovide:",
   ["Notes"] = ":notes:",
+  ["Logseq"] = ":notes:",
   ["Notion"] = ":notion:",
   ["Notion Calendar"] = ":notion_calendar:",
   ["Numbers"] = ":numbers:",
@@ -126,6 +128,7 @@ return {
   ["XQuartz"] = ":xquartz:",
   ["Zed"] = ":zed:",
   ["Zen Browser"] = ":zen_browser:",
+  ["Zen Twilight"] = ":zen_browser:",
   ["zoom"] = ":zoom:",
   ["zoom.us"] = ":zoom:",
 }
