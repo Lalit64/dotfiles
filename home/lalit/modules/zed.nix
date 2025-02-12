@@ -1,16 +1,38 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.zed-editor = {
     enable = true;
     extensions = [
       "nix"
       "catppuccin"
+      "catppuccin-icons"
+      "catppuccin-blur-plus"
+      "toml"
+      "java"
+      "dockerfile"
+      "sql"
+      "ruby"
+      "latex"
+      "xml"
+      "make"
+      "svelte"
+      "zig"
+      "lua"
+      "astro"
+      "docker-compose"
+      "emmet"
+      "swift"
+      "kotlin"
+      "prisma"
+      "env"
+      "deno"
     ];
     userSettings = {
       base_keymap = "Atom";
-      vim_mode = false;
+      theme = "Catppuccin Mocha (Blue Blur+)";
+      buffer_font_family = config.stylix.fonts.monospace.name;
+      vim_mode = true;
       tab_size = 2;
-      soft_wrap = "editor_width";
       show_wrap_guides = true;
       project_panel = {
         git_status = false;
@@ -19,10 +41,18 @@
         Nix = {
           language_servers = [
             "nil"
+            "!nixd"
           ];
-          formatter = {
-            external = {
-              command = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+        };
+      };
+      lsp = {
+        nil = {
+          initialization_options = {
+            formatting = {
+              command = [ "nixfmt" ];
+            };
+            nix = {
+              binary = "${pkgs.nix}/bin/nix";
             };
           };
         };

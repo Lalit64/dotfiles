@@ -33,7 +33,7 @@ return {
   ["DEVONthink"] = ":devonthink:",
   ["DEVONthink 3"] = ":devonthink:",
   ["Discord"] = ":discord:",
-  ["Vesktop"] = ":discord:",
+  ["Legcord"] = ":discord:",
   ["Docker Desktop"] = ":docker:",
   ["Drafts"] = ":drafts:",
   ["Easy CSV Editor"] = ":easy_csv_editor:",

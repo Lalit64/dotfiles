@@ -15,6 +15,8 @@
     ];
     casks = [
       "android-platform-tools"
+      "jetbrains-toolbox"
+      "webstorm"
       "android-studio"
       "background-music"
       "karabiner-elements"
@@ -27,13 +29,13 @@
       "sf-symbols"
       "font-sf-mono"
       "font-sf-pro"
-      "orbstack"
       "google-chrome"
       "sidequest"
       "kitty@nightly"
-      "sioyek"
       "zen-browser@twilight"
       "youtube-music"
+      "orbstack"
+      "legcord"
     ];
     brews = [
       "libiconv"

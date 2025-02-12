@@ -8,7 +8,7 @@
     targets = {
       kitty.enable = false;
       bat.enable = false;
-      nixvim.enable = false;
+      zed.enable = false;
     };
     fonts = {
       monospace = {

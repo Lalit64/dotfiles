@@ -54,6 +54,15 @@
         {
           check-further-callbacks = false;
           "if" = {
+            app-id = "dev.kdrag0n.MacVirt";
+          };
+          run = [
+            "layout floating"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
             app-id = "com.github.th-ch.youtube-music";
           };
           run = [
@@ -128,6 +137,15 @@
         {
           check-further-callbacks = false;
           "if" = {
+            app-id = "dev.zed.Zed";
+          };
+          run = [
+            "move-node-to-workspace 2"
+          ];
+        }
+        {
+          check-further-callbacks = false;
+          "if" = {
             app-id = "net.kovidgoyal.kitty";
           };
           run = [
@@ -166,7 +184,7 @@
         {
           check-further-callbacks = false;
           "if" = {
-            app-id = "dev.vencord.vesktop";
+            app-id = "app.legcord.Legcord";
           };
           run = [
             "move-node-to-workspace 3"
@@ -218,7 +236,7 @@
 
         alt-t = "exec-and-forget open -a kitty.app";
         alt-o = ''exec-and-forget open -a "Zen Twilight.app"'';
-        alt-c = "exec-and-forget open -a VSCodium.app";
+        alt-c = "exec-and-forget open -a Zed.app";
       };
     };
   };

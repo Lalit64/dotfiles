@@ -37,6 +37,7 @@
       "/Users/${username}/.local/bin"
       "/Users/${username}/.cargo/bin"
       "/Users/${username}/Library/pnpm"
+      "/Users/${username}/.bun/bin"
     ];
     pathsToLink = [ "/Applications" ];
   };
@@ -82,10 +83,10 @@
 
         persistent-apps = [
           "/Applications/Zen Twilight.app/"
-          "${pkgs.vscodium}/Applications/VSCodium.app/"
+          "${pkgs.zed-editor}/Applications/Zed.app/"
           "/Applications/kitty.app/"
           "${pkgs.logseq}/Applications/Logseq.app/"
-          "/Applications/sioyek.app/"
+          "${pkgs.sioyek}/Applications/sioyek.app/"
         ];
       };
       finder = {

@@ -22,10 +22,9 @@
       zoom-us
       docker
       keka
-      vesktop
       qbittorrent
       # java
-      zulu
+      # zulu
       # packages
       vim
       automake
@@ -37,7 +36,6 @@
       dipc
       docker
       docker-compose
-      eslint
       eza
       fd
       ffmpeg
@@ -178,14 +176,6 @@
           "gpu"
           "colors"
         ];
-      };
-    };
-
-    zathura = {
-      enable = true;
-      options = {
-        recolor = true;
-        recolor-keephue = true;
       };
     };
 

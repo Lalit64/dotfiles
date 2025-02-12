@@ -31,17 +31,13 @@
     lalit64-nur.url = "git+ssh://git@github.com/lalit64/nur.git";
     lalit64-nur.inputs.nixpkgs.follows = "nixpkgs";
 
-    # nvf - neovim configuration
-    # nvf.url = "git+ssh://git@github.com/NotAShelf/nvf.git";
-    # nvf.inputs.nixpkgs.follows = "nixpkgs";
-
     nvchad4nix = {
       url = "github:nix-community/nix4nvchad";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     # vscode-marketplace for vscodium extensions
-    vscode-marketplace.url = "git+ssh://git@github.com/nix-community/nix-vscode-extensions";
+    nix-vscode-extensions.url = "git+ssh://git@github.com/nix-community/nix-vscode-extensions";
 
     # sbarlua
     sbarlua.url = "github:lalit64/SbarLua/nix-darwin-package";
@@ -69,9 +65,9 @@
                 nvchad = inputs.nvchad4nix.packages."${prev.system}".nvchad;
                 sbarlua = inputs.sbarlua.packages."${prev.system}".sbarlua;
                 nh = inputs.nh.packages."${prev.system}".nh;
+                nix-vscode-extensions = inputs.nix-vscode-extensions.extensions."${prev.system}";
               })
               inputs.lix.overlays.lixFromNixpkgs
-              inputs.vscode-marketplace.overlays.default
             ];
           };
           specialArgs = {
