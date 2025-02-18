@@ -12,8 +12,8 @@ local icons = {
     calendar = "􀐫",
     message = "􁋬",
     separators = {
-      left = "",
-      right = "",
+      left = "",
+      right = "",
     },
     space_indicator = {
       on = "󰄯",

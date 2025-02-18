@@ -64,6 +64,22 @@
     };
 
     extraConfig = ''
+      ### remap kitty to use ⌥ and ⌘:
+      map cmd+v paste_from_clipboard
+      ## jump to end of line:
+      map super+right send_text all \x05
+      ## jump to start of line:
+      map super+left send_text all \x01
+      ## jump right to end of word:
+      map alt+right send_text all \x1b\x66
+      ## jump left to beginning of word:
+      map alt+left send_text all \x1b\x62
+      ## delete line from cursor position to start of line:
+      map super+backspace send_text all \x15
+      ## delete word works by default via opt+backspace
+      ## undo (doesn't work in zsh, works in nushell with ctrl-z and ⌘-z in both):
+      map super+z send_text all \x1A
+
       modify_font cell_height 15px
       nnoremap <ScrollWheelRight> <Nop>
       nnoremap <ScrollWheelLeft> <Nop>

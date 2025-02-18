@@ -1,6 +1,12 @@
-{ config, pkgs, ... }:
+{
+  inputs,
+  system,
+  config,
+  pkgs,
+  ...
+}:
 let
-  vscode-marketplace = with pkgs.nix-vscode-extensions.vscode-marketplace; [
+  vscode-marketplace = with inputs.nix-vscode-extensions.extensions."${system}".vscode-marketplace; [
     bradlc.vscode-tailwindcss
     oven.bun-vscode
     ms-vscode.atom-keybindings
@@ -14,7 +20,7 @@ let
     ionic.ionic
   ];
 
-  open-vsx = with pkgs.nix-vscode-extensions.open-vsx; [
+  open-vsx = with inputs.nix-vscode-extensions.extensions."${system}".open-vsx; [
   ];
 in
 {

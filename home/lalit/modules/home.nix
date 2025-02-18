@@ -1,4 +1,6 @@
 {
+  inputs,
+  system,
   pkgs,
   lib,
   config,
@@ -11,10 +13,13 @@
     homeDirectory = "/Users/${username}";
     packages = with pkgs; [
       # from my nur ( nix user repository )
-      lalit64-nur.monolisa-nf # MonoLisa Nerd Font Mono
-      lalit64-nur.cleanshot
-      lalit64-nur.affinity-photo
-      lalit64-nur.affinity-designer
+      inputs.lalit64-nur.packages."${system}".monolisa-nf # MonoLisa Nerd Font Mono
+      inputs.lalit64-nur.packages."${system}".operator-nf # Operator Nerd Font Mono
+      inputs.lalit64-nur.packages."${system}".cleanshot
+      inputs.lalit64-nur.packages."${system}".affinity-photo
+      inputs.lalit64-nur.packages."${system}".affinity-designer
+      # other packages
+      inputs.sbarlua.packages."${system}".sbarlua
       # macos utils
       aerospace
       sketchybar
@@ -45,6 +50,7 @@
       gh
       glow
       git-lfs
+      gowall
       httpie
       ice-bar
       imagemagick
@@ -59,11 +65,11 @@
       portaudio
       rust-analyzer
       ripgrep
-      sbarlua
       sketchybar-app-font
       stow
       typescript
       utm
+      vesktop
       watchman
       wget
       zig
@@ -90,6 +96,7 @@
     kitty.enable = true;
     starship.enable = true;
     bat.enable = true;
+    zed.enable = true;
   };
 
   programs = {
@@ -154,6 +161,11 @@
         };
       };
     };
+
+    lazygit = {
+      enable = true;
+    };
+
     # fetch
     fastfetch = {
       enable = true;
@@ -182,7 +194,7 @@
     # nh cli
     nh = {
       enable = true;
-      package = pkgs.nh;
+      package = inputs.nh.packages."${system}".nh;
       clean.enable = true;
       clean.extraArgs = "--keep-since 4d --keep 3";
       flake = "/Users/${username}/.config/snowflake";

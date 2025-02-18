@@ -9,12 +9,6 @@
     darwin.url = "git+ssh://git@github.com/lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    # lix.systems
-    lix = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # home-manager
     home-manager.url = "git+ssh://git@github.com/nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -56,20 +50,6 @@
         system: hostname: username: wallpaper:
         inputs.darwin.lib.darwinSystem {
           inherit system;
-          pkgs = import inputs.nixpkgs {
-            inherit system;
-            config.allowUnfree = true;
-            overlays = [
-              (final: prev: {
-                lalit64-nur = inputs.lalit64-nur.packages."${prev.system}";
-                nvchad = inputs.nvchad4nix.packages."${prev.system}".nvchad;
-                sbarlua = inputs.sbarlua.packages."${prev.system}".sbarlua;
-                nh = inputs.nh.packages."${prev.system}".nh;
-                nix-vscode-extensions = inputs.nix-vscode-extensions.extensions."${prev.system}";
-              })
-              inputs.lix.overlays.lixFromNixpkgs
-            ];
-          };
           specialArgs = {
             inherit
               inputs
@@ -82,7 +62,6 @@
           };
           modules = [
             ./hosts/${hostname}/default.nix
-            inputs.lix.nixosModules.default
             inputs.home-manager.darwinModules.home-manager
             {
               users.users."${username}".home = "/Users/${username}";

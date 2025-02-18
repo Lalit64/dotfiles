@@ -5,7 +5,7 @@
     extensions = [
       "nix"
       "catppuccin"
-      "catppuccin-icons"
+      "symbols"
       "catppuccin-blur-plus"
       "toml"
       "java"
@@ -29,8 +29,8 @@
     ];
     userSettings = {
       base_keymap = "Atom";
-      theme = "Catppuccin Mocha (Blue Blur+)";
       buffer_font_family = config.stylix.fonts.monospace.name;
+      buffer_font_size = 18;
       vim_mode = true;
       tab_size = 2;
       show_wrap_guides = true;
@@ -43,6 +43,17 @@
             "nil"
             "!nixd"
           ];
+        };
+        JavaScript = {
+          formatter = {
+            external = {
+              command = "prettier";
+              arguments = [
+                "--stdin-filepath"
+                "{buffer_path}"
+              ];
+            };
+          };
         };
       };
       lsp = {
@@ -57,7 +68,24 @@
           };
         };
       };
-      formatter = "language_server";
+      show_edit_predictions = true;
+      features.edit_predicition_provider = "supermaven";
+      assistant = {
+        version = "2";
+        default_model = {
+          provider = "lmstudio";
+          model = "deepseek-coder-v2-lite-instruct-mlx";
+        };
+      };
+      formatter = {
+        external = {
+          command = "prettier";
+          arguments = [
+            "--stdin-filepath"
+            "{buffer_path}"
+          ];
+        };
+      };
       formate_on_save = "on";
       git = {
         inline_blame = {
@@ -66,6 +94,7 @@
       };
       terminal = {
         cursor_shape = "underline";
+        toolbar.breadcrumbs = false;
       };
     };
   };

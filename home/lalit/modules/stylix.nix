@@ -1,4 +1,8 @@
-{ pkgs, wallpaper, ... }:
+{
+  pkgs,
+  wallpaper,
+  ...
+}:
 {
   stylix = {
     enable = true;
@@ -12,8 +16,8 @@
     };
     fonts = {
       monospace = {
-        package = pkgs.lalit64-nur.monolisa-nf;
-        name = "MonoLisa Nerd Font Mono";
+        package = pkgs.nerd-fonts.caskaydia-cove;
+        name = "CaskaydiaCove Nerd Font Mono";
       };
       sizes.terminal = 13;
     };

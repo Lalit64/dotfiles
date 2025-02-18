@@ -1,4 +1,6 @@
 {
+  inputs,
+  system,
   pkgs,
   username,
   ...
@@ -20,9 +22,13 @@
     };
 
     shellAliases = {
-      nixswitch = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh}/bin/nh darwin switch";
-      ns = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${pkgs.nh}/bin/nh darwin switch";
-      nc = "${pkgs.nh}/bin/nh clean all";
+      nixswitch = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${
+        inputs.nh.packages."${system}".nh
+      }/bin/nh darwin switch";
+      ns = "cd /Users/${username}/.config/snowflake && ${pkgs.git}/bin/git add -A && ${
+        inputs.nh.packages."${system}".nh
+      }/bin/nh darwin switch";
+      nc = "${inputs.nh.packages."${system}".nh}/bin/nh clean all";
       nu = "nix flake update --flake /Users/${username}/.config/snowflake";
       nhash = ''nix hash to-sri --type sha256 $(nix-prefetch-url "$1")'';
 

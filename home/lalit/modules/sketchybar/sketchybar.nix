@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  inputs,
+  system,
+  pkgs,
+  ...
+}:
 {
   home.file = {
     ".config/sketchybar" = {
@@ -7,7 +12,7 @@
       onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
     };
     ".local/share/sketchybar_lua/sketchybar.so" = {
-      source = "${pkgs.sbarlua}/lib/sketchybar.so";
+      source = "${inputs.sbarlua.packages."${system}".sbarlua}/lib/sketchybar.so";
       onChange = "${pkgs.sketchybar}/bin/sketchybar --reload";
     };
     ".config/sketchybar/sketchybarrc" = {

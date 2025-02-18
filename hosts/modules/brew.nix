@@ -35,7 +35,7 @@
       "zen-browser@twilight"
       "youtube-music"
       "orbstack"
-      "legcord"
+      "lm-studio"
     ];
     brews = [
       "libiconv"

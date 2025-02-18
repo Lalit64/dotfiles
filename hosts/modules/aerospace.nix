@@ -184,7 +184,7 @@
         {
           check-further-callbacks = false;
           "if" = {
-            app-id = "app.legcord.Legcord";
+            app-id = "dev.vencord.vesktop";
           };
           run = [
             "move-node-to-workspace 3"

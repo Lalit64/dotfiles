@@ -9,6 +9,7 @@
 
   nixpkgs = {
     config.allowUnfree = true;
+    config.allowUnfreePredicate = (_: true);
   };
 
   nix.settings = {
@@ -38,6 +39,7 @@
       "/Users/${username}/.cargo/bin"
       "/Users/${username}/Library/pnpm"
       "/Users/${username}/.bun/bin"
+      "/Users/${username}/.lmstudio/bin"
     ];
     pathsToLink = [ "/Applications" ];
   };
@@ -52,9 +54,13 @@
       # Wallpaper
       echo >&2 "Setting the wallpaper..."
       osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${wallpaper}"'
+
       # disable .DS_Store files
       defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool TRUE
       defaults write com.apple.desktopservices DSDontWriteUSBStores -bool TRUE
+
+      # hide icons on desktop
+      defaults write com.apple.finder CreateDesktop FALSE; killall Finder
     '';
 
     defaults = {
@@ -98,8 +104,6 @@
 
   networking.hostName = hostname;
 
-  services.nix-daemon.enable = true;
-
   # touch id sudo
   security.pam.enableSudoTouchIdAuth = true;
 
@@ -115,5 +119,5 @@
   ];
 
   # backwards compat; don't change
-  system.stateVersion = 4;
+  system.stateVersion = 5;
 }
