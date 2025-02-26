@@ -1,4 +1,6 @@
 {
+  inputs,
+  system,
   pkgs,
   wallpaper,
   ...
@@ -16,7 +18,7 @@
     };
     fonts = {
       monospace = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
+        package = inputs.lalit64-nur.packages."${system}".operator-nf;
         name = "CaskaydiaCove Nerd Font Mono";
       };
       sizes.terminal = 13;

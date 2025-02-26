@@ -7,6 +7,7 @@
     onActivation.cleanup = "zap";
     global = {
       brewfile = true;
+      autoUpdate = true;
     };
     taps = [
       "homebrew/services"
@@ -15,6 +16,7 @@
     ];
     casks = [
       "android-platform-tools"
+      "anytype"
       "jetbrains-toolbox"
       "webstorm"
       "android-studio"
@@ -41,6 +43,7 @@
       "libiconv"
       "switchaudio-osx"
       "nowplaying-cli"
+      "fonttools"
       {
         name = "ollama";
         start_service = true;

@@ -156,7 +156,7 @@
         {
           check-further-callbacks = false;
           "if" = {
-            app-id = "com.electron.logseq";
+            app-id = "com.anytype.anytype";
           };
           run = [
             "move-node-to-workspace 2"

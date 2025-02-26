@@ -91,7 +91,7 @@
           "/Applications/Zen Twilight.app/"
           "${pkgs.zed-editor}/Applications/Zed.app/"
           "/Applications/kitty.app/"
-          "${pkgs.logseq}/Applications/Logseq.app/"
+          "/Applications/Anytype.app/"
           "${pkgs.sioyek}/Applications/sioyek.app/"
         ];
       };
@@ -105,7 +105,7 @@
   networking.hostName = hostname;
 
   # touch id sudo
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   services.sketchybar = {
     enable = true;

@@ -8,7 +8,7 @@ local cal = sbar.add("item", {
     padding_right = 4,
     font = {
       family = settings.font.numbers,
-      style = settings.font.style_map["Bold"],
+      style = settings.font.style_map["Medium"],
     },
   },
   label = {

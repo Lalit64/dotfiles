@@ -13,7 +13,9 @@
     home-manager.url = "git+ssh://git@github.com/nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    # nh cli
+    lix.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
+    lix.inputs.nixpkgs.follows = "nixpkgs";
+
     nh.url = "git+ssh://git@github.com/viperML/nh";
     nh.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -62,6 +64,7 @@
           };
           modules = [
             ./hosts/${hostname}/default.nix
+            inputs.lix.nixosModules.default
             inputs.home-manager.darwinModules.home-manager
             {
               users.users."${username}".home = "/Users/${username}";

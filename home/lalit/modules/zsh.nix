@@ -36,6 +36,7 @@
       ls = "${pkgs.eza}/bin/eza --icons";
       tree = "${pkgs.eza}/bin/eza --icons --tree";
       ff = "${pkgs.fastfetch}/bin/fastfetch";
+      lg = "${pkgs.lazygit}/bin/lazygit";
     };
 
     initExtra = ''

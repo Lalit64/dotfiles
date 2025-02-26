@@ -25,14 +25,18 @@
       allow_remote_control = true;
       confirm_os_window_close = 0;
 
+      # cursor
       cursor_shape = "underline";
       cursor_trail = 4;
 
+      # tabs
       tab_bar_style = "custom";
       tab_bar_edge = "top";
       tab_bar_align = "left";
       tab_powerline_style = "slanted";
-      active_tab_font_style = "normal";
+      active_tab_font_style = "italic";
+      tab_title_template = "[{index}] {title}";
+      active_tab_title_template = "[{index}] {title}";
 
       # font
       font_family = config.stylix.fonts.monospace.name;
@@ -50,8 +54,11 @@
       "cmd+4" = "goto_tab 4";
       "cmd+5" = "goto_tab 5";
       "cmd+6" = "goto_tab 6";
+      "cmd+7" = "goto_tab 7";
+      "cmd+8" = "goto_tab 8";
+      "cmd+9" = "goto_tab 9";
       "cmd+," =
-        "launch --type=overlay /etc/profiles/per-user/${username}/bin/nvim ~/.config/snowflake/home/${username}/modules/kitty/kitty.nix";
+        ''launch --type=overlay vim ~/.config/snowflake/home/${username}/modules/kitty/kitty.nix'';
 
       # search using cmd+f
       "cmd+f" =
@@ -64,23 +71,15 @@
     };
 
     extraConfig = ''
-      ### remap kitty to use ⌥ and ⌘:
       map cmd+v paste_from_clipboard
-      ## jump to end of line:
-      map super+right send_text all \x05
-      ## jump to start of line:
-      map super+left send_text all \x01
-      ## jump right to end of word:
+      map cmd+right send_text all \x05
+      map cmd+left send_text all \x01
       map alt+right send_text all \x1b\x66
-      ## jump left to beginning of word:
       map alt+left send_text all \x1b\x62
-      ## delete line from cursor position to start of line:
-      map super+backspace send_text all \x15
-      ## delete word works by default via opt+backspace
-      ## undo (doesn't work in zsh, works in nushell with ctrl-z and ⌘-z in both):
-      map super+z send_text all \x1A
+      map cmd+backspace send_text all \x15
+      map cmd+z send_text all \x1A
 
-      modify_font cell_height 15px
+      modify_font cell_height 16px
       nnoremap <ScrollWheelRight> <Nop>
       nnoremap <ScrollWheelLeft> <Nop>
       nnoremap <S-ScrollWheelUp> <ScrollWheelRight>

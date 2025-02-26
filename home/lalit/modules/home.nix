@@ -29,7 +29,7 @@
       keka
       qbittorrent
       # java
-      # zulu
+      zulu
       # packages
       vim
       automake
@@ -45,6 +45,7 @@
       fd
       ffmpeg
       fontconfig
+      fontforge
       fzf
       gcc
       gh
@@ -55,7 +56,6 @@
       ice-bar
       imagemagick
       jq
-      logseq # notes app
       lua54Packages.lua
       nixd
       nixfmt-rfc-style

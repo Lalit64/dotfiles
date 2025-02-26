@@ -15,6 +15,7 @@
     ./nvchad.nix # neovim
     ./zed.nix # text editor
     ./cava.nix # audio visualizer
-    ./vscode.nix # text editor
+    ./anytype.nix
+    # ./vscode.nix # text editor
   ];
 }

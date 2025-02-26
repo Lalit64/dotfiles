@@ -9,6 +9,7 @@ local media_playback = sbar.add("item", {
     max_chars = 30,
     padding_left = 8,
     string = "",
+    y_offset = 1,
     highlight_color = colors.highlight,
   },
   label = {
