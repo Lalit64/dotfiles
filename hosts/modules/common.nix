@@ -89,9 +89,9 @@
 
         persistent-apps = [
           "/Applications/Zen Twilight.app/"
-          "${pkgs.zed-editor}/Applications/Zed.app/"
+          "${pkgs.vscodium}/Applications/VSCodium.app/"
           "/Applications/kitty.app/"
-          "/Applications/Anytype.app/"
+          "/Applications/Obsidian.app/"
           "${pkgs.sioyek}/Applications/sioyek.app/"
         ];
       };

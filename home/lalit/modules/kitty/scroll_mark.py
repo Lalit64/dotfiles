@@ -1,10 +1,8 @@
 from kittens.tui.handler import result_handler
 from kitty.boss import Boss
 
-
 def main(args: list[str]) -> None:
     pass
-
 
 @result_handler(no_ui=True)
 def handle_result(

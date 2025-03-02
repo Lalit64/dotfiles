@@ -79,7 +79,6 @@ return {
   ["Neovide"] = ":neovide:",
   ["Neovim"] = ":neovide:",
   ["Notes"] = ":notes:",
-  ["Anytype"] = ":notes:",
   ["Notion"] = ":notion:",
   ["Notion Calendar"] = ":notion_calendar:",
   ["Numbers"] = ":numbers:",

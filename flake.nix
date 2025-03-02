@@ -33,7 +33,7 @@
     };
 
     # vscode-marketplace for vscodium extensions
-    nix-vscode-extensions.url = "git+ssh://git@github.com/nix-community/nix-vscode-extensions";
+    nix-vscode-extensions.url = "git+ssh://git@github.com/nix-community/nix-vscode-extensions?rev=bcf7577daac02aa1a7dfaddc79324b7c6ca4af81";
 
     # sbarlua
     sbarlua.url = "github:lalit64/SbarLua/nix-darwin-package";
@@ -98,7 +98,7 @@
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-galaxy.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/astronaut-jellyfish-catppuccin.png";
         "home-desk" =
           mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit"
             "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-galaxy.png";

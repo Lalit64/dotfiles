@@ -13,7 +13,7 @@
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
 
-      accordion-padding = 12;
+      accordion-padding = 14;
 
       default-root-container-layout = "tiles";
       default-root-container-orientation = "horizontal";
@@ -30,13 +30,13 @@
 
       gaps = {
         outer = {
-          bottom = 14;
-          left = 14;
-          right = 14;
+          bottom = 16;
+          left = 16;
+          right = 16;
         };
         inner = {
-          horizontal = 14;
-          vertical = 14;
+          horizontal = 16;
+          vertical = 16;
         };
       };
 
@@ -156,7 +156,7 @@
         {
           check-further-callbacks = false;
           "if" = {
-            app-id = "com.anytype.anytype";
+            app-id = "md.obsidian";
           };
           run = [
             "move-node-to-workspace 2"
@@ -236,7 +236,7 @@
 
         alt-t = "exec-and-forget open -a kitty.app";
         alt-o = ''exec-and-forget open -a "Zen Twilight.app"'';
-        alt-c = "exec-and-forget open -a Zed.app";
+        alt-c = "exec-and-forget open -a VSCodium.app";
       };
     };
   };

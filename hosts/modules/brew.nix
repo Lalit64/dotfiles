@@ -16,9 +16,6 @@
     ];
     casks = [
       "android-platform-tools"
-      "anytype"
-      "jetbrains-toolbox"
-      "webstorm"
       "android-studio"
       "background-music"
       "karabiner-elements"
@@ -36,6 +33,7 @@
       "kitty@nightly"
       "zen-browser@twilight"
       "youtube-music"
+      "obsidian"
       "orbstack"
       "lm-studio"
     ];

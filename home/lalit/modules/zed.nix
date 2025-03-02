@@ -4,7 +4,6 @@
     enable = true;
     extensions = [
       "nix"
-      "catppuccin"
       "symbols"
       "catppuccin-blur-plus"
       "toml"
@@ -37,6 +36,7 @@
       project_panel = {
         git_status = false;
       };
+      confirm_quit = true;
       languages = {
         Nix = {
           language_servers = [
@@ -77,15 +77,7 @@
           model = "deepseek-coder-v2-lite-instruct-mlx";
         };
       };
-      formatter = {
-        external = {
-          command = "prettier";
-          arguments = [
-            "--stdin-filepath"
-            "{buffer_path}"
-          ];
-        };
-      };
+      formatter = "language_server";
       formate_on_save = "on";
       git = {
         inline_blame = {

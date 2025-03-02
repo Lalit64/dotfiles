@@ -7,169 +7,166 @@
 }:
 let
   vscode-marketplace = with inputs.nix-vscode-extensions.extensions."${system}".vscode-marketplace; [
-    bradlc.vscode-tailwindcss
-    oven.bun-vscode
     ms-vscode.atom-keybindings
-    moalamri.inline-fold
-    mongodb.mongodb-vscode
     miguelsolorio.symbols
-    formulahendry.auto-complete-tag
-    heybourn.headwind
-    aaron-bond.better-comments
-    xyz.local-history
-    ionic.ionic
   ];
 
   open-vsx = with inputs.nix-vscode-extensions.extensions."${system}".open-vsx; [
+    continue.continue
   ];
 in
 {
   programs.vscode = {
     enable = true;
     package = pkgs.vscodium;
-    enableUpdateCheck = false;
 
     mutableExtensionsDir = false;
-    extensions =
-      with pkgs;
-      [
-        vscode-extensions.christian-kohler.path-intellisense
-        vscode-extensions.christian-kohler.npm-intellisense
-        vscode-extensions.catppuccin.catppuccin-vsc
-        vscode-extensions.eamodio.gitlens
-        vscode-extensions.esbenp.prettier-vscode
-        vscode-extensions.ms-azuretools.vscode-docker
-        vscode-extensions.ms-vscode-remote.remote-containers
-        vscode-extensions.ms-vscode-remote.remote-ssh
-        vscode-extensions.ms-vscode-remote.remote-ssh-edit
-        vscode-extensions.ms-vscode-remote.remote-containers
-        vscode-extensions.naumovs.color-highlight
-        vscode-extensions.prisma.prisma
-        vscode-extensions.sumneko.lua
-        vscode-extensions.svelte.svelte-vscode
-        vscode-extensions.wix.vscode-import-cost
-        vscode-extensions.jnoortheen.nix-ide
-        vscode-extensions.ms-python.python
-        vscode-extensions.rust-lang.rust-analyzer
-        vscode-extensions.ziglang.vscode-zig
-        vscode-extensions.vscodevim.vim
-      ]
-      ++ vscode-marketplace
-      ++ open-vsx;
+    profiles = {
+      default = {
+        enableUpdateCheck = false;
+        extensions =
+          with pkgs.vscode-extensions;
+          [
+            jnoortheen.nix-ide
+            esbenp.prettier-vscode
+            aaron-bond.better-comments
+            vscodevim.vim
+            catppuccin.catppuccin-vsc
+            prisma.prisma
+            sumneko.lua
+            svelte.svelte-vscode
+            wix.vscode-import-cost
+            ms-python.python
+            rust-lang.rust-analyzer
+            ziglang.vscode-zig
+            vscodevim.vim
+            formulahendry.auto-close-tag
+            formulahendry.auto-rename-tag
+            jock.svg
+            visualstudioexptteam.vscodeintellicode
+          ]
+          ++ vscode-marketplace
+          ++ open-vsx;
+        userSettings = {
+          # appearance
+          editor.fontFamily = config.stylix.fonts.monospace.name;
+          editor.fontLigatures = true;
+          editor.lineHeight = 34;
+          workbench.colorTheme = "Stylix";
+          workbench.iconTheme = "symbols"; # miguelsolorio.symbols
+          editor.minimap.enabled = false;
+          workbench.tips.enabled = false;
+          breadcrumbs.enabled = true;
+          editor.stickyScroll.enabled = false;
+          workbench.startupEditor = "newUntitledFile";
+          # tabs and titlebar
+          workbench.editor.showTabs = "multiple";
+          window.commandCenter = false;
 
-    userSettings = {
-      editor = {
-        copyWithSyntaxHighlighting = false;
-        emptySelectionClipboard = true;
-        multiCursorModifier = "ctrlCmd";
-        snippetSuggestions = "top";
-        detectIndentation = true;
-        minimap.enabled = false;
-        guides.indentation = false;
-        hover.delay = 1500;
-        hover.enabled = true;
-        colorDecorators = false;
-        lightbulb.enabled = "off";
-        selectionHighlight = false;
-        overviewRulerBorder = false;
-        renderLineHighlight = "none";
-        occurrencesHighlight = "off";
-        renderControlCharacters = false;
-        hideCursorInOverviewRuler = true;
-        gotoLocation = {
-          multipleReferences = "goto";
-          multipleDefinitions = "goto";
-          multipleDeclarations = "goto";
-          multipleImplementations = "goto";
-          multipleTypeDefinitions = "goto";
-        };
-        suggestLineHeight = 30;
-        fontLigatures = true;
-        wordSeparators = "`~!@#%^&*()=+[{]}\\|;:'\",.<>/?";
-        defaultFormatter = "esbenp.prettier-vscode";
-        formatOnSave = true;
-        tabSize = 2;
-      };
+          # small preferences
+          git.blame.editorDecoration.enabled = true;
+          editor.emptySelectionClipboard = true;
+          editor.multiCursorModifier = "ctrlCmd";
+          editor.defaultFormatter = "esbenp.prettier-vscode";
+          editor.formatOnSave = true;
+          editor.tabSize = 2;
 
-      workbench.iconTheme = "symbols";
-      terminal.integrated.cursorStyle = "underline";
-      terminal.integrated.fontFamily = config.stylix.fonts.monospace.name;
+          # vscodevim
+          extensions.experimental.affinity = {
+            vscodevim.vim = 1;
+          };
+          vim.useSystemClipboard = true;
+          vim.hlsearch = true;
+          editor.cursorSurroundingLines = 6;
+          vim.smartRelativeLine = true;
+          vim.highlightedyank.enable = true;
+          vim.highlightedyank.color = "rgba(137, 180, 250, 0.5)";
+          vim.highlightedyank.textColor = "#1E1E2E";
+          vim.highlightedyank.duration = 150;
+          vim.leader = "<space>";
+          vim.normalModeKeyBindings = [
+            {
+              before = [
+                "<leader>"
+                "f"
+                "f"
+              ];
+              commands = [ "workbench.action.quickOpen" ];
+            }
+            {
+              before = [
+                "<leader>"
+                "f"
+                "w"
+              ];
+              commands = [ "workbench.action.findInFiles" ];
+            }
+            {
+              before = [
+                "<leader>"
+                "f"
+                "o"
+              ];
+              commands = [ "workbench.action.files.openFileFolder" ];
+            }
+            {
+              before = [
+                "<leader>"
+                "f"
+                "p"
+              ];
+              commands = [ "workbench.action.openRecent" ];
+            }
+            {
+              before = [
+                "<leader>"
+                "f"
+                "m"
+              ];
+              after = [
+                "editor.action.formatDocument"
+              ];
+            }
+            {
+              before = [
+                "<leader>"
+                "f"
+                "n"
+              ];
+              commands = [ "workbench.action.files.newUntitledFile" ];
+            }
+            {
+              before = [
+                "<leader>"
+                "e"
+              ];
+              commands = [ "workbench.action.toggleSidebarVisibility" ];
+            }
+          ];
 
-      vim.leader = "<space>";
-      vim.cursorStylePerMode.Insert = "underline";
-      vim.useSystemClipboard = true;
-      vim.normalModeKeyBindings = [
-        {
-          before = [
-            "<leader>"
-            "f"
-            "f"
-          ];
-          commands = [ "workbench.action.quickOpen" ];
-        }
-        {
-          before = [
-            "<leader>"
-            "f"
-            "m"
-          ];
-          after = [
-            "editor.action.formatDocument.none"
-          ];
-        }
-        {
-          before = [
-            "<leader>"
-            "/"
-          ];
-          after = [
-            "editor.action.commentLine"
-          ];
-        }
-        {
-          before = [
-            "<leader>"
-            "t"
-            "t"
-          ];
-          commands = [ "workbench.action.terminal.focus" ];
-        }
-        {
-          before = [
-            "<leader>"
-            "e"
-          ];
-          commands = [ "workbench.action.toggleSidebarVisibility" ];
-        }
-      ];
-
-      extensions.experimental.affinity = {
-        vscodevim.vim = 1;
-      };
-
-      # nix stuff
-      nix = {
-        enableLanguageServer = true;
-        formatterPath = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
-        serverPath = "${pkgs.nil}/bin/nil";
-        serverSettings = {
-          nil = {
-            formatting = {
-              command = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
+          # language settings
+          nix = {
+            enableLanguageServer = true;
+            formatterPath = "${pkgs.nixfmt-rfc-style}/bin/nixfmt";
+            serverPath = "${pkgs.nil}/bin/nil";
+            serverSettings = {
+              nil = {
+                formatting = {
+                  command = [ "${pkgs.nixfmt-rfc-style}/bin/nixfmt" ];
+                };
+              };
             };
           };
+
+          svelte.enable-ts-plugin = true;
+
+          "[nix]".editor.defaultFormatter = "jnoortheen.nix-ide";
+          "[lua]".editor.defaultFormatter = "sumneko.lua";
+          "[python]".editor.defaultFormatter = "ms-python.black-formatter";
+          "[rust]".editor.defaultFormatter = "rust-lang.rust-analyzer";
+          "[svelte]".editor.defaultFormatter = "svelte.svelte-vscode";
         };
       };
-
-      # svelte typscript
-      svelte.enable-ts-plugin = true;
-
-      # formatters
-      "[nix]".editor.defaultFormatter = "jnoortheen.nix-ide";
-      "[lua]".editor.defaultFormatter = "sumneko.lua";
-      "[python]".editor.defaultFormatter = "ms-python.black-formatter";
-      "[rust]".editor.defaultFormatter = "rust-lang.rust-analyzer";
-      "[svelte]".editor.defaultFormatter = "svelte.svelte-vscode";
     };
   };
 }
