@@ -450,15 +450,15 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1740880350,
-        "narHash": "sha256-I5OsjzIBnUKkMc4xsCWOrvz9mgcSXKyyPA+TkaoKiRg=",
-        "ref": "refs/heads/master",
-        "rev": "87b0f840199b9e84a1c73d9fc814db173dcac1f0",
-        "revCount": 1244,
+        "lastModified": 1740655383,
+        "narHash": "sha256-HHb6wtlHWy/CW3oCtOyOQrNnzgtsvwvwM6wAlDvfTec=",
+        "rev": "bcf7577daac02aa1a7dfaddc79324b7c6ca4af81",
+        "revCount": 1216,
         "type": "git",
         "url": "ssh://git@github.com/nix-community/nix-vscode-extensions"
       },
       "original": {
+        "rev": "bcf7577daac02aa1a7dfaddc79324b7c6ca4af81",
         "type": "git",
         "url": "ssh://git@github.com/nix-community/nix-vscode-extensions"
       }
