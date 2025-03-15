@@ -10,21 +10,6 @@ end
 local transparent = 0x00000000
 
 local catppuccin_mocha = {
-  -- base = 0xff181825,
-  -- surface = 0xff181825,
-  -- overlay = 0xff1e1e2e,
-  -- muted = 0xff6e6a86,
-  -- subtle = 0xff313244,
-  -- text = 0xffcdd6f4,
-  -- love = 0xfff38ba8,
-  -- rose = 0xffcba6f7,
-  -- gold = 0xfff9e2af,
-  -- iris = 0xffb4befe,
-  -- pine = 0xff89b4fa,
-  -- foam = 0xff9ccfd8,
-  -- highlight_low = 0xff11111b,
-  -- highlight_med = 0xff44415a,
-
   crust = 0xff11111b,
   mantle = 0xff181825,
   base = 0xff1e1e2e,
@@ -41,7 +26,7 @@ local catppuccin_mocha = {
 
 M.sections = {
   bar = {
-    bg = with_alpha(catppuccin_mocha.mantle, 0.9),
+    bg = with_alpha(catppuccin_mocha.mantle, 0.6),
     transparent = transparent,
     border = transparent,
   },
@@ -50,7 +35,7 @@ M.sections = {
     border = catppuccin_mocha.crust,
     text = catppuccin_mocha.text,
   },
-  apple = catppuccin_mocha.blue,
+  apple = catppuccin_mocha.mauve,
   spaces = {
     icon = {
       color = catppuccin_mocha.muted,
@@ -58,9 +43,9 @@ M.sections = {
     },
     label = {
       color = catppuccin_mocha.text,
-      highlight = catppuccin_mocha.blue,
+      highlight = catppuccin_mocha.mauve,
     },
-    indicator = catppuccin_mocha.blue,
+    indicator = catppuccin_mocha.mauve,
   },
   media = {
     label = catppuccin_mocha.muted,

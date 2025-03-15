@@ -1,6 +1,5 @@
 {
   description = "snowflake config for my systems";
-
   inputs = {
     # nixpkgs
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";

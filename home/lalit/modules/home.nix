@@ -79,6 +79,7 @@
       # fonts
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
+      maple-mono-NF
     ];
 
     file = {
@@ -91,9 +92,10 @@
 
   catppuccin = {
     flavor = "mocha";
-    accent = "blue";
+    accent = "mauve";
 
     kitty.enable = true;
+    ghostty.enable = true;
     starship.enable = true;
     bat.enable = true;
     zed.enable = true;
@@ -153,7 +155,7 @@
         ];
         hostname = {
           ssh_only = false;
-          style = "fg:blue";
+          style = "fg:purple";
           format = "[@$hostname ]($style)";
         };
         fill = {
@@ -208,7 +210,7 @@
     };
 
     bat = {
-      enable = true;
+      enable = false;
     };
 
     btop = {

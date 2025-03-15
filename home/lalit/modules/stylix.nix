@@ -15,11 +15,12 @@
       kitty.enable = false;
       bat.enable = false;
       zed.enable = false;
+      ghostty.enable = false;
     };
     fonts = {
       monospace = {
         package = inputs.lalit64-nur.packages."${system}".operator-nf;
-        name = "JetBrainsMono Nerd Font Mono";
+        name = "Maple Mono NF";
       };
       sizes.terminal = 13;
     };

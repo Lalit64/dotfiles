@@ -3,9 +3,9 @@
   programs.zed-editor = {
     enable = true;
     extensions = [
+      "rose-pine-theme"
       "nix"
       "symbols"
-      "catppuccin-blur-plus"
       "toml"
       "java"
       "dockerfile"
@@ -25,18 +25,26 @@
       "prisma"
       "env"
       "deno"
+      "git-firefly"
     ];
     userSettings = {
       base_keymap = "Atom";
       buffer_font_family = config.stylix.fonts.monospace.name;
       buffer_font_size = 18;
+      vertical_scroll_margin = 5;
+      icon_theme = {
+        mode = "system";
+        light = "Symbols";
+        dark = "Symbols";
+      };
       vim_mode = true;
+      relative_line_numbers = true;
       tab_size = 2;
       show_wrap_guides = true;
       project_panel = {
         git_status = false;
       };
-      confirm_quit = true;
+      confirm_quit = false;
       languages = {
         Nix = {
           language_servers = [

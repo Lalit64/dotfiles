@@ -71,6 +71,8 @@
         AppleShowAllExtensions = true;
         # Automatically hide and show the menu bar
         _HIHideMenuBar = true;
+        # Disable window animations
+        NSAutomaticWindowAnimationsEnabled = false;
       };
 
       screencapture = {
@@ -89,8 +91,8 @@
 
         persistent-apps = [
           "/Applications/Zen Twilight.app/"
-          "${pkgs.vscodium}/Applications/VSCodium.app/"
-          "/Applications/kitty.app/"
+          "${pkgs.zed-editor}/Applications/Zed.app/"
+          "/Applications/Ghostty.app/"
           "/Applications/Obsidian.app/"
           "${pkgs.sioyek}/Applications/sioyek.app/"
         ];

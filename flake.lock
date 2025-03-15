@@ -92,11 +92,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740755725,
-        "narHash": "sha256-amZbqP84H/ApugaT+TADXTB3NbjkVHI9Vac1saIk0kE=",
+        "lastModified": 1741112248,
+        "narHash": "sha256-Y340xoE1Vgo0eCDJi4srVjuwlr50vYSoyJrZeXHw3n0=",
         "ref": "refs/heads/master",
-        "rev": "5d6e0851b60508cffd66b4a6982440a40720338d",
-        "revCount": 2094,
+        "rev": "991bb2f6d46fc2ff7990913c173afdb0318314cb",
+        "revCount": 2098,
         "type": "git",
         "url": "ssh://git@github.com/lnl7/nix-darwin"
       },
@@ -334,11 +334,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1740845322,
-        "narHash": "sha256-AXEgFj3C0YJhu9k1OhbRhiA6FnDr81dQZ65U3DhaWpw=",
+        "lastModified": 1741174782,
+        "narHash": "sha256-dYRebJk58/d5Ej1G6xTOadTfG6tU5zFgXYrLsRJlrgw=",
         "ref": "refs/heads/master",
-        "rev": "fcac3d6d88302a5e64f6cb8014ac785e08874c8d",
-        "revCount": 4240,
+        "rev": "def0dbbcea715d4514ca343ab4d6d7f3a1742da0",
+        "revCount": 4245,
         "type": "git",
         "url": "ssh://git@github.com/nix-community/home-manager"
       },
@@ -497,11 +497,11 @@
     },
     "nixpkgs_3": {
       "locked": {
-        "lastModified": 1740791350,
-        "narHash": "sha256-igS2Z4tVw5W/x3lCZeeadt0vcU9fxtetZ/RyrqsCRQ0=",
+        "lastModified": 1741037377,
+        "narHash": "sha256-SvtvVKHaUX4Owb+PasySwZsoc5VUeTf1px34BByiOxw=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "199169a2135e6b864a888e89a2ace345703c025d",
+        "rev": "02032da4af073d0f6110540c8677f16d4be0117f",
         "type": "github"
       },
       "original": {
@@ -575,11 +575,11 @@
         "nvchad-starter": "nvchad-starter"
       },
       "locked": {
-        "lastModified": 1740892371,
-        "narHash": "sha256-MJ/b+ieHcy2O4WZlLQfAHQO/Zzl+Kx+Dc5+/Ve4mm74=",
+        "lastModified": 1741148844,
+        "narHash": "sha256-pTpxrm+E00vb6fBxAUr/HubIPFGCKDF3OaYfcY80j98=",
         "owner": "nix-community",
         "repo": "nix4nvchad",
-        "rev": "26c6e3d4f05ea65b74b14b73e722f4dba35f2ac0",
+        "rev": "c498c67a20cf22aea946f2d04c26f302b640e086",
         "type": "github"
       },
       "original": {
@@ -646,11 +646,11 @@
         "tinted-zed": "tinted-zed"
       },
       "locked": {
-        "lastModified": 1740769934,
-        "narHash": "sha256-iyxUwII/NQNClT77VqQiDpaXJz1r0Z8tNVxgY64mLak=",
+        "lastModified": 1741112087,
+        "narHash": "sha256-dBGwN4aHmX2QUXolZDhV+p06+WM5ZykL4wd9BD6bT7k=",
         "ref": "refs/heads/master",
-        "rev": "de4ee5899042801b62f988687acd454d4d411075",
-        "revCount": 627,
+        "rev": "11780517948f214b9f93d1bf5a2d29bc181d3a33",
+        "revCount": 632,
         "type": "git",
         "url": "ssh://git@github.com/danth/stylix"
       },

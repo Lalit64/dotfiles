@@ -32,6 +32,7 @@
       nu = "nix flake update --flake /Users/${username}/.config/snowflake";
       nhash = ''nix hash to-sri --type sha256 $(nix-prefetch-url "$1")'';
 
+      nvim = "/Users/${username}/.config/nvim/result/bin/nvim";
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";
       tree = "${pkgs.eza}/bin/eza --icons --tree";

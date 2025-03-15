@@ -17,7 +17,7 @@
 
     settings = {
       # customization stuff
-      background_opacity = 0.9;
+      background_opacity = 0.8;
       background_blur = 64;
       window_padding_width = 20;
       hide_window_decorations = "titlebar-only";
@@ -40,7 +40,7 @@
 
       # font
       font_family = config.stylix.fonts.monospace.name;
-      font_size = config.stylix.fonts.sizes.terminal + 4;
+      font_size = config.stylix.fonts.sizes.terminal + 3;
       bold_font = "auto";
       italic_font = "auto";
       bold_italic_font = "auto";

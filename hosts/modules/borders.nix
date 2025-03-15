@@ -7,9 +7,10 @@
     style = "round";
     width = 3.0;
     hidpi = true;
-    active_color = "0xff89b4fa";
-    inactive_color = "0xff56526e";
+    active_color = "0xffac8fd4";
+    inactive_color = "0xffac8fd4";
     whitelist = [
+      "ghostty"
       "kitty"
     ];
   };

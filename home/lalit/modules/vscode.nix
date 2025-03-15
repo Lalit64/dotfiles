@@ -11,10 +11,9 @@ let
     miguelsolorio.symbols
   ];
 
-  open-vsx = with inputs.nix-vscode-extensions.extensions."${system}".open-vsx; [
-    continue.continue
-  ];
 in
+# open-vsx = with inputs.nix-vscode-extensions.extensions."${system}".open-vsx; [
+# ];
 {
   programs.vscode = {
     enable = true;
@@ -30,11 +29,11 @@ in
             jnoortheen.nix-ide
             esbenp.prettier-vscode
             aaron-bond.better-comments
-            vscodevim.vim
             catppuccin.catppuccin-vsc
             prisma.prisma
             sumneko.lua
             svelte.svelte-vscode
+            christian-kohler.path-intellisense
             wix.vscode-import-cost
             ms-python.python
             rust-lang.rust-analyzer
@@ -45,8 +44,8 @@ in
             jock.svg
             visualstudioexptteam.vscodeintellicode
           ]
-          ++ vscode-marketplace
-          ++ open-vsx;
+          ++ vscode-marketplace;
+        # ++ open-vsx;
         userSettings = {
           # appearance
           editor.fontFamily = config.stylix.fonts.monospace.name;
@@ -65,11 +64,14 @@ in
 
           # small preferences
           git.blame.editorDecoration.enabled = true;
+          git.decorations.enabled = false;
           editor.emptySelectionClipboard = true;
           editor.multiCursorModifier = "ctrlCmd";
           editor.defaultFormatter = "esbenp.prettier-vscode";
           editor.formatOnSave = true;
           editor.tabSize = 2;
+          editor.cursorSmoothCaretAnimation = "on";
+          editor.cursorBlinking = "smooth";
 
           # vscodevim
           extensions.experimental.affinity = {

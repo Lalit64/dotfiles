@@ -30,11 +30,13 @@
       "font-sf-pro"
       "google-chrome"
       "sidequest"
-      "kitty@nightly"
+      "kitty"
+      "ghostty"
       "zen-browser@twilight"
       "youtube-music"
       "obsidian"
       "orbstack"
+      "libreoffice"
       "lm-studio"
     ];
     brews = [

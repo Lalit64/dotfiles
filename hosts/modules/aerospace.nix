@@ -152,6 +152,15 @@
             "move-node-to-workspace 2"
           ];
         }
+        {
+          check-further-callbacks = false;
+          "if" = {
+            app-id = "com.mitchellh.ghostty";
+          };
+          run = [
+            "move-node-to-workspace 2"
+          ];
+        }
 
         {
           check-further-callbacks = false;
@@ -207,7 +216,7 @@
         ctrl-cmd-shift-up = "move up";
         ctrl-cmd-shift-right = "move right";
 
-        alt-cmd-b = "balance-sizes";
+        ctrl-cmd-shift-0 = "balance-sizes";
 
         alt-1 = "workspace 1";
         alt-2 = "workspace 2";
@@ -216,12 +225,30 @@
         alt-5 = "workspace 5";
         alt-6 = "workspace 6";
 
-        ctrl-cmd-shift-1 = "move-node-to-workspace 1";
-        ctrl-cmd-shift-2 = "move-node-to-workspace 2";
-        ctrl-cmd-shift-3 = "move-node-to-workspace 3";
-        ctrl-cmd-shift-4 = "move-node-to-workspace 4";
-        ctrl-cmd-shift-5 = "move-node-to-workspace 5";
-        ctrl-cmd-shift-6 = "move-node-to-workspace 6";
+        ctrl-cmd-shift-1 = [
+          "move-node-to-workspace 1"
+          "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger space_windows_change"
+        ];
+        ctrl-cmd-shift-2 = [
+          "move-node-to-workspace 2"
+          "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger space_windows_change"
+        ];
+        ctrl-cmd-shift-3 = [
+          "move-node-to-workspace 3"
+          "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger space_windows_change"
+        ];
+        ctrl-cmd-shift-4 = [
+          "move-node-to-workspace 4"
+          "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger space_windows_change"
+        ];
+        ctrl-cmd-shift-5 = [
+          "move-node-to-workspace 5"
+          "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger space_windows_change"
+        ];
+        ctrl-cmd-shift-6 = [
+          "move-node-to-workspace 6"
+          "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger space_windows_change"
+        ];
 
         ctrl-cmd-shift-space = "layout floating tiling";
         ctrl-cmd-shift-minus = "resize smart -50";
@@ -234,9 +261,10 @@
 
         ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload && aerospace reload-config";
 
-        alt-t = "exec-and-forget open -a kitty.app";
-        alt-o = ''exec-and-forget open -a "Zen Twilight.app"'';
-        alt-c = "exec-and-forget open -a VSCodium.app";
+        alt-t = "exec-and-forget open -a Ghostty.app";
+        alt-e = ''exec-and-forget open -a "Zen Twilight.app"'';
+        alt-c = "exec-and-forget open -a Zed.app";
+        alt-d = "exec-and-forget open -a Obsidian.app";
       };
     };
   };

@@ -1,7 +1,7 @@
 return {
-  text = "JetBrainsMono Nerd Font Mono",    -- Used for -- Used for text
-  numbers = "JetBrainsMono Nerd Font Mono", -- Used for numbers
-  weather = "JetBrainsMono Nerd Font Mono",
+  text = "Maple Mono NF",    -- Used for -- Used for text
+  numbers = "Maple Mono NF", -- Used for numbers
+  weather = "Maple Mono NF",
 
   -- Unified font style map
   style_map = {
