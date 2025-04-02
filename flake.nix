@@ -12,9 +12,6 @@
     home-manager.url = "git+ssh://git@github.com/nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    lix.url = "https://git.lix.systems/lix-project/nixos-module/archive/2.92.0.tar.gz";
-    lix.inputs.nixpkgs.follows = "nixpkgs";
-
     nh.url = "git+ssh://git@github.com/viperML/nh";
     nh.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -26,10 +23,9 @@
     lalit64-nur.url = "git+ssh://git@github.com/lalit64/nur.git";
     lalit64-nur.inputs.nixpkgs.follows = "nixpkgs";
 
-    nvchad4nix = {
-      url = "github:nix-community/nix4nvchad";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # my neovim configuration using nixCats
+    neovim.url = "git+ssh://git@github.com/lalit64/nvim.git";
+    neovim.inputs.nixpkgs.follows = "nixpkgs";
 
     # vscode-marketplace for vscodium extensions
     nix-vscode-extensions.url = "git+ssh://git@github.com/nix-community/nix-vscode-extensions?rev=bcf7577daac02aa1a7dfaddc79324b7c6ca4af81";
@@ -63,7 +59,6 @@
           };
           modules = [
             ./hosts/${hostname}/default.nix
-            inputs.lix.nixosModules.default
             inputs.home-manager.darwinModules.home-manager
             {
               users.users."${username}".home = "/Users/${username}";
@@ -83,9 +78,9 @@
                 users."${username}" = {
                   imports = [
                     ./home/${username}/${hostname}.nix
-                    inputs.nvchad4nix.homeManagerModule
                     inputs.stylix.homeManagerModules.stylix
-                    inputs.catppuccin.homeManagerModules.catppuccin
+                    inputs.catppuccin.homeModules.catppuccin
+                    inputs.neovim.homeModules.default
                   ];
                 };
               };
@@ -97,7 +92,7 @@
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/astronaut-jellyfish-catppuccin.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-galaxy.png";
         "home-desk" =
           mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit"
             "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-galaxy.png";

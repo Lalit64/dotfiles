@@ -90,7 +90,7 @@
         show-recents = false;
 
         persistent-apps = [
-          "/Applications/Zen Twilight.app/"
+          "/Applications/Twilight.app/"
           "${pkgs.zed-editor}/Applications/Zed.app/"
           "/Applications/Ghostty.app/"
           "/Applications/Obsidian.app/"

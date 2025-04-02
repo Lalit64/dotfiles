@@ -14,7 +14,7 @@ sbar.exec("aerospace list-workspaces --all", function(spaces)
         padding_right = 4,
       },
       label = {
-        font = "sketchybar-app-font-bg:Regular:13.0",
+        font = "sketchybar-app-font:Regular:13.0",
         string = "space",
         color = colors.label.color,
         highlight_color = colors.label.highlight,

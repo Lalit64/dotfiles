@@ -1,7 +1,7 @@
 local icons = require "icons"
 local colors = require("colors").sections.media
 
-local whitelist = { ["YouTube Music"] = true, ["Zen Twilight"] = true }
+local whitelist = { ["YouTube Music"] = true, ["Twilight"] = true }
 
 local media_playback = sbar.add("item", {
   position = "right",
@@ -56,7 +56,10 @@ sbar.add("item", {
 media_playback:subscribe("media_change", function(env)
   if whitelist[env.INFO.app] then
     local playing = (env.INFO.state == "playing")
-    media_playback:set { drawing = true, icon = { string = env.INFO.title .. " - " .. env.INFO.artist, highlight = playing } }
+    media_playback:set {
+      drawing = true,
+      icon = { string = env.INFO.title .. " - " .. env.INFO.artist, highlight = playing },
+    }
   end
 end)
 

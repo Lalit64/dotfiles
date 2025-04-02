@@ -10,7 +10,7 @@
         ''${{
           echo "Directory Name: "
           read DIR
-          mkdir DIR
+          mkdir $DIR
         }}
       '';
     };

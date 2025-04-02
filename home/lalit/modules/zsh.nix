@@ -32,7 +32,6 @@
       nu = "nix flake update --flake /Users/${username}/.config/snowflake";
       nhash = ''nix hash to-sri --type sha256 $(nix-prefetch-url "$1")'';
 
-      nvim = "/Users/${username}/.config/nvim/result/bin/nvim";
       cd = "z";
       ls = "${pkgs.eza}/bin/eza --icons";
       tree = "${pkgs.eza}/bin/eza --icons --tree";
@@ -42,7 +41,6 @@
 
     initExtra = ''
       export PNPM_HOME="/"
-      export EDITOR=${pkgs.neovim}/bin/nvim
 
       # fix rust liconv stuff
       export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"

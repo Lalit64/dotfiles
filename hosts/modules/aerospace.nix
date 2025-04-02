@@ -262,7 +262,7 @@
         ctrl-cmd-shift-r = "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --reload && aerospace reload-config";
 
         alt-t = "exec-and-forget open -a Ghostty.app";
-        alt-e = ''exec-and-forget open -a "Zen Twilight.app"'';
+        alt-e = ''exec-and-forget open -a "Twilight.app"'';
         alt-c = "exec-and-forget open -a Zed.app";
         alt-d = "exec-and-forget open -a Obsidian.app";
       };

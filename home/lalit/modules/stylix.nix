@@ -16,11 +16,12 @@
       bat.enable = false;
       zed.enable = false;
       ghostty.enable = false;
+      starship.enable = false;
     };
     fonts = {
       monospace = {
-        package = inputs.lalit64-nur.packages."${system}".operator-nf;
-        name = "Maple Mono NF";
+        package = pkgs.nerd-fonts.jetbrains-mono;
+        name = "JetBrainsMono Nerd Font Mono";
       };
       sizes.terminal = 13;
     };

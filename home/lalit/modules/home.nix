@@ -16,11 +16,9 @@
       inputs.lalit64-nur.packages."${system}".monolisa-nf # MonoLisa Nerd Font Mono
       inputs.lalit64-nur.packages."${system}".operator-nf # Operator Nerd Font Mono
       inputs.lalit64-nur.packages."${system}".cleanshot
-      inputs.lalit64-nur.packages."${system}".affinity-photo
-      inputs.lalit64-nur.packages."${system}".affinity-designer
       # other packages
       inputs.sbarlua.packages."${system}".sbarlua
-      # macos utils
+      # macos applications
       aerospace
       sketchybar
       raycast
@@ -31,7 +29,6 @@
       # java
       zulu
       # packages
-      vim
       automake
       base16-schemes
       bun
@@ -79,7 +76,6 @@
       # fonts
       nerd-fonts.jetbrains-mono
       nerd-fonts.caskaydia-cove
-      maple-mono-NF
     ];
 
     file = {
@@ -99,7 +95,10 @@
     starship.enable = true;
     bat.enable = true;
     zed.enable = true;
+    tmux.enable = true;
   };
+
+  nvim.enable = true;
 
   programs = {
     home-manager = {
@@ -124,6 +123,7 @@
         };
       };
     };
+
     # prompt
     starship = {
       enable = true;

@@ -32,11 +32,6 @@
       buffer_font_family = config.stylix.fonts.monospace.name;
       buffer_font_size = 18;
       vertical_scroll_margin = 5;
-      icon_theme = {
-        mode = "system";
-        light = "Symbols";
-        dark = "Symbols";
-      };
       vim_mode = true;
       relative_line_numbers = true;
       tab_size = 2;
