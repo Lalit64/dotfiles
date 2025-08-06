@@ -20,7 +20,8 @@
       "background-music"
       "karabiner-elements"
       "modrinth"
-      "httpie"
+      "yaak"
+      "zoom"
       "protonvpn"
       "whatsapp"
       "handbrake"
@@ -32,6 +33,7 @@
       "kitty"
       "ghostty@tip"
       "zen-browser@twilight"
+      "gitbutler"
       "youtube-music"
       "obsidian"
       "orbstack"
@@ -45,6 +47,7 @@
       "switchaudio-osx"
       "nowplaying-cli"
       "fonttools"
+      "fzf"
       {
         name = "ollama";
         start_service = true;

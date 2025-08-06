@@ -12,14 +12,14 @@
     home-manager.url = "git+ssh://git@github.com/nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # advanced nix cli
     nh.url = "git+ssh://git@github.com/viperML/nh";
     nh.inputs.nixpkgs.follows = "nixpkgs";
 
     # system theming
     stylix.url = "git+ssh://git@github.com/danth/stylix";
-    catppuccin.url = "github:catppuccin/nix";
 
-    # my nix user repository
+    # my repository containing personal packages
     lalit64-nur.url = "git+ssh://git@github.com/lalit64/nur.git";
     lalit64-nur.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -79,7 +79,6 @@
                   imports = [
                     ./home/${username}/${hostname}.nix
                     inputs.stylix.homeManagerModules.stylix
-                    inputs.catppuccin.homeModules.catppuccin
                     inputs.neovim.homeModules.default
                   ];
                 };
@@ -92,10 +91,10 @@
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-galaxy.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/cloudy_quasar.png";
         "home-desk" =
           mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/catppuccin-galaxy.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/cloudy_quasar.png";
       };
     };
 }

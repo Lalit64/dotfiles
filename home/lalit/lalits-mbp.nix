@@ -9,6 +9,6 @@
     "/opt/homebrew/bin/"
   ];
 
-  # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
+  # backwards compat; don't change
   home.stateVersion = "24.11";
 }

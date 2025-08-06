@@ -41,6 +41,7 @@
 
     initExtra = ''
       export PNPM_HOME="/"
+      export EDITOR=/etc/profiles/per-user/lalit/bin/nvim
 
       # fix rust liconv stuff
       export PATH="/opt/homebrew/opt/libiconv/bin:$PATH"
@@ -53,9 +54,5 @@
       eval "$(${pkgs.mise}/bin/mise activate zsh)"
       source "${pkgs.zsh-autopair}/share/zsh/zsh-autopair/autopair.zsh"
     '';
-
-    oh-my-zsh = {
-      enable = true;
-    };
   };
 }

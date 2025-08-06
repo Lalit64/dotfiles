@@ -79,6 +79,7 @@
         location = "/Users/${username}/Desktop/screenshots";
         type = "png";
       };
+
       dock = {
         # Automatically hide and show the Dock
         autohide = true;

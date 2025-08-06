@@ -12,7 +12,7 @@
     inherit username;
     homeDirectory = "/Users/${username}";
     packages = with pkgs; [
-      # from my nur ( nix user repository )
+      # my personal packages
       inputs.lalit64-nur.packages."${system}".monolisa-nf # MonoLisa Nerd Font Mono
       inputs.lalit64-nur.packages."${system}".operator-nf # Operator Nerd Font Mono
       inputs.lalit64-nur.packages."${system}".cleanshot
@@ -22,17 +22,20 @@
       aerospace
       sketchybar
       raycast
-      zoom-us
+      # zoom-us
       docker
       keka
       qbittorrent
       # java
       zulu
+      zulu17
+      zulu8
       # packages
       automake
       base16-schemes
       bun
       cmatrix
+      chafa
       cocoapods
       deno
       dipc
@@ -43,20 +46,18 @@
       ffmpeg
       fontconfig
       fontforge
-      fzf
       gcc
       gh
       glow
       git-lfs
       gowall
-      httpie
       ice-bar
       imagemagick
       jq
+      lima
       lua54Packages.lua
       nixd
       nixfmt-rfc-style
-      nil
       pnpm
       prettierd
       portaudio
@@ -65,6 +66,8 @@
       sketchybar-app-font
       stow
       typescript
+      tokei
+      smassh
       utm
       vesktop
       watchman
@@ -85,18 +88,6 @@
   };
 
   fonts.fontconfig.enable = true;
-
-  catppuccin = {
-    flavor = "mocha";
-    accent = "mauve";
-
-    kitty.enable = true;
-    ghostty.enable = true;
-    starship.enable = true;
-    bat.enable = true;
-    zed.enable = true;
-    tmux.enable = true;
-  };
 
   nvim.enable = true;
 
@@ -121,6 +112,9 @@
           rust-analyzer = "latest";
           go = "latest";
         };
+        settings = {
+          idiomatic_version_file_enable_tools = [ ];
+        };
       };
     };
 
@@ -128,7 +122,6 @@
     starship = {
       enable = true;
       enableZshIntegration = true;
-
       settings = {
         add_newline = false;
         format = lib.concatStrings [
@@ -209,13 +202,8 @@
       userEmail = "lalit.yalamanchili@gmail.com";
     };
 
-    bat = {
-      enable = false;
-    };
+    btop.enable = true;
 
-    btop = {
-      enable = true;
-    };
     # better ls
     eza.enable = true;
   };

@@ -69,7 +69,7 @@ sbar.exec("aerospace list-workspaces --all", function(spaces)
           icon_line = icon_line .. " " .. icon
         end
         sbar.animate("tanh", 10, function()
-          space:set { label = no_app and " —" or icon_line }
+          space:set { label = no_app and " " or icon_line }
         end)
       end)
     end)

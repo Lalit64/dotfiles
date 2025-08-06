@@ -6,5 +6,6 @@
         "bar",
         "default",
         "helpers"
-    ]
+    ],
+    "runtime.version": "Lua 5.4"
 }

@@ -77,6 +77,7 @@ return {
   ["Discord"] = ":discord:",
   ["Discord Canary"] = ":discord:",
   ["Discord PTB"] = ":discord:",
+  ["Vesktop"] = ":discord:",
   ["Docker"] = ":docker:",
   ["Docker Desktop"] = ":docker:",
   ["GrandTotal"] = ":dollar:",
@@ -109,6 +110,7 @@ return {
   ["システム設定"] = ":gear:",
   ["Ghostty"] = ":ghostty:",
   ["GitHub Desktop"] = ":git_hub:",
+  ["GitButler"] = ":git_hub:",
   ["Godot"] = ":godot:",
   ["GoLand"] = ":goland:",
   ["Chromium"] = ":google_chrome:",
@@ -127,6 +129,7 @@ return {
   ["Inkdrop"] = ":inkdrop:",
   ["Inkscape"] = ":inkscape:",
   ["Insomnia"] = ":insomnia:",
+  ["Yaak"] = ":insomnia:",
   ["iPhone Mirroring"] = ":iphone_mirroring:",
   ["Iris"] = ":iris:",
   ["iTerm"] = ":iterm:",
@@ -190,6 +193,7 @@ return {
   ["mpv"] = ":mpv:",
   ["Mullvad Browser"] = ":mullvad_browser:",
   ["Music"] = ":music:",
+  ["YouTube Music"] = ":music:",
   ["音乐"] = ":music:",
   ["Musique"] = ":music:",
   ["ミュージック"] = ":music:",
@@ -351,4 +355,3 @@ return {
   ["Zotero"] = ":zotero:",
   ["Zulip"] = ":zulip:",
 }
-

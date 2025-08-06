@@ -1,6 +1,4 @@
 {
-  inputs,
-  system,
   pkgs,
   wallpaper,
   ...
@@ -11,20 +9,14 @@
     autoEnable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
     image = wallpaper;
-    targets = {
-      kitty.enable = false;
-      bat.enable = false;
-      zed.enable = false;
-      ghostty.enable = false;
-      starship.enable = false;
-    };
+    targets = { };
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.jetbrains-mono;
         name = "JetBrainsMono Nerd Font Mono";
       };
-      sizes.terminal = 13;
+      sizes.terminal = 18;
     };
-    opacity.terminal = 0.8;
+    opacity.terminal = 0.95;
   };
 }

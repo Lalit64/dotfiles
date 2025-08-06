@@ -25,6 +25,7 @@
       ];
 
       on-focus-changed = [
+        "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger space_windows_change"
         "exec-and-forget ${pkgs.sketchybar}/bin/sketchybar --trigger front_app_switched"
       ];
 
@@ -161,7 +162,6 @@
             "move-node-to-workspace 2"
           ];
         }
-
         {
           check-further-callbacks = false;
           "if" = {
@@ -203,18 +203,19 @@
 
       mode.main.binding = {
         cmd-alt-h = [ ];
+        cmd-h = [ ];
 
         alt-tab = "workspace-back-and-forth";
 
-        alt-left = "focus left";
-        alt-down = "focus down";
-        alt-up = "focus up";
-        alt-right = "focus right";
+        alt-h = "focus left";
+        alt-j = "focus down";
+        alt-k = "focus up";
+        alt-l = "focus right";
 
-        ctrl-cmd-shift-left = "move left";
-        ctrl-cmd-shift-down = "move down";
-        ctrl-cmd-shift-up = "move up";
-        ctrl-cmd-shift-right = "move right";
+        ctrl-cmd-shift-h = "move left";
+        ctrl-cmd-shift-j = "move down";
+        ctrl-cmd-shift-k = "move up";
+        ctrl-cmd-shift-l = "move right";
 
         ctrl-cmd-shift-0 = "balance-sizes";
 

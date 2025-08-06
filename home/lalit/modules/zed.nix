@@ -1,9 +1,10 @@
-{ pkgs, config, ... }:
+{ pkgs, ... }:
 {
   programs.zed-editor = {
     enable = true;
     extensions = [
       "rose-pine-theme"
+      "catppuccin"
       "nix"
       "symbols"
       "toml"
@@ -29,8 +30,6 @@
     ];
     userSettings = {
       base_keymap = "Atom";
-      buffer_font_family = config.stylix.fonts.monospace.name;
-      buffer_font_size = 18;
       vertical_scroll_margin = 5;
       vim_mode = true;
       relative_line_numbers = true;

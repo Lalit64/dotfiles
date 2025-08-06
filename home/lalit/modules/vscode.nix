@@ -29,7 +29,7 @@ in
             jnoortheen.nix-ide
             esbenp.prettier-vscode
             aaron-bond.better-comments
-            catppuccin.catppuccin-vsc
+            mvllow.rose-pine
             prisma.prisma
             sumneko.lua
             svelte.svelte-vscode
