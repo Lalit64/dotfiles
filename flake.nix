@@ -78,7 +78,7 @@
                 users."${username}" = {
                   imports = [
                     ./home/${username}/${hostname}.nix
-                    inputs.stylix.homeManagerModules.stylix
+                    inputs.stylix.homeModules.stylix
                     inputs.neovim.homeModules.default
                   ];
                 };

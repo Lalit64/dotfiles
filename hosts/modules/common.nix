@@ -45,12 +45,14 @@
   };
 
   system = {
+    primaryUser = "lalit";
+
     keyboard.enableKeyMapping = true;
     keyboard.remapCapsLockToEscape = true;
 
     startup.chime = true;
 
-    activationScripts.postUserActivation.text = ''
+    activationScripts.activateSettings.text = ''
       # Wallpaper
       echo >&2 "Setting the wallpaper..."
       osascript -e 'tell application "Finder" to set desktop picture to POSIX file "${wallpaper}"'
