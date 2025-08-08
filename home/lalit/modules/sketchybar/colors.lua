@@ -9,76 +9,76 @@ end
 
 local transparent = 0x00000000
 
-local catppuccin_mocha = {
-  crust = 0xff11111b,
-  mantle = 0xff181825,
-  base = 0xff1e1e2e,
-  text = 0xff7f849c,
-  muted = 0xff585b70,
-  red = 0xfff38ba8,
-  orange = 0xfffab387,
-  yellow = 0xfff9e2af,
-  green = 0xffa6e3a1,
-  cyan = 0xff89dceb,
-  blue = 0xff89b4fa,
-  mauve = 0xffcba6f7,
+local tokyonight_moon = {
+  crust = 0xff1a1b26,
+  mantle = 0xff414868,
+  base = 0xff24283b,
+  text = 0xffc0caf5,
+  muted = 0xff9aa5ce,
+  red = 0xfff7768e,
+  orange = 0xffff9e64,
+  yellow = 0xffe0af68,
+  green = 0xff9ece6a,
+  cyan = 0xff2ac3de,
+  blue = 0xff7aa2f7,
+  purple = 0xffbb9af7,
 }
 
 M.sections = {
   bar = {
-    bg = with_alpha(catppuccin_mocha.mantle, 0.9),
+    bg = with_alpha(tokyonight_moon.crust, 0.7),
     transparent = transparent,
     border = transparent,
   },
   item = {
-    bg = catppuccin_mocha.base,
-    border = catppuccin_mocha.crust,
-    text = catppuccin_mocha.text,
+    bg = tokyonight_moon.base,
+    border = tokyonight_moon.crust,
+    text = tokyonight_moon.text,
   },
-  apple = catppuccin_mocha.mauve,
+  apple = tokyonight_moon.blue,
   spaces = {
     icon = {
-      color = catppuccin_mocha.muted,
-      highlight = catppuccin_mocha.text,
+      color = tokyonight_moon.muted,
+      highlight = tokyonight_moon.text,
     },
     label = {
-      color = catppuccin_mocha.text,
-      highlight = catppuccin_mocha.mauve,
+      color = tokyonight_moon.text,
+      highlight = tokyonight_moon.blue,
     },
-    indicator = catppuccin_mocha.mauve,
+    indicator = tokyonight_moon.blue,
   },
   media = {
-    label = catppuccin_mocha.muted,
-    highlight = catppuccin_mocha.blue,
+    label = tokyonight_moon.muted,
+    highlight = tokyonight_moon.blue,
   },
   widgets = {
     battery = {
-      low = catppuccin_mocha.red,
-      mid = catppuccin_mocha.yellow,
-      high = catppuccin_mocha.green,
+      low = tokyonight_moon.red,
+      mid = tokyonight_moon.yellow,
+      high = tokyonight_moon.green,
     },
-    wifi = { icon = catppuccin_mocha.blue },
+    wifi = { icon = tokyonight_moon.blue },
     volume = {
-      icon = catppuccin_mocha.mauve,
+      icon = tokyonight_moon.purple,
       popup = {
-        item = catppuccin_mocha.muted,
-        highlight = catppuccin_mocha.text,
+        item = tokyonight_moon.muted,
+        highlight = tokyonight_moon.text,
       },
       slider = {
-        highlight = catppuccin_mocha.blue,
-        bg = catppuccin_mocha.crust,
-        border = catppuccin_mocha.mantle,
+        highlight = tokyonight_moon.blue,
+        bg = tokyonight_moon.crust,
+        border = tokyonight_moon.mantle,
       },
     },
-    messages = { icon = catppuccin_mocha.red },
+    messages = { icon = tokyonight_moon.red },
   },
   calendar = {
-    label = catppuccin_mocha.muted,
+    label = tokyonight_moon.muted,
   },
   popup = {
-    bg = catppuccin_mocha.base,
-    border = catppuccin_mocha.blue,
-    text = catppuccin_mocha.text,
+    bg = tokyonight_moon.base,
+    border = tokyonight_moon.blue,
+    text = tokyonight_moon.text,
   },
 }
 

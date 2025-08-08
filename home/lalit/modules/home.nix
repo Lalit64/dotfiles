@@ -28,8 +28,8 @@
       qbittorrent
       # java
       zulu
-      zulu17
-      zulu8
+      # zulu17
+      # zulu8
       # packages
       automake
       base16-schemes
@@ -51,6 +51,7 @@
       glow
       git-lfs
       gowall
+      hellwal
       ice-bar
       imagemagick
       jq

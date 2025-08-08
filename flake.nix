@@ -91,10 +91,10 @@
       darwinConfigurations = {
         "lalits-mbp" =
           mkDarwinConfiguration "aarch64-darwin" "lalits-mbp" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/cloudy_quasar.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/cloudy-quasar-tokyo-night.png";
         "home-desk" =
           mkDarwinConfiguration "aarch64-darwin" "home-desk" "lalit"
-            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/cloudy_quasar.png";
+            "/Users/lalit/.config/snowflake/home/lalit/modules/wallpapers/cloudy-quasar-tokyo-night.png";
       };
     };
 }

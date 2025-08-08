@@ -7,7 +7,7 @@
   stylix = {
     enable = true;
     autoEnable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-moon.yaml";
     image = wallpaper;
     targets = { };
     fonts = {
@@ -17,6 +17,6 @@
       };
       sizes.terminal = 18;
     };
-    opacity.terminal = 0.95;
+    opacity.terminal = 0.8;
   };
 }

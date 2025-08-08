@@ -12,11 +12,12 @@
       shell-integration = "zsh";
       shell-integration-features = "no-cursor";
       background-blur = 255;
+      theme = "tokyonight_moon";
       font-thicken = true;
       cursor-style = "block";
       mouse-hide-while-typing = true;
       window-colorspace = "display-p3";
-      adjust-cell-height = "35%";
+      adjust-cell-height = "30%";
       macos-titlebar-style = "hidden";
       macos-window-shadow = true;
       macos-option-as-alt = "left";
