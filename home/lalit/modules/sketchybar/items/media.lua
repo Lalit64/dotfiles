@@ -1,7 +1,7 @@
 local icons = require "icons"
 local colors = require("colors").sections.media
 
-local whitelist = { ["YouTube Music"] = true, ["Twilight"] = true }
+local whitelist = { ["Music"] = true, ["Twilight"] = true }
 
 local media_playback = sbar.add("item", {
   position = "right",

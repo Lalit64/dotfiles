@@ -14,6 +14,17 @@
 </p>
 <br>
 
+<img align="center" >
+    <img src="./screenshots/terminal.png" align="center" width="20%">
+</img>
+<img align="center">
+    <img src="./screenshots/neovim.png" align="center" width="20%">
+</img>
+<img align="center">
+    <img src="./screenshots/zen.png" align="center" width="20%">
+</img>
+
+
 ## 🔗 Table of Contents
 
 - [📍 Overview](#-overview)

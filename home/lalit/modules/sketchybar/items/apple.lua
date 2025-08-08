@@ -3,7 +3,7 @@ local icons = require "icons"
 
 local apple = sbar.add("item", {
   icon = {
-    font = { size = 16 },
+    font = { size = 20 },
     string = icons.apple,
     padding_right = 15,
     padding_left = 15,

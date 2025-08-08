@@ -386,11 +386,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1754632185,
-        "narHash": "sha256-VrCWC5UQmXchE6Gg6W7A14xxnjyaRBiBKhIMkaPYp8Q=",
+        "lastModified": 1754655496,
+        "narHash": "sha256-Cqf3yYhc4kXg9x75Zc9EIQRKsrtLbmfxXwFvoa+APBo=",
         "ref": "refs/heads/main",
-        "rev": "de0a6f5b8b70b8a59cbeb1d53a8d1d129c9a62f7",
-        "revCount": 3,
+        "rev": "3e88e012ef3f0861dc7aa2ac555fd6f394b53b22",
+        "revCount": 4,
         "type": "git",
         "url": "ssh://git@github.com/lalit64/nvim.git"
       },
@@ -446,11 +446,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1754500768,
-        "narHash": "sha256-FshqNREdGLe6ToWO95krBMWlFO1NN7y1n8+RWBMvnm4=",
+        "lastModified": 1754654688,
+        "narHash": "sha256-gHBHX/Q1B5IDqJ2bAwI5EfQL8hZN00lbDJUWJ+bC9pA=",
         "ref": "refs/heads/master",
-        "rev": "f8c9708b86930a6d9c2dbcd5e07d2c7ba2160839",
-        "revCount": 693,
+        "rev": "a82badc762d00f32e4870c3f61a9e01e075868ed",
+        "revCount": 697,
         "type": "git",
         "url": "ssh://git@github.com/viperML/nh"
       },
